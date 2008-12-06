@@ -4061,3 +4061,741 @@ cjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--1ff53a1cf1653118791cd9e1cb58fe9079
   [4;36;1mClient Load (0.000370)[0m   [0;1mSELECT * FROM "clients" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
   [4;35;1mSQL (0.000288)[0m   [0mSELECT count(*) AS count_all FROM "clients" [0m
 Completed in 0.01027 (97 reqs/sec) | Rendering: 0.00048 (4%) | DB: 0.00066 (6%) | 200 OK [http://localhost/clients?format=ext_json&_dc=1228600529730&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 20:54:03) [GET]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOg9zb3J0X2ZpZWxkIglu
+YW1lOgpsaW1pdGkKOhNzb3J0X2RpcmVjdGlvbiIJREVTQzoLb2Zmc2V0aQA6
+DGNzcmZfaWQiJTQ0ZWYzZjAzZDNhMjc0Yzk3NzQwNzQxM2RjNjhjMTMwIhxn
+cm91cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwAiB2lkOwZpCjsHIghBU0M7CGkA
+IhxwZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgluYW1lOwciCURF
+U0M7CGkAIiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsA
+IgdpZDsHIghBU0M7CGkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsA
+IgdpZDsGaQo7ByIIQVNDOwhpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxl
+cjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--bdafc060ab9c46d19a658f8a3a19aceac10bf5e0
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 0.01165 (85 reqs/sec) | Rendering: 0.00924 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 20:54:04) [GET]
+  Session ID: BAh7DDoMY3NyZl9pZCIlNDRlZjNmMDNkM2EyNzRjOTc3NDA3NDEzZGM2OGMx
+MzAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGltaXRpCjoPc29ydF9m
+aWVsZCIJbmFtZToTc29ydF9kaXJlY3Rpb24iCURFU0M6C29mZnNldGkAIhxn
+cm91cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghBU0M7CWkA
+IiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwciB2lkOwZpCjsI
+IghBU0M7CWkAIhxwZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwciCW5hbWU7
+BmkKOwgiCURFU0M7CWkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsG
+aQo7ByIHaWQ7CCIIQVNDOwlpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxl
+cjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--1ff53a1cf1653118791cd9e1cb58fe9079dbb2a9
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1228604044550", "limit"=>"5"}
+  [4;36;1mUser Load (0.000277)[0m   [0;1mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.000143)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.01038 (96 reqs/sec) | Rendering: 0.00035 (3%) | DB: 0.00042 (4%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228604044550&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2008-12-06 20:54:08) [GET]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOg9zb3J0X2ZpZWxkIgdp
+ZDoKbGltaXRpCjoTc29ydF9kaXJlY3Rpb24iCEFTQzoLb2Zmc2V0aQA6DGNz
+cmZfaWQiJTQ0ZWYzZjAzZDNhMjc0Yzk3NzQwNzQxM2RjNjhjMTMwIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwAiB2lkOwZpCjsHIghBU0M7CGkAIhxw
+ZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgluYW1lOwciCURFU0M7
+CGkAIiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgdp
+ZDsHIghBU0M7CGkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsAIgdp
+ZDsGaQo7ByIIQVNDOwhpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--db8f7d83377e40e8942f4fac7300bb0f33eedb6a
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/new
+  [4;36;1mGroup Load (0.000314)[0m   [0;1mSELECT * FROM "groups" [0m
+Rendered users/_form_items (0.00781)
+Completed in 0.01871 (53 reqs/sec) | Rendering: 0.01202 (64%) | DB: 0.00031 (1%) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2008-12-06 20:55:05) [GET]
+  Session ID: BAh7DDoMY3NyZl9pZCIlNDRlZjNmMDNkM2EyNzRjOTc3NDA3NDEzZGM2OGMx
+MzAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGltaXRpCjoPc29ydF9m
+aWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0M6C29mZnNldGkAIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghBU0M7CWkAIiJw
+ZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwciB2lkOwZpCjsIIghB
+U0M7CWkAIhxwZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwciCW5hbWU7BmkK
+OwgiCURFU0M7CWkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7
+ByIHaWQ7CCIIQVNDOwlpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--90009eb31c94fa5562ea451e8b965c296075826c
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/new
+  [4;35;1mGroup Load (0.000273)[0m   [0mSELECT * FROM "groups" [0m
+Rendered users/_form_items (0.00691)
+Completed in 0.01609 (62 reqs/sec) | Rendering: 0.00943 (58%) | DB: 0.00027 (1%) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2008-12-06 20:55:09) [POST]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOg9zb3J0X2ZpZWxkIgdp
+ZDoKbGltaXRpCjoTc29ydF9kaXJlY3Rpb24iCEFTQzoLb2Zmc2V0aQA6DGNz
+cmZfaWQiJTQ0ZWYzZjAzZDNhMjc0Yzk3NzQwNzQxM2RjNjhjMTMwIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwAiB2lkOwZpCjsHIghBU0M7CGkAIhxw
+ZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgluYW1lOwciCURFU0M7
+CGkAIiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgdp
+ZDsHIghBU0M7CGkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsAIgdp
+ZDsGaQo7ByIIQVNDOwhpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--db8f7d83377e40e8942f4fac7300bb0f33eedb6a
+  Parameters: {"user"=>{"name"=>"", "username"=>"", "group_id"=>"", "password"=>"", "email"=>""}, "format"=>"ext_json", "authenticity_token"=>"ff44ce24f70b7a2f66e2b9b816c85e983a59ed4d", "action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Create (0.000430)[0m   [0;1mINSERT INTO "users" ("name", "updated_at", "username", "group_id", "password", "email", "created_at") VALUES('', '2008-12-06 22:55:09', '', NULL, '', '', '2008-12-06 22:55:09')[0m
+Completed in 0.01660 (60 reqs/sec) | Rendering: 0.00438 (26%) | DB: 0.00043 (2%) | 200 OK [http://localhost/users?format=ext_json]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 20:55:09) [GET]
+  Session ID: BAh7DDoMY3NyZl9pZCIlNDRlZjNmMDNkM2EyNzRjOTc3NDA3NDEzZGM2OGMx
+MzAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGltaXRpCjoPc29ydF9m
+aWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0M6C29mZnNldGkAIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghBU0M7CWkAIiJw
+ZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwciB2lkOwZpCjsIIghB
+U0M7CWkAIhxwZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwciCW5hbWU7BmkK
+OwgiCURFU0M7CWkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7
+ByIHaWQ7CCIIQVNDOwlpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiI1VzZXIgd2FzIHN1Y2Nlc3Nm
+dWxseSBjcmVhdGVkLgY6CkB1c2VkewY7C0Y=--e3ae76a030e62f6d21fa0b8810b62cb4b383858b
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 0.00965 (103 reqs/sec) | Rendering: 0.00716 (74%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 20:55:09) [GET]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOg9zb3J0X2ZpZWxkIgdp
+ZDoKbGltaXRpCjoTc29ydF9kaXJlY3Rpb24iCEFTQzoLb2Zmc2V0aQA6DGNz
+cmZfaWQiJTQ0ZWYzZjAzZDNhMjc0Yzk3NzQwNzQxM2RjNjhjMTMwIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwAiB2lkOwZpCjsHIghBU0M7CGkAIhxw
+ZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgluYW1lOwciCURFU0M7
+CGkAIiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgdp
+ZDsHIghBU0M7CGkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsAIgdp
+ZDsGaQo7ByIIQVNDOwhpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiI1VzZXIgd2FzIHN1Y2Nlc3Nm
+dWxseSBjcmVhdGVkLgY6CkB1c2VkewY7C1Q=--32f9169ffc72e333416e3fd023904d2e547baa61
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1228604109884", "limit"=>"5"}
+  [4;35;1mUser Load (0.000520)[0m   [0mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000183)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.01167 (85 reqs/sec) | Rendering: 0.00049 (4%) | DB: 0.00070 (6%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228604109884&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2008-12-06 20:55:15) [DELETE]
+  Session ID: BAh7DDoMY3NyZl9pZCIlNDRlZjNmMDNkM2EyNzRjOTc3NDA3NDEzZGM2OGMx
+MzAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGltaXRpCjoPc29ydF9m
+aWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0M6C29mZnNldGkAIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghBU0M7CWkAIiJw
+ZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwciB2lkOwZpCjsIIghB
+U0M7CWkAIhxwZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwciCW5hbWU7BmkK
+OwgiCURFU0M7CWkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7
+ByIHaWQ7CCIIQVNDOwlpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--90009eb31c94fa5562ea451e8b965c296075826c
+  Parameters: {"authenticity_token"=>"ff44ce24f70b7a2f66e2b9b816c85e983a59ed4d", "_method"=>"DELETE", "action"=>"destroy", "id"=>"2", "controller"=>"users"}
+  [4;35;1mUser Load (0.000269)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Destroy (0.000368)[0m   [0;1m DELETE FROM "users"
+ WHERE "id" = 2
+[0m
+Completed in 0.01086 (92 reqs/sec) | Rendering: 0.00031 (2%) | DB: 0.00064 (5%) | 200 OK [http://localhost/users/2]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 20:55:15) [GET]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOg9zb3J0X2ZpZWxkIgdp
+ZDoKbGltaXRpCjoTc29ydF9kaXJlY3Rpb24iCEFTQzoLb2Zmc2V0aQA6DGNz
+cmZfaWQiJTQ0ZWYzZjAzZDNhMjc0Yzk3NzQwNzQxM2RjNjhjMTMwIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwAiB2lkOwZpCjsHIghBU0M7CGkAIhxw
+ZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgluYW1lOwciCURFU0M7
+CGkAIiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgdp
+ZDsHIghBU0M7CGkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsAIgdp
+ZDsGaQo7ByIIQVNDOwhpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--db8f7d83377e40e8942f4fac7300bb0f33eedb6a
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "controller"=>"users", "sort"=>"id", "_dc"=>"1228604115226"}
+  [4;35;1mUser Load (0.000250)[0m   [0mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.00933 (107 reqs/sec) | Rendering: 0.00031 (3%) | DB: 0.00038 (4%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228604115226&sort=id&dir=ASC]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2008-12-06 20:55:17) [GET]
+  Session ID: BAh7DDoMY3NyZl9pZCIlNDRlZjNmMDNkM2EyNzRjOTc3NDA3NDEzZGM2OGMx
+MzAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGltaXRpCjoPc29ydF9m
+aWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0M6C29mZnNldGkAIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghBU0M7CWkAIiJw
+ZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwciB2lkOwZpCjsIIghB
+U0M7CWkAIhxwZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwciCW5hbWU7BmkK
+OwgiCURFU0M7CWkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7
+ByIHaWQ7CCIIQVNDOwlpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--90009eb31c94fa5562ea451e8b965c296075826c
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/new
+  [4;35;1mGroup Load (0.000275)[0m   [0mSELECT * FROM "groups" [0m
+Rendered users/_form_items (0.00689)
+Completed in 0.01580 (63 reqs/sec) | Rendering: 0.00944 (59%) | DB: 0.00028 (1%) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2008-12-06 20:55:26) [POST]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOg9zb3J0X2ZpZWxkIgdp
+ZDoKbGltaXRpCjoTc29ydF9kaXJlY3Rpb24iCEFTQzoLb2Zmc2V0aQA6DGNz
+cmZfaWQiJTQ0ZWYzZjAzZDNhMjc0Yzk3NzQwNzQxM2RjNjhjMTMwIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwAiB2lkOwZpCjsHIghBU0M7CGkAIhxw
+ZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgluYW1lOwciCURFU0M7
+CGkAIiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgdp
+ZDsHIghBU0M7CGkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsAIgdp
+ZDsGaQo7ByIIQVNDOwhpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--db8f7d83377e40e8942f4fac7300bb0f33eedb6a
+  Parameters: {"user"=>{"name"=>"", "username"=>"", "group_id"=>"", "password"=>"", "email"=>""}, "format"=>"ext_json", "authenticity_token"=>"ff44ce24f70b7a2f66e2b9b816c85e983a59ed4d", "action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Create (0.000378)[0m   [0;1mINSERT INTO "users" ("name", "updated_at", "username", "group_id", "password", "email", "created_at") VALUES('', '2008-12-06 22:55:26', '', NULL, '', '', '2008-12-06 22:55:26')[0m
+Completed in 0.01514 (66 reqs/sec) | Rendering: 0.00406 (26%) | DB: 0.00038 (2%) | 200 OK [http://localhost/users?format=ext_json]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 20:55:26) [GET]
+  Session ID: BAh7DDoMY3NyZl9pZCIlNDRlZjNmMDNkM2EyNzRjOTc3NDA3NDEzZGM2OGMx
+MzAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGltaXRpCjoPc29ydF9m
+aWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0M6C29mZnNldGkAIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghBU0M7CWkAIiJw
+ZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwciB2lkOwZpCjsIIghB
+U0M7CWkAIhxwZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwciCW5hbWU7BmkK
+OwgiCURFU0M7CWkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7
+ByIHaWQ7CCIIQVNDOwlpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiI1VzZXIgd2FzIHN1Y2Nlc3Nm
+dWxseSBjcmVhdGVkLgY6CkB1c2VkewY7C0Y=--e3ae76a030e62f6d21fa0b8810b62cb4b383858b
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 0.00933 (107 reqs/sec) | Rendering: 0.00699 (74%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 20:55:27) [GET]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOg9zb3J0X2ZpZWxkIgdp
+ZDoKbGltaXRpCjoTc29ydF9kaXJlY3Rpb24iCEFTQzoLb2Zmc2V0aQA6DGNz
+cmZfaWQiJTQ0ZWYzZjAzZDNhMjc0Yzk3NzQwNzQxM2RjNjhjMTMwIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwAiB2lkOwZpCjsHIghBU0M7CGkAIhxw
+ZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgluYW1lOwciCURFU0M7
+CGkAIiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgdp
+ZDsHIghBU0M7CGkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsAIgdp
+ZDsGaQo7ByIIQVNDOwhpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiI1VzZXIgd2FzIHN1Y2Nlc3Nm
+dWxseSBjcmVhdGVkLgY6CkB1c2VkewY7C1Q=--32f9169ffc72e333416e3fd023904d2e547baa61
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1228604127157", "limit"=>"5"}
+  [4;35;1mUser Load (0.000377)[0m   [0mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000189)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.02077 (48 reqs/sec) | Rendering: 0.00043 (2%) | DB: 0.00057 (2%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228604127157&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2008-12-06 20:55:31) [DELETE]
+  Session ID: BAh7DDoMY3NyZl9pZCIlNDRlZjNmMDNkM2EyNzRjOTc3NDA3NDEzZGM2OGMx
+MzAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGltaXRpCjoPc29ydF9m
+aWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0M6C29mZnNldGkAIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghBU0M7CWkAIiJw
+ZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwciB2lkOwZpCjsIIghB
+U0M7CWkAIhxwZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwciCW5hbWU7BmkK
+OwgiCURFU0M7CWkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7
+ByIHaWQ7CCIIQVNDOwlpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--90009eb31c94fa5562ea451e8b965c296075826c
+  Parameters: {"authenticity_token"=>"ff44ce24f70b7a2f66e2b9b816c85e983a59ed4d", "_method"=>"DELETE", "action"=>"destroy", "id"=>"3", "controller"=>"users"}
+  [4;35;1mUser Load (0.000406)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mUser Destroy (0.000390)[0m   [0;1m DELETE FROM "users"
+ WHERE "id" = 3
+[0m
+Completed in 0.01085 (92 reqs/sec) | Rendering: 0.00032 (2%) | DB: 0.00080 (7%) | 200 OK [http://localhost/users/3]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 20:55:31) [GET]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOg9zb3J0X2ZpZWxkIgdp
+ZDoKbGltaXRpCjoTc29ydF9kaXJlY3Rpb24iCEFTQzoLb2Zmc2V0aQA6DGNz
+cmZfaWQiJTQ0ZWYzZjAzZDNhMjc0Yzk3NzQwNzQxM2RjNjhjMTMwIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwAiB2lkOwZpCjsHIghBU0M7CGkAIhxw
+ZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgluYW1lOwciCURFU0M7
+CGkAIiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgdp
+ZDsHIghBU0M7CGkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsAIgdp
+ZDsGaQo7ByIIQVNDOwhpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--db8f7d83377e40e8942f4fac7300bb0f33eedb6a
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "controller"=>"users", "sort"=>"id", "_dc"=>"1228604131870"}
+  [4;35;1mUser Load (0.000242)[0m   [0mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.00952 (105 reqs/sec) | Rendering: 0.00031 (3%) | DB: 0.00038 (3%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228604131870&sort=id&dir=ASC]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2008-12-06 20:56:23) [GET]
+  Session ID: BAh7DDoMY3NyZl9pZCIlNDRlZjNmMDNkM2EyNzRjOTc3NDA3NDEzZGM2OGMx
+MzAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGltaXRpCjoPc29ydF9m
+aWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0M6C29mZnNldGkAIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghBU0M7CWkAIiJw
+ZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwciB2lkOwZpCjsIIghB
+U0M7CWkAIhxwZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwciCW5hbWU7BmkK
+OwgiCURFU0M7CWkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7
+ByIHaWQ7CCIIQVNDOwlpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--90009eb31c94fa5562ea451e8b965c296075826c
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/new
+  [4;36;1mGroup Load (0.000302)[0m   [0;1mSELECT * FROM "groups" [0m
+Rendered users/_form_items (0.00807)
+Completed in 0.02115 (47 reqs/sec) | Rendering: 0.01442 (68%) | DB: 0.00030 (1%) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2008-12-06 20:56:26) [POST]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOg9zb3J0X2ZpZWxkIgdp
+ZDoKbGltaXRpCjoTc29ydF9kaXJlY3Rpb24iCEFTQzoLb2Zmc2V0aQA6DGNz
+cmZfaWQiJTQ0ZWYzZjAzZDNhMjc0Yzk3NzQwNzQxM2RjNjhjMTMwIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwAiB2lkOwZpCjsHIghBU0M7CGkAIhxw
+ZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgluYW1lOwciCURFU0M7
+CGkAIiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgdp
+ZDsHIghBU0M7CGkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsAIgdp
+ZDsGaQo7ByIIQVNDOwhpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--db8f7d83377e40e8942f4fac7300bb0f33eedb6a
+  Parameters: {"user"=>{"name"=>"", "username"=>"", "group_id"=>"", "password"=>"", "email"=>""}, "format"=>"ext_json", "authenticity_token"=>"ff44ce24f70b7a2f66e2b9b816c85e983a59ed4d", "action"=>"create", "controller"=>"users"}
+  [4;35;1mUser Create (0.000480)[0m   [0mINSERT INTO "users" ("name", "updated_at", "username", "group_id", "password", "email", "created_at") VALUES('', '2008-12-06 22:56:26', '', NULL, '', '', '2008-12-06 22:56:26')[0m
+Completed in 0.01512 (66 reqs/sec) | Rendering: 0.00419 (27%) | DB: 0.00048 (3%) | 200 OK [http://localhost/users?format=ext_json]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 20:56:26) [GET]
+  Session ID: BAh7DDoMY3NyZl9pZCIlNDRlZjNmMDNkM2EyNzRjOTc3NDA3NDEzZGM2OGMx
+MzAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGltaXRpCjoPc29ydF9m
+aWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0M6C29mZnNldGkAIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghBU0M7CWkAIiJw
+ZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwciB2lkOwZpCjsIIghB
+U0M7CWkAIhxwZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwciCW5hbWU7BmkK
+OwgiCURFU0M7CWkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7
+ByIHaWQ7CCIIQVNDOwlpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiI1VzZXIgd2FzIHN1Y2Nlc3Nm
+dWxseSBjcmVhdGVkLgY6CkB1c2VkewY7C0Y=--e3ae76a030e62f6d21fa0b8810b62cb4b383858b
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 0.01013 (98 reqs/sec) | Rendering: 0.00769 (75%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 20:56:26) [GET]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOg9zb3J0X2ZpZWxkIgdp
+ZDoKbGltaXRpCjoTc29ydF9kaXJlY3Rpb24iCEFTQzoLb2Zmc2V0aQA6DGNz
+cmZfaWQiJTQ0ZWYzZjAzZDNhMjc0Yzk3NzQwNzQxM2RjNjhjMTMwIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwAiB2lkOwZpCjsHIghBU0M7CGkAIhxw
+ZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgluYW1lOwciCURFU0M7
+CGkAIiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgdp
+ZDsHIghBU0M7CGkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsAIgdp
+ZDsGaQo7ByIIQVNDOwhpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiI1VzZXIgd2FzIHN1Y2Nlc3Nm
+dWxseSBjcmVhdGVkLgY6CkB1c2VkewY7C1Q=--32f9169ffc72e333416e3fd023904d2e547baa61
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1228604186654", "limit"=>"5"}
+  [4;36;1mUser Load (0.000558)[0m   [0;1mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.000211)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.13456 (7 reqs/sec) | Rendering: 0.00037 (0%) | DB: 0.00077 (0%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228604186654&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2008-12-06 20:56:31) [DELETE]
+  Session ID: BAh7DDoMY3NyZl9pZCIlNDRlZjNmMDNkM2EyNzRjOTc3NDA3NDEzZGM2OGMx
+MzAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGltaXRpCjoPc29ydF9m
+aWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0M6C29mZnNldGkAIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghBU0M7CWkAIiJw
+ZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwciB2lkOwZpCjsIIghB
+U0M7CWkAIhxwZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwciCW5hbWU7BmkK
+OwgiCURFU0M7CWkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7
+ByIHaWQ7CCIIQVNDOwlpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--90009eb31c94fa5562ea451e8b965c296075826c
+  Parameters: {"authenticity_token"=>"ff44ce24f70b7a2f66e2b9b816c85e983a59ed4d", "_method"=>"DELETE", "action"=>"destroy", "id"=>"4", "controller"=>"users"}
+  [4;36;1mUser Load (0.000274)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mUser Destroy (0.000509)[0m   [0m DELETE FROM "users"
+ WHERE "id" = 4
+[0m
+Completed in 0.01183 (84 reqs/sec) | Rendering: 0.00033 (2%) | DB: 0.00078 (6%) | 200 OK [http://localhost/users/4]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 20:56:31) [GET]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOg9zb3J0X2ZpZWxkIgdp
+ZDoKbGltaXRpCjoTc29ydF9kaXJlY3Rpb24iCEFTQzoLb2Zmc2V0aQA6DGNz
+cmZfaWQiJTQ0ZWYzZjAzZDNhMjc0Yzk3NzQwNzQxM2RjNjhjMTMwIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwAiB2lkOwZpCjsHIghBU0M7CGkAIhxw
+ZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgluYW1lOwciCURFU0M7
+CGkAIiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgdp
+ZDsHIghBU0M7CGkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsAIgdp
+ZDsGaQo7ByIIQVNDOwhpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--db8f7d83377e40e8942f4fac7300bb0f33eedb6a
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "controller"=>"users", "sort"=>"id", "_dc"=>"1228604191145"}
+  [4;36;1mUser Load (0.000244)[0m   [0;1mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.000139)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.00960 (104 reqs/sec) | Rendering: 0.00031 (3%) | DB: 0.00038 (3%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228604191145&sort=id&dir=ASC]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2008-12-06 20:56:33) [GET]
+  Session ID: BAh7DDoMY3NyZl9pZCIlNDRlZjNmMDNkM2EyNzRjOTc3NDA3NDEzZGM2OGMx
+MzAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGltaXRpCjoPc29ydF9m
+aWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0M6C29mZnNldGkAIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghBU0M7CWkAIiJw
+ZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwciB2lkOwZpCjsIIghB
+U0M7CWkAIhxwZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwciCW5hbWU7BmkK
+OwgiCURFU0M7CWkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7
+ByIHaWQ7CCIIQVNDOwlpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--90009eb31c94fa5562ea451e8b965c296075826c
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/new
+  [4;36;1mGroup Load (0.000261)[0m   [0;1mSELECT * FROM "groups" [0m
+Rendered users/_form_items (0.00687)
+Completed in 0.01575 (63 reqs/sec) | Rendering: 0.00944 (59%) | DB: 0.00026 (1%) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2008-12-06 20:56:35) [POST]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOg9zb3J0X2ZpZWxkIgdp
+ZDoKbGltaXRpCjoTc29ydF9kaXJlY3Rpb24iCEFTQzoLb2Zmc2V0aQA6DGNz
+cmZfaWQiJTQ0ZWYzZjAzZDNhMjc0Yzk3NzQwNzQxM2RjNjhjMTMwIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwAiB2lkOwZpCjsHIghBU0M7CGkAIhxw
+ZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgluYW1lOwciCURFU0M7
+CGkAIiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgdp
+ZDsHIghBU0M7CGkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsAIgdp
+ZDsGaQo7ByIIQVNDOwhpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--db8f7d83377e40e8942f4fac7300bb0f33eedb6a
+  Parameters: {"user"=>{"name"=>"", "username"=>"", "group_id"=>"", "password"=>"", "email"=>""}, "format"=>"ext_json", "authenticity_token"=>"ff44ce24f70b7a2f66e2b9b816c85e983a59ed4d", "action"=>"create", "controller"=>"users"}
+  [4;35;1mUser Create (0.000457)[0m   [0mINSERT INTO "users" ("name", "updated_at", "username", "group_id", "password", "email", "created_at") VALUES('', '2008-12-06 22:56:35', '', NULL, '', '', '2008-12-06 22:56:35')[0m
+Completed in 0.01652 (60 reqs/sec) | Rendering: 0.00438 (26%) | DB: 0.00046 (2%) | 200 OK [http://localhost/users?format=ext_json]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 20:56:35) [GET]
+  Session ID: BAh7DDoMY3NyZl9pZCIlNDRlZjNmMDNkM2EyNzRjOTc3NDA3NDEzZGM2OGMx
+MzAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGltaXRpCjoPc29ydF9m
+aWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0M6C29mZnNldGkAIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghBU0M7CWkAIiJw
+ZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwciB2lkOwZpCjsIIghB
+U0M7CWkAIhxwZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwciCW5hbWU7BmkK
+OwgiCURFU0M7CWkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7
+ByIHaWQ7CCIIQVNDOwlpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiI1VzZXIgd2FzIHN1Y2Nlc3Nm
+dWxseSBjcmVhdGVkLgY6CkB1c2VkewY7C0Y=--e3ae76a030e62f6d21fa0b8810b62cb4b383858b
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 0.01153 (86 reqs/sec) | Rendering: 0.00807 (70%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 20:56:35) [GET]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOg9zb3J0X2ZpZWxkIgdp
+ZDoKbGltaXRpCjoTc29ydF9kaXJlY3Rpb24iCEFTQzoLb2Zmc2V0aQA6DGNz
+cmZfaWQiJTQ0ZWYzZjAzZDNhMjc0Yzk3NzQwNzQxM2RjNjhjMTMwIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwAiB2lkOwZpCjsHIghBU0M7CGkAIhxw
+ZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgluYW1lOwciCURFU0M7
+CGkAIiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgdp
+ZDsHIghBU0M7CGkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsAIgdp
+ZDsGaQo7ByIIQVNDOwhpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiI1VzZXIgd2FzIHN1Y2Nlc3Nm
+dWxseSBjcmVhdGVkLgY6CkB1c2VkewY7C1Q=--32f9169ffc72e333416e3fd023904d2e547baa61
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1228604195606", "limit"=>"5"}
+  [4;36;1mUser Load (0.003237)[0m   [0;1mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.000216)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.01688 (59 reqs/sec) | Rendering: 0.00040 (2%) | DB: 0.00345 (20%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228604195606&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2008-12-06 20:56:36) [GET]
+  Session ID: BAh7DDoMY3NyZl9pZCIlNDRlZjNmMDNkM2EyNzRjOTc3NDA3NDEzZGM2OGMx
+MzAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGltaXRpCjoPc29ydF9m
+aWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0M6C29mZnNldGkAIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghBU0M7CWkAIiJw
+ZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwciB2lkOwZpCjsIIghB
+U0M7CWkAIhxwZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwciCW5hbWU7BmkK
+OwgiCURFU0M7CWkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7
+ByIHaWQ7CCIIQVNDOwlpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--90009eb31c94fa5562ea451e8b965c296075826c
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/new
+  [4;36;1mGroup Load (0.000292)[0m   [0;1mSELECT * FROM "groups" [0m
+Rendered users/_form_items (0.00727)
+Completed in 0.01675 (59 reqs/sec) | Rendering: 0.00986 (58%) | DB: 0.00029 (1%) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2008-12-06 20:56:38) [POST]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOg9zb3J0X2ZpZWxkIgdp
+ZDoKbGltaXRpCjoTc29ydF9kaXJlY3Rpb24iCEFTQzoLb2Zmc2V0aQA6DGNz
+cmZfaWQiJTQ0ZWYzZjAzZDNhMjc0Yzk3NzQwNzQxM2RjNjhjMTMwIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwAiB2lkOwZpCjsHIghBU0M7CGkAIhxw
+ZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgluYW1lOwciCURFU0M7
+CGkAIiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgdp
+ZDsHIghBU0M7CGkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsAIgdp
+ZDsGaQo7ByIIQVNDOwhpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--db8f7d83377e40e8942f4fac7300bb0f33eedb6a
+  Parameters: {"user"=>{"name"=>"", "username"=>"", "group_id"=>"", "password"=>"", "email"=>""}, "format"=>"ext_json", "authenticity_token"=>"ff44ce24f70b7a2f66e2b9b816c85e983a59ed4d", "action"=>"create", "controller"=>"users"}
+  [4;35;1mUser Create (0.000369)[0m   [0mINSERT INTO "users" ("name", "updated_at", "username", "group_id", "password", "email", "created_at") VALUES('', '2008-12-06 22:56:38', '', NULL, '', '', '2008-12-06 22:56:38')[0m
+Completed in 0.01542 (64 reqs/sec) | Rendering: 0.00449 (29%) | DB: 0.00037 (2%) | 200 OK [http://localhost/users?format=ext_json]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 20:56:38) [GET]
+  Session ID: BAh7DDoMY3NyZl9pZCIlNDRlZjNmMDNkM2EyNzRjOTc3NDA3NDEzZGM2OGMx
+MzAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGltaXRpCjoPc29ydF9m
+aWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0M6C29mZnNldGkAIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghBU0M7CWkAIiJw
+ZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwciB2lkOwZpCjsIIghB
+U0M7CWkAIhxwZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwciCW5hbWU7BmkK
+OwgiCURFU0M7CWkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7
+ByIHaWQ7CCIIQVNDOwlpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiI1VzZXIgd2FzIHN1Y2Nlc3Nm
+dWxseSBjcmVhdGVkLgY6CkB1c2VkewY7C0Y=--e3ae76a030e62f6d21fa0b8810b62cb4b383858b
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 0.01390 (71 reqs/sec) | Rendering: 0.01139 (81%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 20:56:39) [GET]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOg9zb3J0X2ZpZWxkIgdp
+ZDoKbGltaXRpCjoTc29ydF9kaXJlY3Rpb24iCEFTQzoLb2Zmc2V0aQA6DGNz
+cmZfaWQiJTQ0ZWYzZjAzZDNhMjc0Yzk3NzQwNzQxM2RjNjhjMTMwIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwAiB2lkOwZpCjsHIghBU0M7CGkAIhxw
+ZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgluYW1lOwciCURFU0M7
+CGkAIiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgdp
+ZDsHIghBU0M7CGkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsAIgdp
+ZDsGaQo7ByIIQVNDOwhpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiI1VzZXIgd2FzIHN1Y2Nlc3Nm
+dWxseSBjcmVhdGVkLgY6CkB1c2VkewY7C1Q=--32f9169ffc72e333416e3fd023904d2e547baa61
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1228604199129", "limit"=>"5"}
+  [4;36;1mUser Load (0.000435)[0m   [0;1mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.000166)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.01238 (80 reqs/sec) | Rendering: 0.00051 (4%) | DB: 0.00060 (4%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228604199129&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2008-12-06 20:56:51) [DELETE]
+  Session ID: BAh7DDoMY3NyZl9pZCIlNDRlZjNmMDNkM2EyNzRjOTc3NDA3NDEzZGM2OGMx
+MzAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGltaXRpCjoPc29ydF9m
+aWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0M6C29mZnNldGkAIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghBU0M7CWkAIiJw
+ZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwciB2lkOwZpCjsIIghB
+U0M7CWkAIhxwZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwciCW5hbWU7BmkK
+OwgiCURFU0M7CWkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7
+ByIHaWQ7CCIIQVNDOwlpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--90009eb31c94fa5562ea451e8b965c296075826c
+  Parameters: {"authenticity_token"=>"ff44ce24f70b7a2f66e2b9b816c85e983a59ed4d", "_method"=>"DELETE", "action"=>"destroy", "id"=>"6", "controller"=>"users"}
+  [4;36;1mUser Load (0.000249)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mUser Destroy (0.000348)[0m   [0m DELETE FROM "users"
+ WHERE "id" = 6
+[0m
+Completed in 0.04504 (22 reqs/sec) | Rendering: 0.00044 (0%) | DB: 0.00060 (1%) | 200 OK [http://localhost/users/6]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 20:56:51) [GET]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOg9zb3J0X2ZpZWxkIgdp
+ZDoKbGltaXRpCjoTc29ydF9kaXJlY3Rpb24iCEFTQzoLb2Zmc2V0aQA6DGNz
+cmZfaWQiJTQ0ZWYzZjAzZDNhMjc0Yzk3NzQwNzQxM2RjNjhjMTMwIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwAiB2lkOwZpCjsHIghBU0M7CGkAIhxw
+ZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgluYW1lOwciCURFU0M7
+CGkAIiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgdp
+ZDsHIghBU0M7CGkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsAIgdp
+ZDsGaQo7ByIIQVNDOwhpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--db8f7d83377e40e8942f4fac7300bb0f33eedb6a
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "controller"=>"users", "sort"=>"id", "_dc"=>"1228604211397"}
+  [4;36;1mUser Load (0.000382)[0m   [0;1mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.000135)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.01026 (97 reqs/sec) | Rendering: 0.00031 (3%) | DB: 0.00052 (5%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228604211397&sort=id&dir=ASC]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2008-12-06 20:56:55) [DELETE]
+  Session ID: BAh7DDoMY3NyZl9pZCIlNDRlZjNmMDNkM2EyNzRjOTc3NDA3NDEzZGM2OGMx
+MzAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGltaXRpCjoPc29ydF9m
+aWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0M6C29mZnNldGkAIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghBU0M7CWkAIiJw
+ZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwciB2lkOwZpCjsIIghB
+U0M7CWkAIhxwZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwciCW5hbWU7BmkK
+OwgiCURFU0M7CWkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7
+ByIHaWQ7CCIIQVNDOwlpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--90009eb31c94fa5562ea451e8b965c296075826c
+  Parameters: {"authenticity_token"=>"ff44ce24f70b7a2f66e2b9b816c85e983a59ed4d", "_method"=>"DELETE", "action"=>"destroy", "id"=>"5", "controller"=>"users"}
+  [4;36;1mUser Load (0.000414)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mUser Destroy (0.000374)[0m   [0m DELETE FROM "users"
+ WHERE "id" = 5
+[0m
+Completed in 0.01469 (68 reqs/sec) | Rendering: 0.00032 (2%) | DB: 0.00079 (5%) | 200 OK [http://localhost/users/5]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 20:56:55) [GET]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOg9zb3J0X2ZpZWxkIgdp
+ZDoKbGltaXRpCjoTc29ydF9kaXJlY3Rpb24iCEFTQzoLb2Zmc2V0aQA6DGNz
+cmZfaWQiJTQ0ZWYzZjAzZDNhMjc0Yzk3NzQwNzQxM2RjNjhjMTMwIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwAiB2lkOwZpCjsHIghBU0M7CGkAIhxw
+ZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgluYW1lOwciCURFU0M7
+CGkAIiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsAIgdp
+ZDsHIghBU0M7CGkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsAIgdp
+ZDsGaQo7ByIIQVNDOwhpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--db8f7d83377e40e8942f4fac7300bb0f33eedb6a
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "controller"=>"users", "sort"=>"id", "_dc"=>"1228604215331"}
+  [4;36;1mUser Load (0.000245)[0m   [0;1mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.000134)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.00942 (106 reqs/sec) | Rendering: 0.00031 (3%) | DB: 0.00038 (4%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228604215331&sort=id&dir=ASC]
+  [4;36;1mSQL (0.000678)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000389)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081206201745)
+Migrating to CreateGroups (20081206202105)
+Migrating to CreatePersonTypes (20081206213549)
+Migrating to CreateClients (20081206213621)
+Migrating to CreateCategories (20081206233244)
+  [4;36;1mSQL (0.000099)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.002106)[0m   [0mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "parent_id" integer, "lft" integer, "rgt" integer, "text" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.002132)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081206233244')[0m
+  [4;35;1mSQL (0.000477)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000643)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001288)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000073)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.000051)[0m   [0mPRAGMA index_list("clients")[0m
+  [4;36;1mSQL (0.000064)[0m   [0;1mPRAGMA index_list("groups")[0m
+  [4;35;1mSQL (0.000051)[0m   [0mPRAGMA index_list("people")[0m
+  [4;36;1mSQL (0.000050)[0m   [0;1mPRAGMA index_list("person_types")[0m
+  [4;35;1mSQL (0.000068)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mCategory Create (0.000664)[0m   [0;1mINSERT INTO "categories" ("updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('2008-12-06 23:36:09', 'Frameworks', NULL, NULL, NULL, '2008-12-06 23:36:09')[0m
+  [4;35;1mCategory Create (0.000854)[0m   [0mINSERT INTO "categories" ("updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('2008-12-06 23:36:50', 'Ruby on Rails', NULL, NULL, NULL, '2008-12-06 23:36:50')[0m
+  [4;36;1mCategory Load (0.000467)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCategory Load (0.000297)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCategory Update (0.000336)[0m   [0;1mUPDATE "categories" SET "lft" = 1, "rgt" = 4, "updated_at" = '2008-12-06 23:36:51' WHERE "id" = 1[0m
+  [4;35;1mCategory Update (0.000373)[0m   [0mUPDATE "categories" SET "lft" = 2, "rgt" = 3, "parent_id" = 1, "updated_at" = '2008-12-06 23:36:51' WHERE "id" = 2[0m
+  [4;36;1mCategory Create (0.000810)[0m   [0;1mINSERT INTO "categories" ("updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('2008-12-06 23:37:44', 'Model', NULL, NULL, NULL, '2008-12-06 23:37:44')[0m
+  [4;35;1mCategory Load (0.000468)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCategory Load (0.000328)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;35;1mCategory Update (0.000364)[0m   [0mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 3) [0m
+  [4;36;1mCategory Update (0.000130)[0m   [0;1mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 3) [0m
+  [4;35;1mCategory Update (0.000118)[0m   [0mUPDATE "categories" SET "rgt" = 5, "updated_at" = '2008-12-06 23:37:44' WHERE "id" = 2[0m
+  [4;36;1mCategory Update (0.000114)[0m   [0;1mUPDATE "categories" SET "lft" = 3, "rgt" = 4, "parent_id" = 2, "updated_at" = '2008-12-06 23:37:44' WHERE "id" = 3[0m
+  [4;35;1mCategory Create (0.000517)[0m   [0mINSERT INTO "categories" ("updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('2008-12-06 23:37:58', 'View', NULL, NULL, NULL, '2008-12-06 23:37:58')[0m
+  [4;36;1mCategory Load (0.000400)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mCategory Load (0.000347)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 4) [0m
+  [4;36;1mCategory Update (0.000326)[0m   [0;1mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 5) [0m
+  [4;35;1mCategory Update (0.000132)[0m   [0mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 5) [0m
+  [4;36;1mCategory Update (0.000140)[0m   [0;1mUPDATE "categories" SET "rgt" = 7, "updated_at" = '2008-12-06 23:37:58' WHERE "id" = 2[0m
+  [4;35;1mCategory Update (0.000110)[0m   [0mUPDATE "categories" SET "lft" = 5, "rgt" = 6, "parent_id" = 2, "updated_at" = '2008-12-06 23:37:58' WHERE "id" = 4[0m
+  [4;36;1mCategory Create (0.000513)[0m   [0;1mINSERT INTO "categories" ("updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('2008-12-06 23:38:05', 'Controller', NULL, NULL, NULL, '2008-12-06 23:38:05')[0m
+  [4;35;1mCategory Load (0.000411)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCategory Load (0.000285)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCategory Update (0.000325)[0m   [0mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 7) [0m
+  [4;36;1mCategory Update (0.000224)[0m   [0;1mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 7) [0m
+  [4;35;1mCategory Update (0.000111)[0m   [0mUPDATE "categories" SET "rgt" = 9, "updated_at" = '2008-12-06 23:38:05' WHERE "id" = 2[0m
+  [4;36;1mCategory Update (0.000098)[0m   [0;1mUPDATE "categories" SET "lft" = 7, "rgt" = 8, "parent_id" = 2, "updated_at" = '2008-12-06 23:38:05' WHERE "id" = 5[0m
+  [4;35;1mCategory Create (0.000873)[0m   [0mINSERT INTO "categories" ("updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('2008-12-06 23:38:44', 'Ext JS', NULL, NULL, NULL, '2008-12-06 23:38:44')[0m
+  [4;36;1mCategory Load (0.000397)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCategory Load (0.000259)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;36;1mCategory Update (0.000316)[0m   [0;1mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 10) [0m
+  [4;35;1mCategory Update (0.000106)[0m   [0mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 10) [0m
+  [4;36;1mCategory Update (0.000118)[0m   [0;1mUPDATE "categories" SET "rgt" = 12, "updated_at" = '2008-12-06 23:38:44' WHERE "id" = 1[0m
+  [4;35;1mCategory Update (0.000152)[0m   [0mUPDATE "categories" SET "lft" = 10, "rgt" = 11, "parent_id" = 1, "updated_at" = '2008-12-06 23:38:44' WHERE "id" = 6[0m
+  [4;36;1mCategory Create (0.000614)[0m   [0;1mINSERT INTO "categories" ("updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('2008-12-06 23:38:59', 'Tree', NULL, NULL, NULL, '2008-12-06 23:38:59')[0m
+  [4;35;1mCategory Load (0.000473)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCategory Load (0.000286)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 7) [0m
+  [4;35;1mCategory Update (0.000311)[0m   [0mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 12) [0m
+  [4;36;1mCategory Update (0.000113)[0m   [0;1mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 12) [0m
+  [4;35;1mCategory Update (0.000093)[0m   [0mUPDATE "categories" SET "rgt" = 14, "updated_at" = '2008-12-06 23:39:00' WHERE "id" = 1[0m
+  [4;36;1mCategory Update (0.000090)[0m   [0;1mUPDATE "categories" SET "lft" = 12, "rgt" = 13, "parent_id" = 1, "updated_at" = '2008-12-06 23:39:00' WHERE "id" = 7[0m
+  [4;35;1mCategory Create (0.000796)[0m   [0mINSERT INTO "categories" ("updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('2008-12-06 23:39:25', 'TreePanel', NULL, NULL, NULL, '2008-12-06 23:39:25')[0m
+  [4;36;1mCategory Load (0.000436)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 7) [0m
+  [4;35;1mCategory Load (0.000298)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Update (0.000334)[0m   [0;1mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 13) [0m
+  [4;35;1mCategory Update (0.000143)[0m   [0mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 13) [0m
+  [4;36;1mCategory Update (0.000120)[0m   [0;1mUPDATE "categories" SET "rgt" = 15, "updated_at" = '2008-12-06 23:39:25' WHERE "id" = 7[0m
+  [4;35;1mCategory Update (0.000113)[0m   [0mUPDATE "categories" SET "lft" = 13, "rgt" = 14, "parent_id" = 7, "updated_at" = '2008-12-06 23:39:25' WHERE "id" = 8[0m
+  [4;36;1mCategory Create (0.000530)[0m   [0;1mINSERT INTO "categories" ("updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('2008-12-06 23:39:37', 'AsyncTreeNode', NULL, NULL, NULL, '2008-12-06 23:39:37')[0m
+  [4;35;1mCategory Load (0.000457)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 7) [0m
+  [4;36;1mCategory Load (0.000313)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 9) [0m
+  [4;35;1mCategory Update (0.000311)[0m   [0mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 15) [0m
+  [4;36;1mCategory Update (0.000120)[0m   [0;1mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 15) [0m
+  [4;35;1mCategory Update (0.000093)[0m   [0mUPDATE "categories" SET "rgt" = 17, "updated_at" = '2008-12-06 23:39:37' WHERE "id" = 7[0m
+  [4;36;1mCategory Update (0.000107)[0m   [0;1mUPDATE "categories" SET "lft" = 15, "rgt" = 16, "parent_id" = 7, "updated_at" = '2008-12-06 23:39:37' WHERE "id" = 9[0m
+  [4;35;1mCategory Create (0.000547)[0m   [0mINSERT INTO "categories" ("updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('2008-12-06 23:39:46', 'TreeLoader', NULL, NULL, NULL, '2008-12-06 23:39:46')[0m
+  [4;36;1mCategory Load (0.000394)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 7) [0m
+  [4;35;1mCategory Load (0.000295)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 10) [0m
+  [4;36;1mCategory Update (0.000310)[0m   [0;1mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 17) [0m
+  [4;35;1mCategory Update (0.000140)[0m   [0mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 17) [0m
+  [4;36;1mCategory Update (0.000099)[0m   [0;1mUPDATE "categories" SET "rgt" = 19, "updated_at" = '2008-12-06 23:39:46' WHERE "id" = 7[0m
+  [4;35;1mCategory Update (0.000100)[0m   [0mUPDATE "categories" SET "lft" = 17, "rgt" = 18, "parent_id" = 7, "updated_at" = '2008-12-06 23:39:46' WHERE "id" = 10[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-06 21:44:04) [GET]
+  Session ID: BAh7DDoMY3NyZl9pZCIlNDRlZjNmMDNkM2EyNzRjOTc3NDA3NDEzZGM2OGMx
+MzAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGltaXRpCjoPc29ydF9m
+aWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0M6C29mZnNldGkAIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghBU0M7CWkAIiJw
+ZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwciB2lkOwZpCjsIIghB
+U0M7CWkAIhxwZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwciCW5hbWU7BmkK
+OwgiCURFU0M7CWkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7
+ByIHaWQ7CCIIQVNDOwlpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--90009eb31c94fa5562ea451e8b965c296075826c
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"categories"}
+  [4;36;1mCategory Load (0.000662)[0m   [0;1mSELECT * FROM "categories" WHERE (parent_id IS NULL) [0m
+Completed in 0.03689 (27 reqs/sec) | Rendering: 0.02993 (81%) | DB: 0.00066 (1%) | 200 OK [http://localhost/categories.json]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-06 21:48:37) [GET]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOgpsaW1pdGkKOg9zb3J0
+X2ZpZWxkIgdpZDoLb2Zmc2V0aQA6E3NvcnRfZGlyZWN0aW9uIghBU0M6DGNz
+cmZfaWQiJTQ0ZWYzZjAzZDNhMjc0Yzk3NzQwNzQxM2RjNjhjMTMwIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwBpCjsGIgdpZDsHaQA7CCIIQVNDIhxw
+ZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwBpCjsGIgluYW1lOwdpADsIIglE
+RVNDIiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwBpCjsGIgdp
+ZDsHaQA7CCIIQVNDIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsAaQo7
+BiIHaWQ7B2kAOwgiCEFTQyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b0207a1690a7f3b105a797b6cd26fc0d59685478
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+Rendering categories/index
+Completed in 0.00550 (181 reqs/sec) | Rendering: 0.00301 (54%) | DB: 0.00000 (0%) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-06 21:48:38) [GET]
+  Session ID: BAh7DDoMY3NyZl9pZCIlNDRlZjNmMDNkM2EyNzRjOTc3NDA3NDEzZGM2OGMx
+MzAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGltaXRpCjoPc29ydF9m
+aWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0M6C29mZnNldGkAIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghBU0M7CWkAIiJw
+ZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghB
+U0M7CWkAIhxwZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgluYW1l
+OwgiCURFU0M7CWkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7
+ByIHaWQ7CCIIQVNDOwlpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--8ece9a41bc0084d27e7a69e9e07e785854a36296
+  Parameters: {"format"=>"json", "node"=>"0", "action"=>"index", "controller"=>"categories", "_dc"=>"1228607317983"}
+  [4;35;1mCategory Load (0.000650)[0m   [0mSELECT * FROM "categories" WHERE (parent_id IS NULL) [0m
+Completed in 0.00976 (102 reqs/sec) | Rendering: 0.00263 (26%) | DB: 0.00065 (6%) | 200 OK [http://localhost/categories?_dc=1228607317983&format=json&node=0]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-06 21:48:41) [GET]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOgpsaW1pdGkKOg9zb3J0
+X2ZpZWxkIgdpZDoLb2Zmc2V0aQA6E3NvcnRfZGlyZWN0aW9uIghBU0M6DGNz
+cmZfaWQiJTQ0ZWYzZjAzZDNhMjc0Yzk3NzQwNzQxM2RjNjhjMTMwIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwBpCjsGIgdpZDsHaQA7CCIIQVNDIhxw
+ZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwBpCjsGIgluYW1lOwdpADsIIglE
+RVNDIiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwBpCjsGIgdp
+ZDsHaQA7CCIIQVNDIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsAaQo7
+BiIHaWQ7B2kAOwgiCEFTQyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b0207a1690a7f3b105a797b6cd26fc0d59685478
+  Parameters: {"format"=>"json", "node"=>"1", "action"=>"index", "controller"=>"categories", "_dc"=>"1228607321315"}
+  [4;36;1mCategory Load (0.000224)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCategory Load (0.001074)[0m   [0mSELECT * FROM "categories" WHERE (1 = 1 and parent_id = 1) ORDER BY lft[0m
+Completed in 0.01322 (75 reqs/sec) | Rendering: 0.00404 (30%) | DB: 0.00130 (9%) | 200 OK [http://localhost/categories?_dc=1228607321315&format=json&node=1]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-06 21:48:47) [GET]
+  Session ID: BAh7DDoMY3NyZl9pZCIlNDRlZjNmMDNkM2EyNzRjOTc3NDA3NDEzZGM2OGMx
+MzAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGltaXRpCjoPc29ydF9m
+aWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0M6C29mZnNldGkAIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghBU0M7CWkAIiJw
+ZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdpZDsIIghB
+U0M7CWkAIhxwZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgluYW1l
+OwgiCURFU0M7CWkAIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7
+ByIHaWQ7CCIIQVNDOwlpACIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--8ece9a41bc0084d27e7a69e9e07e785854a36296
+  Parameters: {"format"=>"json", "node"=>"2", "action"=>"index", "controller"=>"categories", "_dc"=>"1228607327666"}
+  [4;36;1mCategory Load (0.000226)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mCategory Load (0.000736)[0m   [0mSELECT * FROM "categories" WHERE (1 = 1 and parent_id = 2) ORDER BY lft[0m
+Completed in 0.01033 (96 reqs/sec) | Rendering: 0.00230 (22%) | DB: 0.00096 (9%) | 200 OK [http://localhost/categories?_dc=1228607327666&format=json&node=2]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-06 21:48:49) [GET]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOgpsaW1pdGkKOg9zb3J0
+X2ZpZWxkIgdpZDoLb2Zmc2V0aQA6E3NvcnRfZGlyZWN0aW9uIghBU0M6DGNz
+cmZfaWQiJTQ0ZWYzZjAzZDNhMjc0Yzk3NzQwNzQxM2RjNjhjMTMwIhxncm91
+cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwBpCjsGIgdpZDsHaQA7CCIIQVNDIhxw
+ZW9wbGVfcGFnaW5hdGlvbl9zdGF0ZXsJOwBpCjsGIgluYW1lOwdpADsIIglE
+RVNDIiJwZXJzb25fdHlwZXNfcGFnaW5hdGlvbl9zdGF0ZXsJOwBpCjsGIgdp
+ZDsHaQA7CCIIQVNDIh1jbGllbnRzX3BhZ2luYXRpb25fc3RhdGV7CTsAaQo7
+BiIHaWQ7B2kAOwgiCEFTQyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b0207a1690a7f3b105a797b6cd26fc0d59685478
+  Parameters: {"format"=>"json", "node"=>"7", "action"=>"index", "controller"=>"categories", "_dc"=>"1228607329401"}
+  [4;36;1mCategory Load (0.000232)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 7) [0m
+  [4;35;1mCategory Load (0.000766)[0m   [0mSELECT * FROM "categories" WHERE (1 = 1 and parent_id = 7) ORDER BY lft[0m
+Completed in 0.01014 (98 reqs/sec) | Rendering: 0.00234 (23%) | DB: 0.00100 (9%) | 200 OK [http://localhost/categories?_dc=1228607329401&format=json&node=7]

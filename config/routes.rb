@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :categories
+
   map.resources :clients
 
   map.resources :person_types

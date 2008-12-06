@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Ext.tree with Ruby on Rails Example</title>
+  <%= stylesheet_link_tag "../ext/resources/css/ext-all.css" %>
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag "../ext/adapter/prototype/ext-prototype-adapter.js" %>
+  <%= javascript_include_tag "../ext/ext-all.js" %>
+</head>
+<body>
+  <div id="category-tree" style="padding:20px"></div>
+  <% javascript_tag do -%>
+    Ext.onReady(function(){
+      // create initial root node
+      root = new Ext.tree.AsyncTreeNode({
+        text: 'Invisible Root',
+        id:'0'
+      });
+      // create the tree
+      new Ext.tree.TreePanel({
+        loader: new Ext.tree.TreeLoader({
+          url:'/categories',
+          requestMethod:'GET',
+          baseParams:{format:'json'}
+        }),
+        renderTo:'category-tree',
+        root: root,
+        rootVisible:false
+      });
+      // expand invisible root node to trigger load
+      // of the first level of actual data
+      root.expand();
+    });
+  <% end -%>
+</body>
+</html>
