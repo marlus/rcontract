@@ -1,0 +1,93 @@
+  [4;36;1mSQL (0.000323)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000171)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.003681)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.002800)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000339)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000196)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081206161645)
+  [4;36;1mSQL (0.002705)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "email" varchar(255), "usuario" varchar(255), "senha" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.002606)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081206161645')[0m
+  [4;36;1mSQL (0.000291)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000172)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000213)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000056)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 14:17:44) [GET]
+  Session ID: 827820795529fbec763671ad5c5dbe90
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 0.05270 (18 reqs/sec) | Rendering: 0.04999 (94%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 14:17:45) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMDg5MGMwMDkzOWExMmUyNGMxMmFjOWE5NmE4ZWRk
+OWUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--33f7eb7a1e0d6eb5550f5ef813193e6bf15bdafe
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1228580265813", "limit"=>"5"}
+  [4;36;1mUser Load (0.000173)[0m   [0;1mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.000185)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.00989 (101 reqs/sec) | Rendering: 0.00032 (3%) | DB: 0.00036 (3%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228580265813&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2008-12-06 14:17:48) [GET]
+  Session ID: BAh7CCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOgpsaW1pdGkKOg9zb3J0
+X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rpb24iCEFTQzoLb2Zmc2V0aQA6DGNz
+cmZfaWQiJTA4OTBjMDA5MzlhMTJlMjRjMTJhYzlhOTZhOGVkZDllIgpmbGFz
+aElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpA
+dXNlZHsA--737c63889571137cd7e723932f9e904a762f9d9c
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/new
+Rendered users/_form_items (0.00037)
+Completed in 0.01040 (96 reqs/sec) | Rendering: 0.00428 (41%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2008-12-06 14:18:09) [POST]
+  Session ID: BAh7CCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOgpsaW1pdGkKOg9zb3J0
+X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rpb24iCEFTQzoLb2Zmc2V0aQA6DGNz
+cmZfaWQiJTA4OTBjMDA5MzlhMTJlMjRjMTJhYzlhOTZhOGVkZDllIgpmbGFz
+aElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpA
+dXNlZHsA--737c63889571137cd7e723932f9e904a762f9d9c
+  Parameters: {"user"=>{"nome"=>"Marlus Cadanus da Costa", "usuario"=>"marlus", "email"=>"marluscadanus@gmail.com", "senha"=>"qwe123"}, "format"=>"ext_json", "authenticity_token"=>"92d4f05c9585af338cb5ac3a2d3b6d0d0cdd65b7", "action"=>"create", "controller"=>"users"}
+  [4;36;1mUser Create (0.000446)[0m   [0;1mINSERT INTO "users" ("updated_at", "nome", "usuario", "email", "senha", "created_at") VALUES('2008-12-06 16:18:09', 'Marlus Cadanus da Costa', 'marlus', 'marluscadanus@gmail.com', 'qwe123', '2008-12-06 16:18:09')[0m
+Completed in 0.01645 (60 reqs/sec) | Rendering: 0.00401 (24%) | DB: 0.00045 (2%) | 200 OK [http://localhost/users?format=ext_json]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 14:18:09) [GET]
+  Session ID: BAh7CCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOgpsaW1pdGkKOg9zb3J0
+X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rpb24iCEFTQzoLb2Zmc2V0aQA6DGNz
+cmZfaWQiJTA4OTBjMDA5MzlhMTJlMjRjMTJhYzlhOTZhOGVkZDllIgpmbGFz
+aElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25v
+dGljZSIjVXNlciB3YXMgc3VjY2Vzc2Z1bGx5IGNyZWF0ZWQuBjoKQHVzZWR7
+BjsLRg==--48b2465d16804edbb8df110f83c2a3180c43e236
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 0.00962 (103 reqs/sec) | Rendering: 0.00700 (72%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 14:18:10) [GET]
+  Session ID: BAh7CCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOgpsaW1pdGkKOg9zb3J0
+X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rpb24iCEFTQzoLb2Zmc2V0aQA6DGNz
+cmZfaWQiJTA4OTBjMDA5MzlhMTJlMjRjMTJhYzlhOTZhOGVkZDllIgpmbGFz
+aElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25v
+dGljZSIjVXNlciB3YXMgc3VjY2Vzc2Z1bGx5IGNyZWF0ZWQuBjoKQHVzZWR7
+BjsLVA==--a0bb06d4c0906756245d8fbad975b154ef4ea6f3
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1228580290154", "limit"=>"5"}
+  [4;35;1mUser Load (0.000279)[0m   [0mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000167)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.09934 (10 reqs/sec) | Rendering: 0.00040 (0%) | DB: 0.00045 (0%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228580290154&start=0&limit=5&sort=id&dir=ASC]
