@@ -1,13 +1,15 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  nome: MyString
+  username: MyString
+  password: MyString
+  name: MyString
   email: MyString
-  usuario: MyString
-  senha: MyString
+  group_id: 1
 
 two:
-  nome: MyString
+  username: MyString
+  password: MyString
+  name: MyString
   email: MyString
-  usuario: MyString
-  senha: MyString
+  group_id: 1

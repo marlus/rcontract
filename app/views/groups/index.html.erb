@@ -1,0 +1,9 @@
+<div id="group-grid"></div>
+<%= ext_datastore_for 'Group' %>
+<% javascript_tag do -%>
+  var group_column_model = new Ext.grid.ColumnModel([
+    {id: 'id', header: "#", width: 20, dataIndex: 'id'},
+    {header: 'Name', dataIndex: 'group[name]'}
+  ]);
+<% end -%>
+<%= ext_grid_for 'Group', :element => 'group-grid' %>

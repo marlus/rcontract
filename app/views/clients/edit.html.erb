@@ -1,0 +1,6 @@
+<div id="client-form"></div>
+<%= render :partial => 'form_items', :object => :client_form_items %>
+<%= ext_form_for 'Client',
+                 :element => 'client-form',
+                 :form_items => :client_form_items,
+                 :mode => :edit %>

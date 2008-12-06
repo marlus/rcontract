@@ -1,0 +1,6 @@
+<div id="person_type-form"></div>
+<%= render :partial => 'form_items', :object => :person_type_form_items %>
+<%= ext_form_for 'PersonType',
+                 :element => 'person_type-form',
+                 :form_items => :person_type_form_items,
+                 :mode => :new %>

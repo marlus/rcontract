@@ -1,0 +1,6 @@
+<div id="group-form"></div>
+<%= render :partial => 'form_items', :object => :group_form_items %>
+<%= ext_form_for 'Group',
+                 :element => 'group-form',
+                 :form_items => :group_form_items,
+                 :mode => :edit %>
