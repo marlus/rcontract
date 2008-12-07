@@ -4799,3 +4799,844 @@ Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b0207a1690a7f3b105a797b6cd26fc0d596854
   [4;36;1mCategory Load (0.000232)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 7) [0m
   [4;35;1mCategory Load (0.000766)[0m   [0mSELECT * FROM "categories" WHERE (1 = 1 and parent_id = 7) ORDER BY lft[0m
 Completed in 0.01014 (98 reqs/sec) | Rendering: 0.00234 (23%) | DB: 0.00100 (9%) | 200 OK [http://localhost/categories?_dc=1228607329401&format=json&node=7]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2008-12-06 23:24:47) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoPc29ydF9maWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0M6C29m
+ZnNldGkAOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--8a274efd2c8d02178b52613557fdae0eccb5422d
+  Parameters: {"action"=>"index", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.02592 (38 reqs/sec) | Rendering: 0.02324 (89%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2008-12-06 23:24:53) [POST]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"username"=>"psaux", "action"=>"do_login", "controller"=>"login", "password"=>"qwe123"}
+Completed in 0.00302 (330 reqs/sec) | Rendering: 0.00056 (18%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/do_login]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2008-12-06 23:25:06) [POST]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"loginPassword"=>"qwe123", "action"=>"login", "id"=>"do_login", "controller"=>"login", "loginUsername"=>"psaux"}
+Rendering login/login
+Completed in 0.00370 (270 reqs/sec) | Rendering: 0.00140 (37%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login/do_login]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2008-12-06 23:26:10) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"index", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.00863 (115 reqs/sec) | Rendering: 0.00625 (72%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2008-12-06 23:26:16) [POST]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"loginPassword"=>"asd", "action"=>"do_login", "controller"=>"login", "loginUsername"=>"asd"}
+Completed in 0.00282 (355 reqs/sec) | Rendering: 0.00057 (20%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/do_login]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-12-06 23:26:18) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"users"}
+Redirected to http://localhost:3000/login/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 0.00069 (1457 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/users/index]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2008-12-06 23:26:18) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"login", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.00441 (226 reqs/sec) | Rendering: 0.00220 (49%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2008-12-06 23:26:26) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"login", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.00463 (215 reqs/sec) | Rendering: 0.00234 (50%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2008-12-06 23:26:31) [POST]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"loginPassword"=>"asd", "action"=>"do_login", "controller"=>"login", "loginUsername"=>"asd"}
+Completed in 0.00296 (338 reqs/sec) | Rendering: 0.00055 (18%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/do_login]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-12-06 23:26:40) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"users"}
+Redirected to http://localhost:3000/login/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 0.00041 (2427 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/users/index]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2008-12-06 23:26:40) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"login", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.00467 (214 reqs/sec) | Rendering: 0.00242 (51%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2008-12-06 23:26:43) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"login", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.00474 (211 reqs/sec) | Rendering: 0.00239 (50%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2008-12-06 23:26:47) [POST]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"loginPassword"=>"asd", "action"=>"do_login", "controller"=>"login", "loginUsername"=>"asd"}
+Completed in 0.00273 (365 reqs/sec) | Rendering: 0.00051 (18%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/do_login]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-12-06 23:26:52) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"users"}
+Redirected to http://localhost:3000/login/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 0.00042 (2381 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/users/index]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2008-12-06 23:26:52) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"login", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.00452 (221 reqs/sec) | Rendering: 0.00222 (49%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2008-12-06 23:28:34) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"login", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.08274 (12 reqs/sec) | Rendering: 0.08043 (97%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2008-12-06 23:28:47) [POST]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"loginPassword"=>"qwe123", "action"=>"do_login", "controller"=>"login", "loginUsername"=>"psaux"}
+  [4;36;1mUser Load (0.393469)[0m   [0;1mSELECT * FROM "users" WHERE (username = NULL) LIMIT 1[0m
+Completed in 0.40057 (2 reqs/sec) | Rendering: 0.00074 (0%) | DB: 0.39347 (98%) | 200 OK [http://localhost/login/do_login]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-12-06 23:28:48) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"users"}
+Redirected to http://localhost:3000/login/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 0.00044 (2251 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/users/index]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2008-12-06 23:28:48) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"login", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.00452 (221 reqs/sec) | Rendering: 0.00223 (49%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2008-12-06 23:31:39) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"login", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.00484 (206 reqs/sec) | Rendering: 0.00244 (50%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2008-12-06 23:31:50) [POST]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"loginPassword"=>"qwe123", "action"=>"do_login", "controller"=>"login", "loginUsername"=>"psaux"}
+  [4;35;1mUser Load (0.000492)[0m   [0mSELECT * FROM "users" WHERE (username = NULL) LIMIT 1[0m
+Completed in 0.00671 (149 reqs/sec) | Rendering: 0.00052 (7%) | DB: 0.00049 (7%) | 200 OK [http://localhost/login/do_login]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2008-12-06 23:33:01) [POST]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"loginPassword"=>"qwe123", "action"=>"do_login", "controller"=>"login", "loginUsername"=>"murilo"}
+  [4;36;1mUser Load (0.000557)[0m   [0;1mSELECT * FROM "users" WHERE (username = NULL) LIMIT 1[0m
+Completed in 0.00670 (149 reqs/sec) | Rendering: 0.00052 (7%) | DB: 0.00056 (8%) | 200 OK [http://localhost/login/do_login]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2008-12-06 23:34:04) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"login", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.00912 (109 reqs/sec) | Rendering: 0.00655 (71%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2008-12-06 23:34:11) [POST]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"username"=>"murilo", "action"=>"do_login", "controller"=>"login", "password"=>"qwe123"}
+  [4;35;1mUser Load (0.000755)[0m   [0mSELECT * FROM "users" WHERE (username = 'murilo') LIMIT 1[0m
+Completed in 0.01071 (93 reqs/sec) | Rendering: 0.00055 (5%) | DB: 0.00076 (7%) | 200 OK [http://localhost/login/do_login]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-12-06 23:34:12) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ee67133e40597d96335b2c178a127574b3b06f14
+  Parameters: {"action"=>"show", "id"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.000183)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 0) [0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=index):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:1383:in `find_one'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:1366:in `find_from_ids'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:541:in `find'
+    /app/controllers/users_controller.rb:72:in `find_user'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:173:in `send'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:173:in `evaluate_method'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:161:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:191:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:591:in `run_before_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:577:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 23:34:35) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ee67133e40597d96335b2c178a127574b3b06f14
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 0.01774 (56 reqs/sec) | Rendering: 0.01130 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 23:34:36) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ee67133e40597d96335b2c178a127574b3b06f14
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1228613676617", "limit"=>"5"}
+  [4;35;1mUser Load (0.000269)[0m   [0mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.09063 (11 reqs/sec) | Rendering: 0.00047 (0%) | DB: 0.00041 (0%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228613676617&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing LoginController#do_logout (for 127.0.0.1 at 2008-12-06 23:37:44) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ee67133e40597d96335b2c178a127574b3b06f14
+  Parameters: {"action"=>"do_logout", "controller"=>"login"}
+Redirected to http://localhost:3000/login/login
+Completed in 0.00277 (361 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/login/do_logout]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2008-12-06 23:37:44) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"login", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.00881 (113 reqs/sec) | Rendering: 0.00622 (70%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2008-12-06 23:37:51) [POST]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"username"=>"murilo", "action"=>"do_login", "controller"=>"login", "password"=>"qwe123"}
+  [4;35;1mUser Load (0.000719)[0m   [0mSELECT * FROM "users" WHERE (username = 'murilo') LIMIT 1[0m
+Completed in 0.00948 (105 reqs/sec) | Rendering: 0.00055 (5%) | DB: 0.00072 (7%) | 200 OK [http://localhost/login/do_login]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 23:37:52) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ee67133e40597d96335b2c178a127574b3b06f14
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 0.01025 (97 reqs/sec) | Rendering: 0.00753 (73%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 23:37:54) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ee67133e40597d96335b2c178a127574b3b06f14
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1228613873982", "limit"=>"5"}
+  [4;36;1mUser Load (0.000271)[0m   [0;1mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.000163)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.01155 (86 reqs/sec) | Rendering: 0.00037 (3%) | DB: 0.00043 (3%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228613873982&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing LoginController#do_logout (for 127.0.0.1 at 2008-12-06 23:38:45) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ee67133e40597d96335b2c178a127574b3b06f14
+  Parameters: {"action"=>"do_logout", "controller"=>"login"}
+Redirected to http://localhost:3000/login/login
+Completed in 0.00249 (401 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/login/do_logout]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2008-12-06 23:38:45) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"login", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.00481 (208 reqs/sec) | Rendering: 0.00243 (50%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2008-12-06 23:38:57) [POST]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"username"=>"murilo", "action"=>"do_login", "controller"=>"login", "password"=>"qwe123"}
+  [4;36;1mUser Load (0.001061)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'murilo') LIMIT 1[0m
+Completed in 0.01015 (98 reqs/sec) | Rendering: 0.00059 (5%) | DB: 0.00106 (10%) | 200 OK [http://localhost/login/do_login]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 23:38:59) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ee67133e40597d96335b2c178a127574b3b06f14
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 0.01050 (95 reqs/sec) | Rendering: 0.00760 (72%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 23:39:00) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ee67133e40597d96335b2c178a127574b3b06f14
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1228613940681", "limit"=>"5"}
+  [4;35;1mUser Load (0.000323)[0m   [0mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000164)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.02782 (35 reqs/sec) | Rendering: 0.00045 (1%) | DB: 0.00049 (1%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228613940681&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing LoginController#do_logout (for 127.0.0.1 at 2008-12-06 23:41:49) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ee67133e40597d96335b2c178a127574b3b06f14
+  Parameters: {"action"=>"do_logout", "controller"=>"login"}
+Redirected to http://localhost:3000/login/login
+Completed in 0.00260 (385 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/login/do_logout]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2008-12-06 23:41:49) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"login", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.00450 (222 reqs/sec) | Rendering: 0.00224 (49%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2008-12-06 23:42:00) [POST]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"username"=>"murilo", "action"=>"do_login", "controller"=>"login", "password"=>"qwe123"}
+  [4;35;1mUser Load (0.015335)[0m   [0mSELECT * FROM "users" WHERE (username = 'murilo') LIMIT 1[0m
+Completed in 0.02481 (40 reqs/sec) | Rendering: 0.00071 (2%) | DB: 0.01534 (61%) | 200 OK [http://localhost/login/do_login]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 23:42:01) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ee67133e40597d96335b2c178a127574b3b06f14
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 0.10236 (9 reqs/sec) | Rendering: 0.09936 (97%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 23:42:03) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ee67133e40597d96335b2c178a127574b3b06f14
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1228614123016", "limit"=>"5"}
+  [4;36;1mUser Load (0.000297)[0m   [0;1mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.000157)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.01281 (78 reqs/sec) | Rendering: 0.00043 (3%) | DB: 0.00045 (3%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228614123016&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2008-12-06 23:42:10) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ee67133e40597d96335b2c178a127574b3b06f14
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/new
+  [4;36;1mGroup Load (0.000312)[0m   [0;1mSELECT * FROM "groups" [0m
+Rendered users/_form_items (0.00817)
+Completed in 0.01914 (52 reqs/sec) | Rendering: 0.01225 (64%) | DB: 0.00031 (1%) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2008-12-06 23:42:39) [POST]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ee67133e40597d96335b2c178a127574b3b06f14
+  Parameters: {"user"=>{"name"=>"psaux", "username"=>"Marlus Cadanus da Costa", "group_id"=>"1", "password"=>"qwe123", "email"=>"marluscadanus@gmail.com"}, "format"=>"ext_json", "action"=>"create", "controller"=>"users"}
+  [4;35;1mUser Create (0.000496)[0m   [0mINSERT INTO "users" ("name", "updated_at", "username", "group_id", "password", "email", "created_at") VALUES('psaux', '2008-12-07 01:42:39', 'Marlus Cadanus da Costa', 1, 'qwe123', 'marluscadanus@gmail.com', '2008-12-07 01:42:39')[0m
+Completed in 0.02191 (45 reqs/sec) | Rendering: 0.00784 (35%) | DB: 0.00050 (2%) | 200 OK [http://localhost/users?format=ext_json]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 23:42:39) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIjVXNl
+ciB3YXMgc3VjY2Vzc2Z1bGx5IGNyZWF0ZWQuBjoKQHVzZWR7BjsNRg==--98b7d9c994cb1b3ca536ab96647362db5019a8db
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 0.01217 (82 reqs/sec) | Rendering: 0.00935 (76%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 23:42:41) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIjVXNl
+ciB3YXMgc3VjY2Vzc2Z1bGx5IGNyZWF0ZWQuBjoKQHVzZWR7BjsNVA==--c291c254d6b91cb1cbd94f2690f97bbecda4d940
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1228614160994", "limit"=>"5"}
+  [4;36;1mUser Load (0.000537)[0m   [0;1mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.000171)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.02578 (38 reqs/sec) | Rendering: 0.00043 (1%) | DB: 0.00071 (2%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228614160994&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2008-12-06 23:42:49) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ee67133e40597d96335b2c178a127574b3b06f14
+  Parameters: {"action"=>"edit", "id"=>"7", "controller"=>"users"}
+  [4;36;1mUser Load (0.000251)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+Rendering template within layouts/users
+Rendering users/edit
+  [4;35;1mGroup Load (0.000412)[0m   [0mSELECT * FROM "groups" [0m
+Rendered users/_form_items (0.01104)
+Completed in 0.11456 (8 reqs/sec) | Rendering: 0.02951 (25%) | DB: 0.00066 (0%) | 200 OK [http://localhost/users/7/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2008-12-06 23:43:05) [PUT]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ee67133e40597d96335b2c178a127574b3b06f14
+  Parameters: {"user"=>{"name"=>"Marlus Cadanus da Costa", "username"=>"psaux", "group_id"=>"1", "password"=>"qwe123", "email"=>"marluscadanus@gmail.com"}, "format"=>"ext_json", "_method"=>"PUT", "action"=>"update", "id"=>"7", "controller"=>"users"}
+  [4;36;1mUser Load (0.000350)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mUser Update (0.000631)[0m   [0mUPDATE "users" SET "username" = 'psaux', "name" = 'Marlus Cadanus da Costa', "updated_at" = '2008-12-07 01:43:05' WHERE "id" = 7[0m
+Completed in 0.01807 (55 reqs/sec) | Rendering: 0.00431 (23%) | DB: 0.00098 (5%) | 200 OK [http://localhost/users/7?format=ext_json]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 23:43:05) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIjVXNl
+ciB3YXMgc3VjY2Vzc2Z1bGx5IHVwZGF0ZWQuBjoKQHVzZWR7BjsNRg==--91dc458778ef2e0b9cde52424da9f2b63da7d297
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 0.01431 (69 reqs/sec) | Rendering: 0.01085 (75%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 23:43:07) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIjVXNl
+ciB3YXMgc3VjY2Vzc2Z1bGx5IHVwZGF0ZWQuBjoKQHVzZWR7BjsNVA==--6186f05a7fabf4b33294a76c6a5dd02509ff23fd
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1228614187192", "limit"=>"5"}
+  [4;36;1mUser Load (0.000435)[0m   [0;1mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.000365)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.01346 (74 reqs/sec) | Rendering: 0.00046 (3%) | DB: 0.00080 (5%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228614187192&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing LoginController#do_logout (for 127.0.0.1 at 2008-12-06 23:43:12) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ee67133e40597d96335b2c178a127574b3b06f14
+  Parameters: {"action"=>"do_logout", "controller"=>"login"}
+Redirected to http://localhost:3000/login/login
+Completed in 0.00258 (387 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/login/do_logout]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2008-12-06 23:43:12) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"login", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.00448 (223 reqs/sec) | Rendering: 0.00225 (50%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2008-12-06 23:45:34) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"login", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.00782 (127 reqs/sec) | Rendering: 0.00545 (69%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2008-12-06 23:45:44) [POST]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"username"=>"psaux", "action"=>"do_login", "controller"=>"login", "password"=>"qwe123"}
+  [4;36;1mUser Load (0.006611)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'psaux') LIMIT 1[0m
+Completed in 0.01603 (62 reqs/sec) | Rendering: 0.00070 (4%) | DB: 0.00661 (41%) | 200 OK [http://localhost/login/do_login]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 23:45:44) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--3f8eae6abe65069cf9f7fb084d87f0a5eb4dfdc1
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 0.01523 (65 reqs/sec) | Rendering: 0.01158 (76%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 23:45:45) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--3f8eae6abe65069cf9f7fb084d87f0a5eb4dfdc1
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1228614345913", "limit"=>"5"}
+  [4;35;1mUser Load (0.000374)[0m   [0mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000154)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.01223 (81 reqs/sec) | Rendering: 0.00042 (3%) | DB: 0.00053 (4%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228614345913&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing LoginController#do_logout (for 127.0.0.1 at 2008-12-06 23:46:03) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--3f8eae6abe65069cf9f7fb084d87f0a5eb4dfdc1
+  Parameters: {"action"=>"do_logout", "controller"=>"login"}
+Redirected to http://localhost:3000/login/login
+Completed in 0.00271 (369 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/login/do_logout]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2008-12-06 23:46:03) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"login", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.00433 (230 reqs/sec) | Rendering: 0.00208 (47%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2008-12-06 23:46:10) [POST]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"username"=>"psaux", "action"=>"do_login", "controller"=>"login", "password"=>"qwe123"}
+  [4;35;1mUser Load (0.000622)[0m   [0mSELECT * FROM "users" WHERE (username = 'psaux') LIMIT 1[0m
+Completed in 0.00877 (114 reqs/sec) | Rendering: 0.00052 (5%) | DB: 0.00062 (7%) | 200 OK [http://localhost/login/do_login]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 23:46:10) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--3f8eae6abe65069cf9f7fb084d87f0a5eb4dfdc1
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 0.01542 (64 reqs/sec) | Rendering: 0.01264 (81%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-06 23:46:12) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--3f8eae6abe65069cf9f7fb084d87f0a5eb4dfdc1
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1228614372124", "limit"=>"5"}
+  [4;36;1mUser Load (0.000376)[0m   [0;1mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.000154)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.01178 (84 reqs/sec) | Rendering: 0.00038 (3%) | DB: 0.00053 (4%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228614372124&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing LoginController#do_logout (for 127.0.0.1 at 2008-12-07 00:42:24) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--3f8eae6abe65069cf9f7fb084d87f0a5eb4dfdc1
+  Parameters: {"action"=>"do_logout", "controller"=>"login"}
+Redirected to http://localhost:3000/login/login
+Completed in 0.00249 (401 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/login/do_logout]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2008-12-07 00:42:24) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"action"=>"login", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.00413 (241 reqs/sec) | Rendering: 0.00188 (45%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2008-12-07 00:42:32) [POST]
+  Session ID: BAh7CjoMdXNlcl9pZDAiG3VzZXJzX3BhZ2luYXRpb25fc3RhdGV7CToKbGlt
+aXRpCjoLb2Zmc2V0aQA6D3NvcnRfZmllbGQiB2lkOhNzb3J0X2RpcmVjdGlv
+biIIQVNDOg5yZXR1cm5fdG8iES91c2Vycy9pbmRleDoMY3NyZl9pZCIlNTY3
+OWU1ZjY0ZjA0OTMzZTliYTgxZWYyMDJhM2RhMGQiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c27098a9aab2865808ff20819715ea16a4717de6
+  Parameters: {"username"=>"psaux", "action"=>"do_login", "controller"=>"login", "password"=>"qwe123"}
+  [4;36;1mUser Load (0.031484)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'psaux') LIMIT 1[0m
+Completed in 0.04090 (24 reqs/sec) | Rendering: 0.00068 (1%) | DB: 0.03148 (76%) | 200 OK [http://localhost/login/do_login]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-07 00:42:33) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--3f8eae6abe65069cf9f7fb084d87f0a5eb4dfdc1
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 0.01293 (77 reqs/sec) | Rendering: 0.00979 (75%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-07 00:42:35) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6C29mZnNldGkAOg9zb3J0X2ZpZWxkIgdpZDoTc29ydF9kaXJlY3Rp
+b24iCEFTQzoOcmV0dXJuX3RvIhEvdXNlcnMvaW5kZXg6DGNzcmZfaWQiJTU2
+NzllNWY2NGYwNDkzM2U5YmE4MWVmMjAyYTNkYTBkIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--3f8eae6abe65069cf9f7fb084d87f0a5eb4dfdc1
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1228617755546", "limit"=>"5"}
+  [4;35;1mUser Load (0.000365)[0m   [0mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000198)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.01542 (64 reqs/sec) | Rendering: 0.00043 (2%) | DB: 0.00056 (3%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228617755546&start=0&limit=5&sort=id&dir=ASC]

@@ -77,4 +77,8 @@ class UsersController < ApplicationController
       @users = User.find(:all, options_from_pagination_state(pagination_state).merge(options_from_search(User)))
     end
 
+    def secure?
+      true
+    end
+
 end
