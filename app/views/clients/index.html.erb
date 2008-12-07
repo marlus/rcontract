@@ -1,4 +1,3 @@
-<div id="client-grid"></div>
 <%= ext_datastore_for 'Client' %>
 <% javascript_tag do -%>
   var client_column_model = new Ext.grid.ColumnModel([
@@ -7,4 +6,4 @@
     {header: 'Tipo pessoa', dataIndex: 'client[person_type_id]'}
   ]);
 <% end -%>
-<%= ext_grid_for 'Client', :element => 'client-grid' %>
+<%= ext_grid_for 'Client', :element => 'center1' %>

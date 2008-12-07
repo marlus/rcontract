@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
 
+  layout "home"
   before_filter :find_group, :only => [ :show, :edit, :update, :destroy ]
 
   # GET /groups
