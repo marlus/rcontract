@@ -31,8 +31,9 @@ module ExtScaffoldCoreExtensions
                   sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
                   renderTo:   '#{element}',
                   title:      '#{panel_title}',
-                  width:      #{options[:width] || 540},
-                  height:     #{options[:height] || 208},
+                  //width:      #{options[:width] || 540},
+                  //height:     #{options[:height] || 208},
+                  height: Ext.get('#{element}').getHeight(),
                   stripeRows: #{options[:stripe_rows] == false ? 'false' : 'true'},
                   viewConfig: {
                       forceFit:#{options[:force_fit] == false ? 'false' : 'true'}
@@ -40,29 +41,29 @@ module ExtScaffoldCoreExtensions
 
                   // inline toolbars
                   tbar:[{
-                      text:'New...',
-                      tooltip:'Create new #{object_name.to_s.demodulize.humanize}',
+                      text:'Adicionar',
+                      tooltip:'Adicionar novo #{object_name.to_s.demodulize.humanize}',
                       handler: function(){
                                  grid.suspendEvents();
                                  window.location.href = '#{new_member_path}';
                                },
                       iconCls:'add'
                   }, '-', {
-                      text:'Edit...',
-                      tooltip:'Edit selected #{object_name.to_s.demodulize.humanize}',
+                      text:'Editar',
+                      tooltip:'Edita o selecionado #{object_name.to_s.demodulize.humanize}',
                       handler: function(){
                                  var selected = grid.getSelectionModel().getSelected();
                                  if(selected) {
                                    grid.suspendEvents();
                                    window.location.href = '#{collection_path}/' + selected.data.id + '/edit';
                                  } else { 
-                                   alert('Please select a row first.');
+                                   alert('Por favor selecione uma linha.');
                                  }
                                },
                       iconCls:'edit'
                   },'-',{
-                      text:'Delete...',
-                      tooltip:'Delete selected #{object_name.to_s.demodulize.humanize}',
+                      text:'Remover',
+                      tooltip:'Remove o selecionado #{object_name.to_s.demodulize.humanize}',
                       handler: function(){
                                  var selected = grid.getSelectionModel().getSelected();
                                  if(selected) {
@@ -79,7 +80,7 @@ module ExtScaffoldCoreExtensions
                                       });
                                    }
                                  } else { 
-                                   alert('Please select a row first.');
+                                   alert('Por favor selecione uma linha.');
                                  }
                                },
                       iconCls:'remove'
