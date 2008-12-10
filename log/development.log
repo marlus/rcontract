@@ -692,3 +692,564 @@ OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b3cd883bac327a0add37779b3e0b43d53e593895
   [4;36;1mGroup Load (0.000264)[0m   [0;1mSELECT * FROM "groups" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
   [4;35;1mSQL (0.000177)[0m   [0mSELECT count(*) AS count_all FROM "groups" [0m
 Completed in 0.01016 (98 reqs/sec) | Rendering: 0.00010 (0%) | DB: 0.00044 (4%) | 200 OK [http://localhost/groups?format=ext_json&_dc=1228672804727&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2008-12-09 22:50:29) [GET]
+  Session ID: cac8723662d09ad5c3799ab1f570e9eb
+  Parameters: {"action"=>"index", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.01075 (93 reqs/sec) | Rendering: 0.00839 (78%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login]
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2008-12-09 22:51:35) [GET]
+  Session ID: 6f976293cb6d88eecda9e5750e4b78ba
+  Parameters: {"action"=>"properties", "controller"=>"rails/info"}
+  [4;36;1mSQL (0.000995)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000491)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 0.07783 (12 reqs/sec) | Rendering: 0.00145 (1%) | DB: 0.00149 (1%) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2008-12-09 22:51:41) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--73d391b025265fd95eda1a5d8916733f41640db6
+  Parameters: {"action"=>"index", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.01318 (75 reqs/sec) | Rendering: 0.01097 (83%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2008-12-09 22:51:51) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--73d391b025265fd95eda1a5d8916733f41640db6
+  Parameters: {"username"=>"murilo", "action"=>"do_login", "controller"=>"login", "password"=>"arise00"}
+  [4;36;1mUser Load (0.000613)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'murilo') LIMIT 1[0m
+Completed in 0.00976 (102 reqs/sec) | Rendering: 0.00055 (5%) | DB: 0.00061 (6%) | 200 OK [http://localhost/login/do_login]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2008-12-09 22:52:02) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsGOgtub3RpY2UiIVVzdcOhcmlvIG91IHNlbmhhIGluY29ycmV0b3MG
+OgpAdXNlZHsGOwZG--16972a27c187b92362ab499ba93cda1cd887cba5
+  Parameters: {"username"=>"psaux", "action"=>"do_login", "controller"=>"login", "password"=>"qwe123"}
+  [4;35;1mUser Load (0.000605)[0m   [0mSELECT * FROM "users" WHERE (username = 'psaux') LIMIT 1[0m
+Completed in 0.00821 (121 reqs/sec) | Rendering: 0.00048 (5%) | DB: 0.00061 (7%) | 200 OK [http://localhost/login/do_login]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-09 22:52:02) [GET]
+  Session ID: BAh7BzoMdXNlcl9pZGkMIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpG
+bGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIhVXN1w6FyaW8gb3Ugc2VuaGEg
+aW5jb3JyZXRvcwY6CkB1c2VkewY7B1Q=--04a21458ac2f8f13c211852e26d3977adb53c60a
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/home
+Rendering users/index
+Completed in 0.01707 (58 reqs/sec) | Rendering: 0.01435 (84%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-09 22:52:04) [GET]
+  Session ID: BAh7BzoMdXNlcl9pZGkMIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpG
+bGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ccef6caae4217bfc6e64465ac58574793df80801
+  Parameters: {"format"=>"json", "node"=>"0", "action"=>"index", "controller"=>"categories", "_dc"=>"1228870324001"}
+  [4;36;1mCategory Load (0.000622)[0m   [0;1mSELECT * FROM "categories" WHERE (parent_id IS NULL) [0m
+Completed in 0.46830 (2 reqs/sec) | Rendering: 0.46080 (98%) | DB: 0.00062 (0%) | 200 OK [http://localhost/categories?_dc=1228870324001&format=json&node=0]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-09 22:52:04) [GET]
+  Session ID: BAh7BzoMdXNlcl9pZGkMIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpG
+bGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--ccef6caae4217bfc6e64465ac58574793df80801
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1228870324161", "limit"=>"5"}
+  [4;35;1mUser Load (0.000449)[0m   [0mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000226)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.01619 (61 reqs/sec) | Rendering: 0.00025 (1%) | DB: 0.00067 (4%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228870324161&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2008-12-09 22:52:20) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZs
+YXNoSGFzaHsABjoKQHVzZWR7AA==--979021406d0c9037d9590afd886046fadffc93fd
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/home
+Rendering users/new
+  [4;35;1mGroup Load (0.000275)[0m   [0mSELECT * FROM "groups" [0m
+Rendered users/_form_items (0.00707)
+Completed in 0.01751 (57 reqs/sec) | Rendering: 0.01108 (63%) | DB: 0.00028 (1%) | 200 OK [http://localhost/users/new]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-09 22:52:22) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZs
+YXNoSGFzaHsABjoKQHVzZWR7AA==--979021406d0c9037d9590afd886046fadffc93fd
+  Parameters: {"format"=>"json", "node"=>"0", "action"=>"index", "controller"=>"categories", "_dc"=>"1228870342040"}
+  [4;36;1mCategory Load (0.000628)[0m   [0;1mSELECT * FROM "categories" WHERE (parent_id IS NULL) [0m
+Completed in 0.00907 (110 reqs/sec) | Rendering: 0.00277 (30%) | DB: 0.00063 (6%) | 200 OK [http://localhost/categories?_dc=1228870342040&format=json&node=0]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2008-12-09 22:52:43) [POST]
+  Session ID: BAh7CDoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZs
+YXNoSGFzaHsABjoKQHVzZWR7AA==--979021406d0c9037d9590afd886046fadffc93fd
+  Parameters: {"user"=>{"name"=>"Murilo Cadanus da Costa", "username"=>"murilo", "group_id"=>"1", "password"=>"qwe123", "email"=>"murilocadanus@gmail.com"}, "format"=>"ext_json", "action"=>"create", "controller"=>"users"}
+  [4;35;1mUser Create (0.000628)[0m   [0mINSERT INTO "users" ("name", "updated_at", "username", "group_id", "password", "email", "created_at") VALUES('Murilo Cadanus da Costa', '2008-12-10 00:52:44', 'murilo', 1, 'qwe123', 'murilocadanus@gmail.com', '2008-12-10 00:52:44')[0m
+Completed in 0.01460 (68 reqs/sec) | Rendering: 0.00305 (20%) | DB: 0.00063 (4%) | 200 OK [http://localhost/users?format=ext_json]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-09 22:52:44) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZs
+YXNoSGFzaHsGOgtub3RpY2UiI1VzZXIgd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7C0Y=--60b494b03fa71bb86d17301da10998c0d16ae0d1
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/home
+Rendering users/index
+Completed in 0.00975 (102 reqs/sec) | Rendering: 0.00729 (74%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-09 22:52:45) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZs
+YXNoSGFzaHsGOgtub3RpY2UiI1VzZXIgd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7C1Q=--d0642b6055c2a4f9b30cb1dbc524e3941bb910b0
+  Parameters: {"format"=>"json", "node"=>"0", "action"=>"index", "controller"=>"categories", "_dc"=>"1228870365178"}
+  [4;36;1mCategory Load (0.000620)[0m   [0;1mSELECT * FROM "categories" WHERE (parent_id IS NULL) [0m
+Completed in 0.00892 (112 reqs/sec) | Rendering: 0.00247 (27%) | DB: 0.00062 (6%) | 200 OK [http://localhost/categories?_dc=1228870365178&format=json&node=0]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-09 22:52:45) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZs
+YXNoSGFzaHsGOgtub3RpY2UiI1VzZXIgd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7C1Q=--d0642b6055c2a4f9b30cb1dbc524e3941bb910b0
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1228870365318", "limit"=>"5"}
+  [4;35;1mUser Load (0.000844)[0m   [0mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000198)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.01378 (72 reqs/sec) | Rendering: 0.00012 (0%) | DB: 0.00104 (7%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228870365318&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2008-12-09 22:52:53) [DELETE]
+  Session ID: BAh7CDoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZs
+YXNoSGFzaHsABjoKQHVzZWR7AA==--979021406d0c9037d9590afd886046fadffc93fd
+  Parameters: {"_method"=>"DELETE", "action"=>"destroy", "id"=>"9", "controller"=>"users"}
+  [4;35;1mUser Load (0.000297)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mUser Destroy (0.000353)[0m   [0;1m DELETE FROM "users"
+ WHERE "id" = 9
+[0m
+Completed in 0.04286 (23 reqs/sec) | Rendering: 0.00011 (0%) | DB: 0.00065 (1%) | 200 OK [http://localhost/users/9]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-09 22:52:54) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZs
+YXNoSGFzaHsABjoKQHVzZWR7AA==--979021406d0c9037d9590afd886046fadffc93fd
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "controller"=>"users", "sort"=>"id", "_dc"=>"1228870374001"}
+  [4;35;1mUser Load (0.000384)[0m   [0mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000131)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.01053 (94 reqs/sec) | Rendering: 0.00010 (0%) | DB: 0.00051 (4%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228870374001&sort=id&dir=ASC]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2008-12-09 22:53:03) [DELETE]
+  Session ID: BAh7CDoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZs
+YXNoSGFzaHsABjoKQHVzZWR7AA==--979021406d0c9037d9590afd886046fadffc93fd
+  Parameters: {"_method"=>"DELETE", "action"=>"destroy", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.000305)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Destroy (0.000504)[0m   [0;1m DELETE FROM "users"
+ WHERE "id" = 1
+[0m
+Completed in 0.05139 (19 reqs/sec) | Rendering: 0.00011 (0%) | DB: 0.00081 (1%) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-09 22:53:04) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZs
+YXNoSGFzaHsABjoKQHVzZWR7AA==--979021406d0c9037d9590afd886046fadffc93fd
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "controller"=>"users", "sort"=>"id", "_dc"=>"1228870383949"}
+  [4;35;1mUser Load (0.000441)[0m   [0mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.01053 (94 reqs/sec) | Rendering: 0.00009 (0%) | DB: 0.00058 (5%) | 200 OK [http://localhost/users?format=ext_json&_dc=1228870383949&sort=id&dir=ASC]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-09 22:53:06) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZs
+YXNoSGFzaHsABjoKQHVzZWR7AA==--979021406d0c9037d9590afd886046fadffc93fd
+  Parameters: {"format"=>"json", "node"=>"12", "action"=>"index", "controller"=>"categories", "_dc"=>"1228870386338"}
+  [4;35;1mCategory Load (0.000230)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 12) [0m
+  [4;36;1mCategory Load (0.001149)[0m   [0;1mSELECT * FROM "categories" WHERE (1 = 1 and parent_id = 12) ORDER BY lft[0m
+Completed in 0.01565 (63 reqs/sec) | Rendering: 0.00628 (40%) | DB: 0.00138 (8%) | 200 OK [http://localhost/categories?_dc=1228870386338&format=json&node=12]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-09 22:53:10) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZs
+YXNoSGFzaHsABjoKQHVzZWR7AA==--979021406d0c9037d9590afd886046fadffc93fd
+  Parameters: {"format"=>"json", "node"=>"13", "action"=>"index", "controller"=>"categories", "_dc"=>"1228870390150"}
+  [4;35;1mCategory Load (0.000240)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 13) [0m
+  [4;36;1mCategory Load (0.000750)[0m   [0;1mSELECT * FROM "categories" WHERE (1 = 1 and parent_id = 13) ORDER BY lft[0m
+Completed in 0.01433 (69 reqs/sec) | Rendering: 0.00341 (23%) | DB: 0.00099 (6%) | 200 OK [http://localhost/categories?_dc=1228870390150&format=json&node=13]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-09 22:53:11) [GET]
+  Session ID: BAh7CDoMdXNlcl9pZGkMIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZs
+YXNoSGFzaHsABjoKQHVzZWR7AA==--979021406d0c9037d9590afd886046fadffc93fd
+  Parameters: {"format"=>"json", "node"=>"16", "action"=>"index", "controller"=>"categories", "_dc"=>"1228870391461"}
+  [4;35;1mCategory Load (0.000232)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 16) [0m
+  [4;36;1mCategory Load (0.000691)[0m   [0;1mSELECT * FROM "categories" WHERE (1 = 1 and parent_id = 16) ORDER BY lft[0m
+Completed in 0.00966 (103 reqs/sec) | Rendering: 0.00200 (20%) | DB: 0.00092 (9%) | 200 OK [http://localhost/categories?_dc=1228870391461&format=json&node=16]
+  [4;36;1mSQL (0.000709)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000758)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000412)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081206201745)
+Migrating to CreateGroups (20081206202105)
+Migrating to CreatePersonTypes (20081206213549)
+Migrating to CreateClients (20081206213621)
+Migrating to CreateCategories (20081206233244)
+  [4;36;1mSQL (0.012132)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000511)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000549)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000417)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000072)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.000058)[0m   [0mPRAGMA index_list("clients")[0m
+  [4;36;1mSQL (0.000067)[0m   [0;1mPRAGMA index_list("groups")[0m
+  [4;35;1mSQL (0.000057)[0m   [0mPRAGMA index_list("people")[0m
+  [4;36;1mSQL (0.000050)[0m   [0;1mPRAGMA index_list("person_types")[0m
+  [4;35;1mSQL (0.000060)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.000490)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000416)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081206201745)
+Migrating to CreateGroups (20081206202105)
+Migrating to CreatePersonTypes (20081206213549)
+Migrating to CreateClients (20081206213621)
+Migrating to CreateCategories (20081206233244)
+  [4;36;1mSQL (0.000107)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000173)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000349)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000171)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000057)[0m   [0;1mPRAGMA index_list("people")[0m
+  [4;36;1mSQL (0.000492)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000425)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081206201745)
+Migrating to CreateGroups (20081206202105)
+Migrating to CreatePersonTypes (20081206213549)
+Migrating to CreateClients (20081206213621)
+Migrating to CreateCategories (20081206233244)
+  [4;36;1mSQL (0.000116)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000176)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000358)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000163)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000101)[0m   [0;1mPRAGMA index_list("people")[0m
+  [4;36;1mSQL (0.000510)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000460)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081206201745)
+Migrating to CreateGroups (20081206202105)
+Migrating to CreatePersonTypes (20081206213549)
+Migrating to CreateClients (20081206213621)
+Migrating to CreateCategories (20081206233244)
+  [4;36;1mSQL (0.000112)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000166)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000350)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000171)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000050)[0m   [0;1mPRAGMA index_list("people")[0m
+  [4;36;1mSQL (0.000483)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000408)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081206201745)
+Migrating to CreateGroups (20081206202105)
+Migrating to CreatePersonTypes (20081206213549)
+Migrating to CreateClients (20081206213621)
+Migrating to CreateCategories (20081206233244)
+Migrating to Teste (20081210010747)
+  [4;36;1mSQL (0.158267)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081210010747')[0m
+  [4;35;1mSQL (0.000166)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000288)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000484)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000222)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000073)[0m   [0mPRAGMA index_list("people")[0m
+  [4;36;1mSQL (0.000496)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000429)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081206201745)
+Migrating to CreateGroups (20081206202105)
+Migrating to CreatePersonTypes (20081206213549)
+Migrating to CreateClients (20081206213621)
+Migrating to CreateCategories (20081206233244)
+  [4;36;1mSQL (0.000115)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000171)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000370)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000165)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000057)[0m   [0;1mPRAGMA index_list("people")[0m
+  [4;36;1mSQL (0.000446)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000143)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081206201745)
+  [4;36;1mSQL (0.000122)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.032937)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "password" varchar(255), "name" varchar(255), "email" varchar(255), "group_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.002005)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081206201745')[0m
+Migrating to CreateGroups (20081206202105)
+  [4;35;1mSQL (0.001658)[0m   [0mCREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.001435)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081206202105')[0m
+Migrating to CreatePersonTypes (20081206213549)
+  [4;35;1mSQL (0.001653)[0m   [0mCREATE TABLE "person_types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.001072)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081206213549')[0m
+Migrating to CreateClients (20081206213621)
+  [4;35;1mSQL (0.001373)[0m   [0mCREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "person_type_id" integer, "details" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.001577)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081206213621')[0m
+Migrating to CreateCategories (20081206233244)
+  [4;35;1mSQL (0.001721)[0m   [0mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "parent_id" integer, "lft" integer, "rgt" integer, "text" varchar(255), "href" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.001412)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081206233244')[0m
+  [4;35;1mSQL (0.000474)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000349)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000434)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000080)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.000077)[0m   [0mPRAGMA index_list("clients")[0m
+  [4;36;1mSQL (0.000057)[0m   [0;1mPRAGMA index_list("groups")[0m
+  [4;35;1mSQL (0.000056)[0m   [0mPRAGMA index_list("person_types")[0m
+  [4;36;1mSQL (0.000067)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.000682)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000409)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081206201745)
+Migrating to CreateGroups (20081206202105)
+Migrating to CreatePersonTypes (20081206213549)
+Migrating to CreateClients (20081206213621)
+Migrating to CreateCategories (20081206233244)
+Migrating to AddItensCategories (20081210011512)
+  [4;36;1mCategory Create (0.000470)[0m   [0;1mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES(NULL, '2008-12-10 01:42:10', 'Menu', NULL, NULL, NULL, '2008-12-10 01:42:10')[0m
+  [4;35;1mCategory Create (0.000263)[0m   [0mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES(NULL, '2008-12-10 01:42:10', 'Alarmes', NULL, NULL, NULL, '2008-12-10 01:42:10')[0m
+  [4;36;1mCategory Load (0.000292)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCategory Load (0.000208)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCategory Update (0.000245)[0m   [0;1mUPDATE "categories" SET "lft" = 1, "rgt" = 4, "updated_at" = '2008-12-10 01:42:10' WHERE "id" = 1[0m
+  [4;35;1mCategory Update (0.000460)[0m   [0mUPDATE "categories" SET "lft" = 2, "rgt" = 3, "parent_id" = 1, "updated_at" = '2008-12-10 01:42:10' WHERE "id" = 2[0m
+  [4;36;1mSQL (0.000672)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000319)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081206201745)
+Migrating to CreateGroups (20081206202105)
+Migrating to CreatePersonTypes (20081206213549)
+Migrating to CreateClients (20081206213621)
+Migrating to CreateCategories (20081206233244)
+Migrating to AddItensCategories (20081210011512)
+  [4;36;1mCategory Create (0.000445)[0m   [0;1mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES(NULL, '2008-12-10 01:42:52', 'Menu', NULL, NULL, NULL, '2008-12-10 01:42:52')[0m
+  [4;35;1mCategory Create (0.000484)[0m   [0mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES(NULL, '2008-12-10 01:42:52', 'Alarmes', NULL, NULL, NULL, '2008-12-10 01:42:52')[0m
+  [4;36;1mCategory Load (0.000424)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;35;1mCategory Load (0.000337)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 4) [0m
+  [4;36;1mCategory Update (0.000369)[0m   [0;1mUPDATE "categories" SET "lft" = 1, "rgt" = 4, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 3[0m
+  [4;35;1mCategory Update (0.000399)[0m   [0mUPDATE "categories" SET "lft" = 2, "rgt" = 3, "parent_id" = 3, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 4[0m
+  [4;36;1mCategory Create (0.000379)[0m   [0;1mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/alarms/create', '2008-12-10 01:42:52', 'Inserir Alarme', NULL, NULL, NULL, '2008-12-10 01:42:52')[0m
+  [4;35;1mCategory Load (0.000387)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 4) [0m
+  [4;36;1mCategory Load (0.000311)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCategory Update (0.000296)[0m   [0mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 3) [0m
+  [4;36;1mCategory Update (0.000152)[0m   [0;1mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 3) [0m
+  [4;35;1mCategory Update (0.000100)[0m   [0mUPDATE "categories" SET "rgt" = 5, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 4[0m
+  [4;36;1mCategory Update (0.000189)[0m   [0;1mUPDATE "categories" SET "lft" = 3, "rgt" = 4, "parent_id" = 4, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 5[0m
+  [4;35;1mCategory Create (0.000377)[0m   [0mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/alarms', '2008-12-10 01:42:52', 'Listar Alarmes', NULL, NULL, NULL, '2008-12-10 01:42:52')[0m
+  [4;36;1mCategory Load (0.000417)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 4) [0m
+  [4;35;1mCategory Load (0.000406)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;36;1mCategory Update (0.000309)[0m   [0;1mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 5) [0m
+  [4;35;1mCategory Update (0.000145)[0m   [0mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 5) [0m
+  [4;36;1mCategory Update (0.000099)[0m   [0;1mUPDATE "categories" SET "rgt" = 7, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 4[0m
+  [4;35;1mCategory Update (0.000090)[0m   [0mUPDATE "categories" SET "lft" = 5, "rgt" = 6, "parent_id" = 4, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 6[0m
+  [4;36;1mCategory Create (0.000401)[0m   [0;1mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES(NULL, '2008-12-10 01:42:52', 'Contratos', NULL, NULL, NULL, '2008-12-10 01:42:52')[0m
+  [4;35;1mCategory Load (0.000376)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;36;1mCategory Load (0.000346)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 7) [0m
+  [4;35;1mCategory Update (0.000330)[0m   [0mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 8) [0m
+  [4;36;1mCategory Update (0.000142)[0m   [0;1mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 8) [0m
+  [4;35;1mCategory Update (0.000080)[0m   [0mUPDATE "categories" SET "rgt" = 10, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 3[0m
+  [4;36;1mCategory Update (0.000079)[0m   [0;1mUPDATE "categories" SET "lft" = 8, "rgt" = 9, "parent_id" = 3, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 7[0m
+  [4;35;1mCategory Create (0.000245)[0m   [0mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/contracts/create', '2008-12-10 01:42:52', 'Inserir Contrato', NULL, NULL, NULL, '2008-12-10 01:42:52')[0m
+  [4;36;1mCategory Load (0.000308)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 7) [0m
+  [4;35;1mCategory Load (0.000227)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Update (0.000220)[0m   [0;1mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 9) [0m
+  [4;35;1mCategory Update (0.000101)[0m   [0mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 9) [0m
+  [4;36;1mCategory Update (0.000077)[0m   [0;1mUPDATE "categories" SET "rgt" = 11, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 7[0m
+  [4;35;1mCategory Update (0.000071)[0m   [0mUPDATE "categories" SET "lft" = 9, "rgt" = 10, "parent_id" = 7, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 8[0m
+  [4;36;1mCategory Create (0.000259)[0m   [0;1mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/contracts', '2008-12-10 01:42:52', 'Listar Contratos', NULL, NULL, NULL, '2008-12-10 01:42:52')[0m
+  [4;35;1mCategory Load (0.000346)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 7) [0m
+  [4;36;1mCategory Load (0.000212)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 9) [0m
+  [4;35;1mCategory Update (0.000226)[0m   [0mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 11) [0m
+  [4;36;1mCategory Update (0.000093)[0m   [0;1mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 11) [0m
+  [4;35;1mCategory Update (0.000077)[0m   [0mUPDATE "categories" SET "rgt" = 13, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 7[0m
+  [4;36;1mCategory Update (0.000079)[0m   [0;1mUPDATE "categories" SET "lft" = 11, "rgt" = 12, "parent_id" = 7, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 9[0m
+  [4;35;1mCategory Create (0.000258)[0m   [0mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES(NULL, '2008-12-10 01:42:52', 'Relatorios', NULL, NULL, NULL, '2008-12-10 01:42:52')[0m
+  [4;36;1mCategory Load (0.000281)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;35;1mCategory Load (0.000220)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 10) [0m
+  [4;36;1mCategory Update (0.000239)[0m   [0;1mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 14) [0m
+  [4;35;1mCategory Update (0.000100)[0m   [0mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 14) [0m
+  [4;36;1mCategory Update (0.000080)[0m   [0;1mUPDATE "categories" SET "rgt" = 16, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 3[0m
+  [4;35;1mCategory Update (0.000074)[0m   [0mUPDATE "categories" SET "lft" = 14, "rgt" = 15, "parent_id" = 3, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 10[0m
+  [4;36;1mCategory Create (0.000295)[0m   [0;1mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/reports', '2008-12-10 01:42:52', 'Visualizar Relatorios', NULL, NULL, NULL, '2008-12-10 01:42:52')[0m
+  [4;35;1mCategory Load (0.000261)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 10) [0m
+  [4;36;1mCategory Load (0.000208)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 11) [0m
+  [4;35;1mCategory Update (0.000223)[0m   [0mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 15) [0m
+  [4;36;1mCategory Update (0.000092)[0m   [0;1mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 15) [0m
+  [4;35;1mCategory Update (0.000073)[0m   [0mUPDATE "categories" SET "rgt" = 17, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 10[0m
+  [4;36;1mCategory Update (0.000078)[0m   [0;1mUPDATE "categories" SET "lft" = 15, "rgt" = 16, "parent_id" = 10, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 11[0m
+  [4;35;1mCategory Create (0.000262)[0m   [0mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES(NULL, '2008-12-10 01:42:52', 'Usuarios', NULL, NULL, NULL, '2008-12-10 01:42:52')[0m
+  [4;36;1mCategory Load (0.000237)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;35;1mCategory Load (0.000216)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 12) [0m
+  [4;36;1mCategory Update (0.000209)[0m   [0;1mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 18) [0m
+  [4;35;1mCategory Update (0.000089)[0m   [0mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 18) [0m
+  [4;36;1mCategory Update (0.000067)[0m   [0;1mUPDATE "categories" SET "rgt" = 20, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 3[0m
+  [4;35;1mCategory Update (0.000069)[0m   [0mUPDATE "categories" SET "lft" = 18, "rgt" = 19, "parent_id" = 3, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 12[0m
+  [4;36;1mCategory Create (0.000249)[0m   [0;1mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/users/create', '2008-12-10 01:42:52', 'Inserir Usuario', NULL, NULL, NULL, '2008-12-10 01:42:52')[0m
+  [4;35;1mCategory Load (0.000248)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 12) [0m
+  [4;36;1mCategory Load (0.000212)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 13) [0m
+  [4;35;1mCategory Update (0.000221)[0m   [0mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 19) [0m
+  [4;36;1mCategory Update (0.000098)[0m   [0;1mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 19) [0m
+  [4;35;1mCategory Update (0.000158)[0m   [0mUPDATE "categories" SET "rgt" = 21, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 12[0m
+  [4;36;1mCategory Update (0.000077)[0m   [0;1mUPDATE "categories" SET "lft" = 19, "rgt" = 20, "parent_id" = 12, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 13[0m
+  [4;35;1mCategory Create (0.000258)[0m   [0mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/users', '2008-12-10 01:42:52', 'Listar Usuarios', NULL, NULL, NULL, '2008-12-10 01:42:52')[0m
+  [4;36;1mCategory Load (0.000221)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 12) [0m
+  [4;35;1mCategory Load (0.000219)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 14) [0m
+  [4;36;1mCategory Update (0.000210)[0m   [0;1mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 21) [0m
+  [4;35;1mCategory Update (0.000101)[0m   [0mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 21) [0m
+  [4;36;1mCategory Update (0.000146)[0m   [0;1mUPDATE "categories" SET "rgt" = 23, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 12[0m
+  [4;35;1mCategory Update (0.000085)[0m   [0mUPDATE "categories" SET "lft" = 21, "rgt" = 22, "parent_id" = 12, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 14[0m
+  [4;36;1mCategory Create (0.000313)[0m   [0;1mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES(NULL, '2008-12-10 01:42:52', 'Grupos de Usuarios', NULL, NULL, NULL, '2008-12-10 01:42:52')[0m
+  [4;35;1mCategory Load (0.000328)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;36;1mCategory Load (0.000210)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 15) [0m
+  [4;35;1mCategory Update (0.000225)[0m   [0mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 24) [0m
+  [4;36;1mCategory Update (0.000108)[0m   [0;1mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 24) [0m
+  [4;35;1mCategory Update (0.000073)[0m   [0mUPDATE "categories" SET "rgt" = 26, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 3[0m
+  [4;36;1mCategory Update (0.000084)[0m   [0;1mUPDATE "categories" SET "lft" = 24, "rgt" = 25, "parent_id" = 3, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 15[0m
+  [4;35;1mCategory Create (0.000257)[0m   [0mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/groups/create', '2008-12-10 01:42:52', 'Inserir Grupo', NULL, NULL, NULL, '2008-12-10 01:42:52')[0m
+  [4;36;1mCategory Load (0.000287)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 15) [0m
+  [4;35;1mCategory Load (0.000224)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 16) [0m
+  [4;36;1mCategory Update (0.000244)[0m   [0;1mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 25) [0m
+  [4;35;1mCategory Update (0.000112)[0m   [0mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 25) [0m
+  [4;36;1mCategory Update (0.000082)[0m   [0;1mUPDATE "categories" SET "rgt" = 27, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 15[0m
+  [4;35;1mCategory Update (0.000153)[0m   [0mUPDATE "categories" SET "lft" = 25, "rgt" = 26, "parent_id" = 15, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 16[0m
+  [4;36;1mCategory Create (0.000310)[0m   [0;1mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/groups', '2008-12-10 01:42:52', 'Listar Grupos', NULL, NULL, NULL, '2008-12-10 01:42:52')[0m
+  [4;35;1mCategory Load (0.000538)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 15) [0m
+  [4;36;1mCategory Load (0.000343)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 17) [0m
+  [4;35;1mCategory Update (0.000313)[0m   [0mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 27) [0m
+  [4;36;1mCategory Update (0.000154)[0m   [0;1mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 27) [0m
+  [4;35;1mCategory Update (0.000102)[0m   [0mUPDATE "categories" SET "rgt" = 29, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 15[0m
+  [4;36;1mCategory Update (0.000101)[0m   [0;1mUPDATE "categories" SET "lft" = 27, "rgt" = 28, "parent_id" = 15, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 17[0m
+  [4;35;1mCategory Create (0.000544)[0m   [0mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES(NULL, '2008-12-10 01:42:52', 'Clientes/Fornecedores', NULL, NULL, NULL, '2008-12-10 01:42:52')[0m
+  [4;36;1mCategory Load (0.000390)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;35;1mCategory Load (0.000306)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+  [4;36;1mCategory Update (0.000319)[0m   [0;1mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 30) [0m
+  [4;35;1mCategory Update (0.000140)[0m   [0mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 30) [0m
+  [4;36;1mCategory Update (0.000102)[0m   [0;1mUPDATE "categories" SET "rgt" = 32, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 3[0m
+  [4;35;1mCategory Update (0.000123)[0m   [0mUPDATE "categories" SET "lft" = 30, "rgt" = 31, "parent_id" = 3, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 18[0m
+  [4;36;1mCategory Create (0.000416)[0m   [0;1mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/clients/create', '2008-12-10 01:42:52', 'Inserir Cliente/Fornecedore', NULL, NULL, NULL, '2008-12-10 01:42:52')[0m
+  [4;35;1mCategory Load (0.000491)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+  [4;36;1mCategory Load (0.000348)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 19) [0m
+  [4;35;1mCategory Update (0.000313)[0m   [0mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 31) [0m
+  [4;36;1mCategory Update (0.000158)[0m   [0;1mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 31) [0m
+  [4;35;1mCategory Update (0.000103)[0m   [0mUPDATE "categories" SET "rgt" = 33, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 18[0m
+  [4;36;1mCategory Update (0.000103)[0m   [0;1mUPDATE "categories" SET "lft" = 31, "rgt" = 32, "parent_id" = 18, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 19[0m
+  [4;35;1mCategory Create (0.000407)[0m   [0mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/clients', '2008-12-10 01:42:52', 'Listar Clientes/Fornecedores', NULL, NULL, NULL, '2008-12-10 01:42:52')[0m
+  [4;36;1mCategory Load (0.000536)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+  [4;35;1mCategory Load (0.000356)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 20) [0m
+  [4;36;1mCategory Update (0.000325)[0m   [0;1mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 33) [0m
+  [4;35;1mCategory Update (0.000158)[0m   [0mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 33) [0m
+  [4;36;1mCategory Update (0.000105)[0m   [0;1mUPDATE "categories" SET "rgt" = 35, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 18[0m
+  [4;35;1mCategory Update (0.000104)[0m   [0mUPDATE "categories" SET "lft" = 33, "rgt" = 34, "parent_id" = 18, "updated_at" = '2008-12-10 01:42:52' WHERE "id" = 20[0m
+  [4;36;1mSQL (0.001448)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081210011512')[0m
+Migrating to AddUsers (20081210011540)
+  [4;35;1mUser Create (0.000461)[0m   [0mINSERT INTO "users" ("name", "updated_at", "username", "group_id", "password", "email", "created_at") VALUES('Psaux', '2008-12-10 01:42:52', 'psaux', 1, 'qwe123', 'psaux1@gmail.com', '2008-12-10 01:42:52')[0m
+  [4;36;1mSQL (0.001374)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081210011540')[0m
+Migrating to AddGroups (20081210011546)
+  [4;35;1mGroup Create (0.000421)[0m   [0mINSERT INTO "groups" ("name", "updated_at", "created_at") VALUES('Adminstradores', '2008-12-10 01:42:52', '2008-12-10 01:42:52')[0m
+  [4;36;1mSQL (0.001373)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081210011546')[0m
+  [4;35;1mSQL (0.000154)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000398)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000395)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000357)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000073)[0m   [0mPRAGMA index_list("categories")[0m
+  [4;36;1mSQL (0.000075)[0m   [0;1mPRAGMA index_list("clients")[0m
+  [4;35;1mSQL (0.000059)[0m   [0mPRAGMA index_list("groups")[0m
+  [4;36;1mSQL (0.000053)[0m   [0;1mPRAGMA index_list("person_types")[0m
+  [4;35;1mSQL (0.000047)[0m   [0mPRAGMA index_list("users")[0m
