@@ -2842,3 +2842,605 @@ Completed in 0.00815 (122 reqs/sec) | Rendering: 0.00311 (38%) | DB: 0.00000 (0%
 =======
 >>>>>>> murilo/master:log/development.log
 >>>>>>> marlus/master:log/development.log
+
+
+Processing LoginController#index (for 127.0.0.1 at 2008-12-13 17:30:46) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"action"=>"index", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.00989 (101 reqs/sec) | Rendering: 0.00722 (72%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2008-12-13 17:30:58) [POST]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"username"=>"psaux", "action"=>"do_login", "controller"=>"login", "password"=>"qwe123"}
+  [4;36;1mUser Load (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: users: SELECT * FROM "users" WHERE (username = 'psaux') LIMIT 1[0m
+
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT * FROM "users"     WHERE (username = 'psaux')  LIMIT 1):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract_adapter.rb:147:in `log'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/sqlite_adapter.rb:372:in `catch_schema_changes'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/sqlite_adapter.rb:275:in `select'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:80:in `cache_sql'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:586:in `find_by_sql'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:1345:in `find_every'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:1307:in `find_initial'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:538:in `find'
+    /app/controllers/login_controller.rb:14:in `do_login'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (0.000269)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000120)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.002075)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001530)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000244)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000166)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081206201745)
+  [4;36;1mSQL (0.001997)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "password" varchar(255), "name" varchar(255), "email" varchar(255), "group_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.001450)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081206201745')[0m
+Migrating to CreateGroups (20081206202105)
+  [4;36;1mSQL (0.001553)[0m   [0;1mCREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.001383)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081206202105')[0m
+Migrating to CreatePersonTypes (20081206213549)
+  [4;36;1mSQL (0.001509)[0m   [0;1mCREATE TABLE "person_types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.001427)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081206213549')[0m
+Migrating to CreateClients (20081206213621)
+  [4;36;1mSQL (0.001809)[0m   [0;1mCREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "person_type_id" integer, "details" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.001516)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081206213621')[0m
+Migrating to CreateCategories (20081206233244)
+  [4;36;1mSQL (0.003720)[0m   [0;1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "parent_id" integer, "lft" integer, "rgt" integer, "text" varchar(255), "href" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.001454)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081206233244')[0m
+Migrating to AddItensCategories (20081210011512)
+  [4;36;1mCategory Create (0.000416)[0m   [0;1mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES(NULL, '2008-12-13 19:31:35', 'Menu', NULL, NULL, NULL, '2008-12-13 19:31:35')[0m
+  [4;35;1mCategory Create (0.000285)[0m   [0mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES(NULL, '2008-12-13 19:31:35', 'Alarmes', NULL, NULL, NULL, '2008-12-13 19:31:35')[0m
+  [4;36;1mCategory Load (0.000547)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCategory Load (0.000350)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCategory Update (0.000368)[0m   [0;1mUPDATE "categories" SET "lft" = 1, "rgt" = 4, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 1[0m
+  [4;35;1mCategory Update (0.000396)[0m   [0mUPDATE "categories" SET "lft" = 2, "rgt" = 3, "parent_id" = 1, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 2[0m
+  [4;36;1mCategory Create (0.000287)[0m   [0;1mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/alarms/create', '2008-12-13 19:31:35', 'Inserir Alarme', NULL, NULL, NULL, '2008-12-13 19:31:35')[0m
+  [4;35;1mCategory Load (0.000287)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mCategory Load (0.000224)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+  [4;35;1mCategory Update (0.000324)[0m   [0mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 3) [0m
+  [4;36;1mCategory Update (0.000118)[0m   [0;1mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 3) [0m
+  [4;35;1mCategory Update (0.000088)[0m   [0mUPDATE "categories" SET "rgt" = 5, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 2[0m
+  [4;36;1mCategory Update (0.000075)[0m   [0;1mUPDATE "categories" SET "lft" = 3, "rgt" = 4, "parent_id" = 2, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 3[0m
+  [4;35;1mCategory Create (0.000389)[0m   [0mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/alarms', '2008-12-13 19:31:35', 'Listar Alarmes', NULL, NULL, NULL, '2008-12-13 19:31:35')[0m
+  [4;36;1mCategory Load (0.000510)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mCategory Load (0.000476)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 4) [0m
+  [4;36;1mCategory Update (0.000335)[0m   [0;1mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 5) [0m
+  [4;35;1mCategory Update (0.000159)[0m   [0mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 5) [0m
+  [4;36;1mCategory Update (0.000115)[0m   [0;1mUPDATE "categories" SET "rgt" = 7, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 2[0m
+  [4;35;1mCategory Update (0.000113)[0m   [0mUPDATE "categories" SET "lft" = 5, "rgt" = 6, "parent_id" = 2, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 4[0m
+  [4;36;1mCategory Create (0.000366)[0m   [0;1mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES(NULL, '2008-12-13 19:31:35', 'Contratos', NULL, NULL, NULL, '2008-12-13 19:31:35')[0m
+  [4;35;1mCategory Load (0.000389)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCategory Load (0.000309)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCategory Update (0.000305)[0m   [0mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 8) [0m
+  [4;36;1mCategory Update (0.000134)[0m   [0;1mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 8) [0m
+  [4;35;1mCategory Update (0.000101)[0m   [0mUPDATE "categories" SET "rgt" = 10, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 1[0m
+  [4;36;1mCategory Update (0.000103)[0m   [0;1mUPDATE "categories" SET "lft" = 8, "rgt" = 9, "parent_id" = 1, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 5[0m
+  [4;35;1mCategory Create (0.000436)[0m   [0mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/contracts/create', '2008-12-13 19:31:35', 'Inserir Contrato', NULL, NULL, NULL, '2008-12-13 19:31:35')[0m
+  [4;36;1mCategory Load (0.000382)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCategory Load (0.000350)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 6) [0m
+  [4;36;1mCategory Update (0.000331)[0m   [0;1mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 9) [0m
+  [4;35;1mCategory Update (0.000209)[0m   [0mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 9) [0m
+  [4;36;1mCategory Update (0.000131)[0m   [0;1mUPDATE "categories" SET "rgt" = 11, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 5[0m
+  [4;35;1mCategory Update (0.000126)[0m   [0mUPDATE "categories" SET "lft" = 9, "rgt" = 10, "parent_id" = 5, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 6[0m
+  [4;36;1mCategory Create (0.000397)[0m   [0;1mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/contracts', '2008-12-13 19:31:35', 'Listar Contratos', NULL, NULL, NULL, '2008-12-13 19:31:35')[0m
+  [4;35;1mCategory Load (0.000470)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;36;1mCategory Load (0.000356)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 7) [0m
+  [4;35;1mCategory Update (0.000352)[0m   [0mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 11) [0m
+  [4;36;1mCategory Update (0.000142)[0m   [0;1mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 11) [0m
+  [4;35;1mCategory Update (0.000111)[0m   [0mUPDATE "categories" SET "rgt" = 13, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 5[0m
+  [4;36;1mCategory Update (0.000101)[0m   [0;1mUPDATE "categories" SET "lft" = 11, "rgt" = 12, "parent_id" = 5, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 7[0m
+  [4;35;1mCategory Create (0.000418)[0m   [0mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES(NULL, '2008-12-13 19:31:35', 'Relatorios', NULL, NULL, NULL, '2008-12-13 19:31:35')[0m
+  [4;36;1mCategory Load (0.000396)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCategory Load (0.000350)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Update (0.000347)[0m   [0;1mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 14) [0m
+  [4;35;1mCategory Update (0.000139)[0m   [0mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 14) [0m
+  [4;36;1mCategory Update (0.000128)[0m   [0;1mUPDATE "categories" SET "rgt" = 16, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 1[0m
+  [4;35;1mCategory Update (0.000139)[0m   [0mUPDATE "categories" SET "lft" = 14, "rgt" = 15, "parent_id" = 1, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 8[0m
+  [4;36;1mCategory Create (0.000476)[0m   [0;1mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/reports', '2008-12-13 19:31:35', 'Visualizar Relatorios', NULL, NULL, NULL, '2008-12-13 19:31:35')[0m
+  [4;35;1mCategory Load (0.000404)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 8) [0m
+  [4;36;1mCategory Load (0.000408)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 9) [0m
+  [4;35;1mCategory Update (0.000309)[0m   [0mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 15) [0m
+  [4;36;1mCategory Update (0.000142)[0m   [0;1mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 15) [0m
+  [4;35;1mCategory Update (0.000100)[0m   [0mUPDATE "categories" SET "rgt" = 17, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 8[0m
+  [4;36;1mCategory Update (0.000101)[0m   [0;1mUPDATE "categories" SET "lft" = 15, "rgt" = 16, "parent_id" = 8, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 9[0m
+  [4;35;1mCategory Create (0.000408)[0m   [0mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES(NULL, '2008-12-13 19:31:35', 'Usuarios', NULL, NULL, NULL, '2008-12-13 19:31:35')[0m
+  [4;36;1mCategory Load (0.000367)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCategory Load (0.000300)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 10) [0m
+  [4;36;1mCategory Update (0.000337)[0m   [0;1mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 18) [0m
+  [4;35;1mCategory Update (0.000129)[0m   [0mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 18) [0m
+  [4;36;1mCategory Update (0.000100)[0m   [0;1mUPDATE "categories" SET "rgt" = 20, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 1[0m
+  [4;35;1mCategory Update (0.000081)[0m   [0mUPDATE "categories" SET "lft" = 18, "rgt" = 19, "parent_id" = 1, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 10[0m
+  [4;36;1mCategory Create (0.000259)[0m   [0;1mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/users/create', '2008-12-13 19:31:35', 'Inserir Usuario', NULL, NULL, NULL, '2008-12-13 19:31:35')[0m
+  [4;35;1mCategory Load (0.000245)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 10) [0m
+  [4;36;1mCategory Load (0.000218)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 11) [0m
+  [4;35;1mCategory Update (0.000237)[0m   [0mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 19) [0m
+  [4;36;1mCategory Update (0.000093)[0m   [0;1mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 19) [0m
+  [4;35;1mCategory Update (0.000069)[0m   [0mUPDATE "categories" SET "rgt" = 21, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 10[0m
+  [4;36;1mCategory Update (0.000071)[0m   [0;1mUPDATE "categories" SET "lft" = 19, "rgt" = 20, "parent_id" = 10, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 11[0m
+  [4;35;1mCategory Create (0.000283)[0m   [0mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/users', '2008-12-13 19:31:35', 'Listar Usuarios', NULL, NULL, NULL, '2008-12-13 19:31:35')[0m
+  [4;36;1mCategory Load (0.000398)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 10) [0m
+  [4;35;1mCategory Load (0.000301)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 12) [0m
+  [4;36;1mCategory Update (0.000310)[0m   [0;1mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 21) [0m
+  [4;35;1mCategory Update (0.000132)[0m   [0mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 21) [0m
+  [4;36;1mCategory Update (0.000099)[0m   [0;1mUPDATE "categories" SET "rgt" = 23, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 10[0m
+  [4;35;1mCategory Update (0.000157)[0m   [0mUPDATE "categories" SET "lft" = 21, "rgt" = 22, "parent_id" = 10, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 12[0m
+  [4;36;1mCategory Create (0.000298)[0m   [0;1mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES(NULL, '2008-12-13 19:31:35', 'Grupos de Usuarios', NULL, NULL, NULL, '2008-12-13 19:31:35')[0m
+  [4;35;1mCategory Load (0.000312)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCategory Load (0.000192)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 13) [0m
+  [4;35;1mCategory Update (0.000223)[0m   [0mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 24) [0m
+  [4;36;1mCategory Update (0.000092)[0m   [0;1mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 24) [0m
+  [4;35;1mCategory Update (0.000089)[0m   [0mUPDATE "categories" SET "rgt" = 26, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 1[0m
+  [4;36;1mCategory Update (0.000076)[0m   [0;1mUPDATE "categories" SET "lft" = 24, "rgt" = 25, "parent_id" = 1, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 13[0m
+  [4;35;1mCategory Create (0.000266)[0m   [0mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/groups/create', '2008-12-13 19:31:35', 'Inserir Grupo', NULL, NULL, NULL, '2008-12-13 19:31:35')[0m
+  [4;36;1mCategory Load (0.000623)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 13) [0m
+  [4;35;1mCategory Load (0.000359)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 14) [0m
+  [4;36;1mCategory Update (0.000329)[0m   [0;1mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 25) [0m
+  [4;35;1mCategory Update (0.000146)[0m   [0mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 25) [0m
+  [4;36;1mCategory Update (0.000108)[0m   [0;1mUPDATE "categories" SET "rgt" = 27, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 13[0m
+  [4;35;1mCategory Update (0.000126)[0m   [0mUPDATE "categories" SET "lft" = 25, "rgt" = 26, "parent_id" = 13, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 14[0m
+  [4;36;1mCategory Create (0.000410)[0m   [0;1mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/groups', '2008-12-13 19:31:35', 'Listar Grupos', NULL, NULL, NULL, '2008-12-13 19:31:35')[0m
+  [4;35;1mCategory Load (0.000394)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 13) [0m
+  [4;36;1mCategory Load (0.000311)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 15) [0m
+  [4;35;1mCategory Update (0.000312)[0m   [0mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 27) [0m
+  [4;36;1mCategory Update (0.000143)[0m   [0;1mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 27) [0m
+  [4;35;1mCategory Update (0.000108)[0m   [0mUPDATE "categories" SET "rgt" = 29, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 13[0m
+  [4;36;1mCategory Update (0.000134)[0m   [0;1mUPDATE "categories" SET "lft" = 27, "rgt" = 28, "parent_id" = 13, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 15[0m
+  [4;35;1mCategory Create (0.000529)[0m   [0mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES(NULL, '2008-12-13 19:31:35', 'Clientes/Fornecedores', NULL, NULL, NULL, '2008-12-13 19:31:35')[0m
+  [4;36;1mCategory Load (0.000516)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCategory Load (0.000349)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 16) [0m
+  [4;36;1mCategory Update (0.000338)[0m   [0;1mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 30) [0m
+  [4;35;1mCategory Update (0.000135)[0m   [0mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 30) [0m
+  [4;36;1mCategory Update (0.000107)[0m   [0;1mUPDATE "categories" SET "rgt" = 32, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 1[0m
+  [4;35;1mCategory Update (0.000132)[0m   [0mUPDATE "categories" SET "lft" = 30, "rgt" = 31, "parent_id" = 1, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 16[0m
+  [4;36;1mCategory Create (0.000481)[0m   [0;1mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/clients/create', '2008-12-13 19:31:35', 'Inserir Cliente/Fornecedore', NULL, NULL, NULL, '2008-12-13 19:31:35')[0m
+  [4;35;1mCategory Load (0.000398)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 16) [0m
+  [4;36;1mCategory Load (0.000310)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 17) [0m
+  [4;35;1mCategory Update (0.000311)[0m   [0mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 31) [0m
+  [4;36;1mCategory Update (0.000154)[0m   [0;1mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 31) [0m
+  [4;35;1mCategory Update (0.000117)[0m   [0mUPDATE "categories" SET "rgt" = 33, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 16[0m
+  [4;36;1mCategory Update (0.000120)[0m   [0;1mUPDATE "categories" SET "lft" = 31, "rgt" = 32, "parent_id" = 16, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 17[0m
+  [4;35;1mCategory Create (0.000378)[0m   [0mINSERT INTO "categories" ("href", "updated_at", "text", "lft", "parent_id", "rgt", "created_at") VALUES('/clients', '2008-12-13 19:31:35', 'Listar Clientes/Fornecedores', NULL, NULL, NULL, '2008-12-13 19:31:35')[0m
+  [4;36;1mCategory Load (0.000485)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 16) [0m
+  [4;35;1mCategory Load (0.000376)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 18) [0m
+  [4;36;1mCategory Update (0.000340)[0m   [0;1mUPDATE "categories" SET lft = (lft + 2) WHERE (1 = 1 AND lft >= 33) [0m
+  [4;35;1mCategory Update (0.000157)[0m   [0mUPDATE "categories" SET rgt = (rgt + 2) WHERE (1 = 1 AND rgt >= 33) [0m
+  [4;36;1mCategory Update (0.000110)[0m   [0;1mUPDATE "categories" SET "rgt" = 35, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 16[0m
+  [4;35;1mCategory Update (0.000100)[0m   [0mUPDATE "categories" SET "lft" = 33, "rgt" = 34, "parent_id" = 16, "updated_at" = '2008-12-13 19:31:35' WHERE "id" = 18[0m
+  [4;36;1mSQL (0.001277)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081210011512')[0m
+Migrating to AddUsers (20081210011540)
+  [4;35;1mUser Create (0.000370)[0m   [0mINSERT INTO "users" ("name", "updated_at", "username", "group_id", "password", "email", "created_at") VALUES('Psaux', '2008-12-13 19:31:35', 'psaux', 1, 'qwe123', 'psaux1@gmail.com', '2008-12-13 19:31:35')[0m
+  [4;36;1mSQL (0.001236)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081210011540')[0m
+Migrating to AddGroups (20081210011546)
+  [4;35;1mGroup Create (0.000324)[0m   [0mINSERT INTO "groups" ("name", "updated_at", "created_at") VALUES('Adminstradores', '2008-12-13 19:31:36', '2008-12-13 19:31:36')[0m
+  [4;36;1mSQL (0.001355)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081210011546')[0m
+  [4;35;1mSQL (0.000314)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000277)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000251)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000049)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.000044)[0m   [0mPRAGMA index_list("clients")[0m
+  [4;36;1mSQL (0.000041)[0m   [0;1mPRAGMA index_list("groups")[0m
+  [4;35;1mSQL (0.000042)[0m   [0mPRAGMA index_list("person_types")[0m
+  [4;36;1mSQL (0.000041)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2008-12-13 17:31:46) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"action"=>"index", "controller"=>"login"}
+Rendering template within layouts/login
+Rendering login/login
+Completed in 0.00958 (104 reqs/sec) | Rendering: 0.00734 (76%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2008-12-13 17:31:54) [POST]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"username"=>"psaux", "action"=>"do_login", "controller"=>"login", "password"=>"qwe123"}
+  [4;36;1mUser Load (0.000685)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'psaux') LIMIT 1[0m
+Completed in 0.00926 (107 reqs/sec) | Rendering: 0.00056 (6%) | DB: 0.00068 (7%) | 200 OK [http://localhost/login/do_login]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-13 17:31:54) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/home
+Rendering users/index
+Completed in 0.02045 (48 reqs/sec) | Rendering: 0.01758 (85%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-13 17:31:55) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"format"=>"json", "node"=>"0", "action"=>"index", "controller"=>"categories", "_dc"=>"1229196715827"}
+  [4;35;1mCategory Load (0.000635)[0m   [0mSELECT * FROM "categories" WHERE (parent_id IS NULL) [0m
+Completed in 0.11720 (8 reqs/sec) | Rendering: 0.11026 (94%) | DB: 0.00064 (0%) | 200 OK [http://localhost/categories?_dc=1229196715827&format=json&node=0]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-13 17:31:56) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1229196715980", "limit"=>"5"}
+  [4;36;1mUser Load (0.000318)[0m   [0;1mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.000382)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.01203 (83 reqs/sec) | Rendering: 0.00012 (1%) | DB: 0.00070 (5%) | 200 OK [http://localhost/users?format=ext_json&_dc=1229196715980&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-13 17:31:58) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"format"=>"json", "node"=>"1", "action"=>"index", "controller"=>"categories", "_dc"=>"1229196718811"}
+  [4;36;1mCategory Load (0.000242)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCategory Load (0.001169)[0m   [0mSELECT * FROM "categories" WHERE (1 = 1 and parent_id = 1) ORDER BY lft[0m
+Completed in 0.01220 (81 reqs/sec) | Rendering: 0.00382 (31%) | DB: 0.00141 (11%) | 200 OK [http://localhost/categories?_dc=1229196718811&format=json&node=1]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2008-12-13 17:32:01) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 0.00965 (103 reqs/sec) | Rendering: 0.00709 (73%) | DB: 0.00000 (0%) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2008-12-13 17:32:01) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"clients", "sort"=>"id", "_dc"=>"1229196721540", "limit"=>"5"}
+  [4;36;1mClient Load (0.000179)[0m   [0;1mSELECT * FROM "clients" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.000136)[0m   [0mSELECT count(*) AS count_all FROM "clients" [0m
+Completed in 0.00848 (117 reqs/sec) | Rendering: 0.00033 (3%) | DB: 0.00031 (3%) | 200 OK [http://localhost/clients?format=ext_json&_dc=1229196721540&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2008-12-13 17:32:05) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"action"=>"index", "controller"=>"clients"}
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 0.00870 (114 reqs/sec) | Rendering: 0.00617 (70%) | DB: 0.00000 (0%) | 200 OK [http://localhost/clients]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2008-12-13 17:32:05) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"clients", "sort"=>"id", "_dc"=>"1229196725415", "limit"=>"5"}
+  [4;36;1mClient Load (0.000125)[0m   [0;1mSELECT * FROM "clients" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.000134)[0m   [0mSELECT count(*) AS count_all FROM "clients" [0m
+Completed in 0.00763 (131 reqs/sec) | Rendering: 0.00030 (3%) | DB: 0.00026 (3%) | 200 OK [http://localhost/clients?format=ext_json&_dc=1229196725415&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-13 17:32:14) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/home
+Rendering users/index
+Completed in 0.08538 (11 reqs/sec) | Rendering: 0.00756 (8%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-13 17:32:16) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"format"=>"json", "node"=>"0", "action"=>"index", "controller"=>"categories", "_dc"=>"1229196736027"}
+  [4;36;1mCategory Load (0.002033)[0m   [0;1mSELECT * FROM "categories" WHERE (parent_id IS NULL) [0m
+Completed in 0.01346 (74 reqs/sec) | Rendering: 0.00328 (24%) | DB: 0.00203 (15%) | 200 OK [http://localhost/categories?_dc=1229196736027&format=json&node=0]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-13 17:32:16) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1229196736200", "limit"=>"5"}
+  [4;35;1mUser Load (0.000313)[0m   [0mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000148)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.01180 (84 reqs/sec) | Rendering: 0.00011 (0%) | DB: 0.00046 (3%) | 200 OK [http://localhost/users?format=ext_json&_dc=1229196736200&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-13 17:32:20) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"format"=>"json", "node"=>"1", "action"=>"index", "controller"=>"categories", "_dc"=>"1229196740135"}
+  [4;35;1mCategory Load (0.000257)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCategory Load (0.001076)[0m   [0;1mSELECT * FROM "categories" WHERE (1 = 1 and parent_id = 1) ORDER BY lft[0m
+Completed in 0.01239 (80 reqs/sec) | Rendering: 0.00372 (30%) | DB: 0.00133 (10%) | 200 OK [http://localhost/categories?_dc=1229196740135&format=json&node=1]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-13 17:32:22) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"format"=>"json", "node"=>"10", "action"=>"index", "controller"=>"categories", "_dc"=>"1229196742646"}
+  [4;35;1mCategory Load (0.000244)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 10) [0m
+  [4;36;1mCategory Load (0.000679)[0m   [0;1mSELECT * FROM "categories" WHERE (1 = 1 and parent_id = 10) ORDER BY lft[0m
+Completed in 0.00984 (101 reqs/sec) | Rendering: 0.00203 (20%) | DB: 0.00092 (9%) | 200 OK [http://localhost/categories?_dc=1229196742646&format=json&node=10]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-12-13 17:32:24) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"action"=>"show", "id"=>"create", "controller"=>"users"}
+  [4;35;1mUser Load (0.000129)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 0) [0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=create):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:1383:in `find_one'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:1366:in `find_from_ids'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/base.rb:541:in `find'
+    /app/controllers/users_controller.rb:73:in `find_user'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:173:in `send'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:173:in `evaluate_method'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/callbacks.rb:161:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:191:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:591:in `run_before_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:577:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:503:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-13 17:32:34) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"format"=>"json", "node"=>"0", "action"=>"index", "controller"=>"categories", "_dc"=>"1229196754550"}
+  [4;36;1mCategory Load (0.000627)[0m   [0;1mSELECT * FROM "categories" WHERE (parent_id IS NULL) [0m
+Completed in 0.01029 (97 reqs/sec) | Rendering: 0.00356 (34%) | DB: 0.00063 (6%) | 200 OK [http://localhost/categories?_dc=1229196754550&format=json&node=0]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-13 17:32:34) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1229196754691", "limit"=>"5"}
+  [4;35;1mUser Load (0.000311)[0m   [0mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000157)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.01151 (86 reqs/sec) | Rendering: 0.00012 (1%) | DB: 0.00047 (4%) | 200 OK [http://localhost/users?format=ext_json&_dc=1229196754691&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2008-12-13 17:32:38) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/home
+Rendering users/new
+  [4;35;1mGroup Load (0.000346)[0m   [0mSELECT * FROM "groups" [0m
+Rendered users/_form_items (0.01036)
+Completed in 0.04269 (23 reqs/sec) | Rendering: 0.03573 (83%) | DB: 0.00035 (0%) | 200 OK [http://localhost/users/new]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-13 17:32:39) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"format"=>"json", "node"=>"0", "action"=>"index", "controller"=>"categories", "_dc"=>"1229196759239"}
+  [4;36;1mCategory Load (0.000621)[0m   [0;1mSELECT * FROM "categories" WHERE (parent_id IS NULL) [0m
+Completed in 0.00913 (109 reqs/sec) | Rendering: 0.00282 (30%) | DB: 0.00062 (6%) | 200 OK [http://localhost/categories?_dc=1229196759239&format=json&node=0]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-13 17:32:43) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"format"=>"json", "node"=>"1", "action"=>"index", "controller"=>"categories", "_dc"=>"1229196763076"}
+  [4;35;1mCategory Load (0.000248)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCategory Load (0.001028)[0m   [0;1mSELECT * FROM "categories" WHERE (1 = 1 and parent_id = 1) ORDER BY lft[0m
+Completed in 0.01258 (79 reqs/sec) | Rendering: 0.00364 (28%) | DB: 0.00128 (10%) | 200 OK [http://localhost/categories?_dc=1229196763076&format=json&node=1]
