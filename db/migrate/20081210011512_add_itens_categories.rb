@@ -4,12 +4,12 @@ class AddItensCategories < ActiveRecord::Migration
     
     #Alarm
     root.add_child(alarme = Category.create(:text => 'Alarmes'))
-    alarme.add_child(Category.create(:text => 'Inserir Alarme', :href => '/alarms/create'))
+    alarme.add_child(Category.create(:text => 'Inserir Alarme', :href => '/alarms/new'))
     alarme.add_child(Category.create(:text => 'Listar Alarmes', :href => '/alarms'))
     
     #Contract
     root.add_child(contrato = Category.create(:text => 'Contratos'))
-    contrato.add_child(Category.create(:text => 'Inserir Contrato', :href => '/contracts/create'))
+    contrato.add_child(Category.create(:text => 'Inserir Contrato', :href => '/contracts/new'))
     contrato.add_child(Category.create(:text => 'Listar Contratos', :href => '/contracts'))
     
     #Report
@@ -18,17 +18,17 @@ class AddItensCategories < ActiveRecord::Migration
     
     #User
     root.add_child(user = Category.create(:text => 'Usuarios'))
-    user.add_child(Category.create(:text => 'Inserir Usuario', :href => '/users/create'))
+    user.add_child(Category.create(:text => 'Inserir Usuario', :href => '/users/new'))
     user.add_child(Category.create(:text => 'Listar Usuarios', :href => '/users'))
     
     #Group
     root.add_child(group = Category.create(:text => 'Grupos de Usuarios'))
-    group.add_child(Category.create(:text => 'Inserir Grupo', :href => '/groups/create'))
+    group.add_child(Category.create(:text => 'Inserir Grupo', :href => '/groups/new'))
     group.add_child(Category.create(:text => 'Listar Grupos', :href => '/groups'))
     
     #Client
     root.add_child(client = Category.create(:text => 'Clientes/Fornecedores'))
-    client.add_child(Category.create(:text => 'Inserir Cliente/Fornecedore', :href => '/clients/create'))
+    client.add_child(Category.create(:text => 'Inserir Cliente/Fornecedore', :href => '/clients/new'))
     client.add_child(Category.create(:text => 'Listar Clientes/Fornecedores', :href => '/clients'))
     
   end
