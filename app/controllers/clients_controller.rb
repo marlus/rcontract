@@ -1,6 +1,6 @@
 class ClientsController < ApplicationController
 
-  layout "home"
+  #layout "home"
   before_filter :find_client, :only => [ :show, :edit, :update, :destroy ]
 
   # GET /clients

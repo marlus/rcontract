@@ -9,13 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081206233244) do
+ActiveRecord::Schema.define(:version => 20081210011546) do
 
   create_table "categories", :force => true do |t|
     t.integer  "parent_id"
     t.integer  "lft"
     t.integer  "rgt"
     t.string   "text"
+    t.string   "href"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -30,12 +31,6 @@ ActiveRecord::Schema.define(:version => 20081206233244) do
   end
 
   create_table "groups", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "people", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"

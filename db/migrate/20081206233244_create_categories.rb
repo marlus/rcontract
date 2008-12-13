@@ -5,6 +5,7 @@ class CreateCategories < ActiveRecord::Migration
       t.integer :lft
       t.integer :rgt
       t.string :text
+      t.string :href
 
       t.timestamps
     end
