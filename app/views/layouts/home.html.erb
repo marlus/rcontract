@@ -24,7 +24,7 @@
 <% end -%>
 </div>
 
-<script type="text/javascript">
+<% javascript_tag do -%>
     Ext.onReady(function(){
 
         // NOTE: This is an example showing simple state management. During development,
@@ -92,35 +92,32 @@
                     activeTab:0,
                     items:[{
                         contentEl:'center1',
-                        title: 'Close Me',
-                        closable:true,
-                        autoScroll:true
-                    },{
-                        contentEl:'center2',
-                        title: 'Center Panel',
+                        title: 'Center',
+                        closable:false,
                         autoScroll:true
                     }]
                 })
              ]
         });
-        Ext.get("hideit").on('click', function() {
-           var w = Ext.getCmp('west-panel');
-           w.collapsed ? w.expand() : w.collapse(); 
-        });
+        
     });
-	</script>
+<% end -%>
 
   <div id="west">
-	  <div id="category-tree" style="padding:20px"></div>
+	  <div id="category-tree"></div>
 	  <% javascript_tag do -%>
 	    Ext.onReady(function(){
-	      // create initial root node
-	      root = new Ext.tree.AsyncTreeNode({
+	      
+		  // create initial root node
+		  var root = new Ext.tree.AsyncTreeNode({
 	        text: 'Invisible Root',
-	        id:'0'
+	        draggable:false,
+	        id:'0',
+	        //children: cat_json
 	      });
-	      // create the tree
-	      new Ext.tree.TreePanel({
+	    	    
+	  	  // create the tree
+	      tree = new Ext.tree.TreePanel({
 	        loader: new Ext.tree.TreeLoader({
 	          url:'/categories',
 	          requestMethod:'GET',
@@ -130,17 +127,23 @@
 	        root: root,
 	        rootVisible:false
 	      });
+		
 	      // expand invisible root node to trigger load
 	      // of the first level of actual data
+	      // tree.setRootNode(root);
+	      tree.on('click', function(n){
+	        if(n.isLeaf() && n.attributes.onclick){
+	          eval(n.attributes.onclick);
+	        }
+	      });
+
+	      tree.render();
 	      root.expand();
 	    });
 	  <% end -%>
   </div>
   <div id="north">
     <p></p>
-  </div>
-  <div id="center2">
-        <a id="hideit" href="#">Toggle the west region</a>
   </div>
 
   <div id="center1" style="height:100%"><%= yield  %></div>
