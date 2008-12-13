@@ -13,6 +13,7 @@
   <%= javascript_include_tag "ext_datetime.js" %>
   <%= javascript_include_tag "ext_searchfield.js" %>
   <%= javascript_include_tag "../ext/build/locale/ext-lang-pt_BR.js" %>
+
 </head>
 <body>
 
@@ -32,8 +33,20 @@
         // can change across page loads, leading to unpredictable results.  The developer
         // should ensure that stable state ids are set for stateful components in real apps.
         Ext.state.Manager.setProvider(new Ext.state.CookieProvider());
-        
-       var viewport = new Ext.Viewport({
+       
+		var tabs = new Ext.TabPanel({
+            region:'center',
+            deferredRender:false,
+            activeTab:0,
+            items:[{
+                contentEl:'center1',
+                title: 'Close Me',
+                closable:true,
+                autoScroll:true
+            }]
+        });
+ 		
+		var viewport = new Ext.Viewport({
             layout:'border',
             items:[
                 new Ext.BoxComponent({ // raw
@@ -85,22 +98,51 @@
                         border:false,
                         iconCls:'settings'
                     }]
-                },
-                new Ext.TabPanel({
-                    region:'center',
-                    deferredRender:false,
-                    activeTab:0,
-                    items:[{
-                        contentEl:'center1',
-                        title: 'Center',
-                        closable:false,
-                        autoScroll:true
-                    }]
-                })
+                },      
+				tabs
              ]
         });
-        
+
+	    // tab generation code
+	    var index = 0;
+
+	    function addTab(){
+	        var myTab = tabs.add({
+				contentEl:'center2',
+	            title: 'New Tab ' + (++index),
+	            iconCls: 'tabs',
+				//url: 'http://www.google.com',
+	            //html: 'Tab Body ' + (index) + '<br/><br/>',
+				autoLoad: {url: '/clients', callback: this.initSearch, scope: this, scripts: true},
+	            closable:true
+	        });
+			myTab.show();
+			var updater = myTab.getUpdater();
+	    }
+
+		//Teste para atualizar automaticamente a aba
+        //var tab2 = jtabs.addTab('jtabs-2', "Ajax Tab 1");
+        //var updater = tab2.getUpdateManager();
+        //updater.setDefaultUrl('ajax1.htm');
+        //tab2.on('activate', updater.refresh, updater, true);
+
+
+	    new Ext.Button({
+	        text: 'Test',
+			renderTo: 'north',
+	        handler: addTab
+	    });
+
+		// Fim do teste de funcionalidades para adicionar novas abas
+
+        Ext.get("hideit").on('click', function() {
+           var w = Ext.getCmp('west-panel');
+           w.collapsed ? w.expand() : w.collapse(); 
+        });
     });
+
+
+
 <% end -%>
 
   <div id="west">
@@ -145,7 +187,9 @@
   <div id="north">
     <p></p>
   </div>
-
+  <div id="center2">
+    <a id="hideit" href="#"></a>
+  </div>
   <div id="center1" style="height:100%"><%= yield  %></div>
   <div id="props-panel" style="width:200px;height:200px;overflow:hidden;">
   </div>

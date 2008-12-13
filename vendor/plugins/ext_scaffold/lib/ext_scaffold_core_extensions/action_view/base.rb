@@ -33,7 +33,7 @@ module ExtScaffoldCoreExtensions
                   title:      '#{panel_title}',
                   //width:      #{options[:width] || 540},
                   //height:     #{options[:height] || 208},
-                  height: Ext.get('#{element}').getHeight(),
+                  height: (Ext.get('#{element}').getHeight() > 0) ? Ext.get('#{element}').getHeight() : 300,
                   stripeRows: #{options[:stripe_rows] == false ? 'false' : 'true'},
                   viewConfig: {
                       forceFit:#{options[:force_fit] == false ? 'false' : 'true'}
