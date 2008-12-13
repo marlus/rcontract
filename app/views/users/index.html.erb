@@ -2,10 +2,14 @@
 <% javascript_tag do -%>
   var user_column_model = new Ext.grid.ColumnModel([
     {id: 'id', header: "#", width: 20, dataIndex: 'id'},
-    {header: 'Usuário', dataIndex: 'user[username]'},
-    {header: 'Nome', dataIndex: 'user[name]'},
-    {header: 'E-mail', dataIndex: 'user[email]'}
+    {header: 'Name', dataIndex: 'user[name]'},
+    {header: 'Email', dataIndex: 'user[email]'},
+    {header: 'Username', dataIndex: 'user[username]'},
+    {header: 'Password', dataIndex: 'user[password]'}
   ]);
 <% end -%>
 <%= ext_grid_for 'User', :element => 'center1' %>
+
+
+
 
