@@ -113,7 +113,7 @@
 	        text: 'Invisible Root',
 	        draggable:false,
 	        id:'0',
-	        children: cat_json
+	        //children: cat_json
 	      });
 	    	    
 	  	  // create the tree
@@ -127,21 +127,11 @@
 	        root: root,
 	        rootVisible:false
 	      });
-	
-	      // create the action
-		  var cat_json = [{
-			onclick: "new Ajax.Request('http://domain/users/1.js', {asynchronous:true, evalScripts:true, method:'get'}); false;", 
-	        cls: "file", 
-	        text: "Forename Surname", 
-	        id: "user_1", 
-	        leaf: true
-		  }];
 		
 	      // expand invisible root node to trigger load
 	      // of the first level of actual data
 	      // tree.setRootNode(root);
 	      tree.on('click', function(n){
-			alert("hello" + n.attributes.onclick);
 	        if(n.isLeaf() && n.attributes.onclick){
 	          eval(n.attributes.onclick);
 	        }
