@@ -1,0 +1,8 @@
+<% javascript_tag do -%>
+  var <%= "#{form_items}" %> = [
+    <%= ext_field(:field_label => 'Data inicial', :name => 'contract[date_start]', :xtype => :date_select) %>,
+    <%= ext_field(:field_label => 'Data final', :name => 'contract[date_end]', :xtype => :date_select) %>,
+    <%= ext_field(:field_label => 'Valor', :name => 'contract[value]', :xtype => :text_field) %>,
+    <%= ext_field(:field_label => 'Descrição', :name => 'contract[description]', :xtype => :text_field) %>
+  ];
+<% end -%>
