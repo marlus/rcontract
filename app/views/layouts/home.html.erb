@@ -106,12 +106,12 @@
 	    // tab generation code
 	    var index = 0;
 
-	    function addTab(text, link){
+	    function addTab(title, url){
 	        var myTab = tabs.add({
 				contentEl:'center2',
-	            title: text,
+	            title: title,
 	            iconCls: 'tabs',
-				autoLoad: {url: link, callback: this.initSearch, scope: this, scripts: true},
+				autoLoad: {url: url, callback: this.initSearch, scope: this, scripts: true},
 	            closable:true
 	        });
 			myTab.show();
@@ -124,34 +124,29 @@
         });
 
 		// create initial root node
-		var root = new Ext.tree.AsyncTreeNode({
-			text: 'Invisible Root',
-	   		draggable:false,
-			id:'0',
-		    //children: cat_json
-		});
-
-		// create the tree
-		tree = new Ext.tree.TreePanel({
-			loader: new Ext.tree.TreeLoader({
-				url:'/categories',
-				requestMethod:'GET',
-				baseParams:{format:'json'}
-			}),
-			renderTo:'category-tree',
-			root: root,
-			rootVisible:false
-		});
-
-		// expand invisible root node to trigger load
-		// of the first level of actual data
-		// tree.setRootNode(root);
-		tree.on('click', function(n){
+		var root = new Ext.tree.AsyncTreeNode();
+	    	    
+	  	// create the tree
+	    tree = new Ext.tree.TreePanel({
+	    	loader: new Ext.tree.TreeLoader({
+	          url:'/categories',
+	          requestMethod:'GET',
+	          baseParams:{format:'json'}
+	        }),
+	        renderTo:'category-tree',
+	        root: root,
+	        rootVisible:false
+	    });
+		
+	    // expand invisible root node to trigger load
+	    // of the first level of actual data
+	    // tree.setRootNode(root);
+	    tree.on('click', function(n){
 			addTab(n.attributes.text, n.attributes.link);
-		});
+	    });
 
-		tree.render();
-		root.expand();
+	    tree.render();
+	    root.expand();
     });
 
 
@@ -160,12 +155,6 @@
 
   <div id="west">
 	  <div id="category-tree"></div>
-	  <% javascript_tag do -%>
-	    Ext.onReady(function(){
-	      
-	
-	    });
-	  <% end -%>
   </div>
   <div id="north">
     <p></p>

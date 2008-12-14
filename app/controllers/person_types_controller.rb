@@ -1,6 +1,5 @@
 class PersonTypesController < ApplicationController
 
-  layout "home"
   before_filter :find_person_type, :only => [ :show, :edit, :update, :destroy ]
 
   # GET /person_types

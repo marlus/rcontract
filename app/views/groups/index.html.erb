@@ -1,3 +1,4 @@
+<div id="indexGroups" style="height:100%"></div>
 <%= ext_datastore_for 'Group' %>
 <% javascript_tag do -%>
   var group_column_model = new Ext.grid.ColumnModel([
@@ -5,4 +6,4 @@
     {header: 'Name', dataIndex: 'group[name]'}
   ]);
 <% end -%>
-<%= ext_grid_for 'Group', :element => 'center1' %>
+<%= ext_grid_for 'Group', :element => 'indexGroups' %>

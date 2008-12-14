@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
 
-  layout "home"
   before_filter :find_user, :only => [ :show, :edit, :update, :destroy ]
 
   # GET /users

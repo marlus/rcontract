@@ -6,7 +6,6 @@ class CreateCategories < ActiveRecord::Migration
       t.integer :rgt
       t.string :text
       t.string :link
-      t.string :title
 
       t.timestamps
     end
