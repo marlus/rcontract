@@ -106,39 +106,52 @@
 	    // tab generation code
 	    var index = 0;
 
-	    function addTab(){
+	    function addTab(text, link){
 	        var myTab = tabs.add({
 				contentEl:'center2',
-	            title: 'New Tab ' + (++index),
+	            title: text,
 	            iconCls: 'tabs',
-				//url: 'http://www.google.com',
-	            //html: 'Tab Body ' + (index) + '<br/><br/>',
-				autoLoad: {url: '/clients', callback: this.initSearch, scope: this, scripts: true},
+				autoLoad: {url: link, callback: this.initSearch, scope: this, scripts: true},
 	            closable:true
 	        });
 			myTab.show();
 			var updater = myTab.getUpdater();
 	    }
 
-		//Teste para atualizar automaticamente a aba
-        //var tab2 = jtabs.addTab('jtabs-2', "Ajax Tab 1");
-        //var updater = tab2.getUpdateManager();
-        //updater.setDefaultUrl('ajax1.htm');
-        //tab2.on('activate', updater.refresh, updater, true);
-
-
-	    new Ext.Button({
-	        text: 'Test',
-			renderTo: 'north',
-	        handler: addTab
-	    });
-
-		// Fim do teste de funcionalidades para adicionar novas abas
-
         Ext.get("hideit").on('click', function() {
            var w = Ext.getCmp('west-panel');
            w.collapsed ? w.expand() : w.collapse(); 
         });
+
+		// create initial root node
+		var root = new Ext.tree.AsyncTreeNode({
+			text: 'Invisible Root',
+	   		draggable:false,
+			id:'0',
+		    //children: cat_json
+		});
+
+		// create the tree
+		tree = new Ext.tree.TreePanel({
+			loader: new Ext.tree.TreeLoader({
+				url:'/categories',
+				requestMethod:'GET',
+				baseParams:{format:'json'}
+			}),
+			renderTo:'category-tree',
+			root: root,
+			rootVisible:false
+		});
+
+		// expand invisible root node to trigger load
+		// of the first level of actual data
+		// tree.setRootNode(root);
+		tree.on('click', function(n){
+			addTab(n.attributes.text, n.attributes.link);
+		});
+
+		tree.render();
+		root.expand();
     });
 
 
@@ -150,37 +163,7 @@
 	  <% javascript_tag do -%>
 	    Ext.onReady(function(){
 	      
-		  // create initial root node
-		  var root = new Ext.tree.AsyncTreeNode({
-	        text: 'Invisible Root',
-	        draggable:false,
-	        id:'0',
-	        //children: cat_json
-	      });
-	    	    
-	  	  // create the tree
-	      tree = new Ext.tree.TreePanel({
-	        loader: new Ext.tree.TreeLoader({
-	          url:'/categories',
-	          requestMethod:'GET',
-	          baseParams:{format:'json'}
-	        }),
-	        renderTo:'category-tree',
-	        root: root,
-	        rootVisible:false
-	      });
-		
-	      // expand invisible root node to trigger load
-	      // of the first level of actual data
-	      // tree.setRootNode(root);
-	      tree.on('click', function(n){
-	        if(n.isLeaf() && n.attributes.onclick){
-	          eval(n.attributes.onclick);
-	        }
-	      });
-
-	      tree.render();
-	      root.expand();
+	
 	    });
 	  <% end -%>
   </div>

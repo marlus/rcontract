@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(:version => 20081210011546) do
     t.integer  "lft"
     t.integer  "rgt"
     t.string   "text"
-    t.string   "href"
+    t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
