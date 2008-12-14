@@ -1,3 +1,4 @@
+<div id="indexUsers" style="height:100%"></div>
 <%= ext_datastore_for 'User' %>
 <% javascript_tag do -%>
   var user_column_model = new Ext.grid.ColumnModel([
@@ -8,7 +9,7 @@
     {header: 'Password', dataIndex: 'user[password]'}
   ]);
 <% end -%>
-<%= ext_grid_for 'User', :element => 'center1' %>
+<%= ext_grid_for 'User', :element => 'indexUsers' %>
 
 
 

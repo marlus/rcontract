@@ -9,14 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081210011546) do
+ActiveRecord::Schema.define(:version => 20081213195655) do
 
   create_table "categories", :force => true do |t|
     t.integer  "parent_id"
     t.integer  "lft"
     t.integer  "rgt"
     t.string   "text"
-    t.string   "href"
+    t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
