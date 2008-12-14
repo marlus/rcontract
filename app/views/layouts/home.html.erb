@@ -76,7 +76,7 @@
                  },{
                     region:'west',
                     id:'west-panel',
-                    title:'West',
+                    title:'Painel de controle',
                     split:true,
                     width: 200,
                     minSize: 175,
@@ -89,7 +89,7 @@
                     },
                     items: [{
                         contentEl: 'west',
-                        title:'Navigation',
+                        title:'Navegação',
                         border:false,
                         iconCls:'nav'
                     },{
@@ -108,7 +108,6 @@
 
 	    function addTab(title, url){
 	        var myTab = tabs.add({
-				contentEl:'center2',
 	            title: title,
 	            iconCls: 'tabs',
 				autoLoad: {url: url, callback: this.initSearch, scope: this, scripts: true},
@@ -157,7 +156,7 @@
   <div id="north">
     <p></p>
   </div>
-  <div id="center2">
+  <div id="center2" style="height:100%">
     <a id="hideit" href="#"></a>
   </div>
   <div id="center1" style="height:100%"><%= yield  %></div>
