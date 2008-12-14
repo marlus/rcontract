@@ -14976,3 +14976,81 @@ YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
   [4;35;1mGroup Load (0.000202)[0m   [0mSELECT * FROM "groups" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
   [4;36;1mSQL (0.000144)[0m   [0;1mSELECT count(*) AS count_all FROM "groups" [0m
 Completed in 0.00966 (103 reqs/sec) | Rendering: 0.00038 (3%) | DB: 0.00035 (3%) | 200 OK [http://localhost/groups?format=ext_json&_dc=1229279038594&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2008-12-14 16:27:40) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"action"=>"index", "controller"=>"groups"}
+Rendering template within layouts/groups
+Rendering groups/index
+Completed in 0.00998 (100 reqs/sec) | Rendering: 0.00728 (72%) | DB: 0.00000 (0%) | 200 OK [http://localhost/groups]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2008-12-14 16:27:40) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"groups", "sort"=>"id", "_dc"=>"1229279260385", "limit"=>"5"}
+  [4;35;1mGroup Load (0.000208)[0m   [0mSELECT * FROM "groups" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000189)[0m   [0;1mSELECT count(*) AS count_all FROM "groups" [0m
+Completed in 0.00950 (105 reqs/sec) | Rendering: 0.00036 (3%) | DB: 0.00040 (4%) | 200 OK [http://localhost/groups?format=ext_json&_dc=1229279260385&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2008-12-14 16:27:41) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"action"=>"new", "controller"=>"groups"}
+Rendering groups/new
+Rendered groups/_form_items (0.00032)
+Completed in 0.00776 (128 reqs/sec) | Rendering: 0.00182 (23%) | DB: 0.00000 (0%) | 200 OK [http://localhost/groups/new]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2008-12-14 16:27:42) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"action"=>"new", "controller"=>"groups"}
+Rendering groups/new
+Rendered groups/_form_items (0.00031)
+Completed in 0.00823 (121 reqs/sec) | Rendering: 0.00193 (23%) | DB: 0.00000 (0%) | 200 OK [http://localhost/groups/new]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2008-12-14 16:27:43) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"action"=>"index", "controller"=>"groups"}
+Rendering template within layouts/groups
+Rendering groups/index
+Completed in 0.00865 (115 reqs/sec) | Rendering: 0.00599 (69%) | DB: 0.00000 (0%) | 200 OK [http://localhost/groups]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2008-12-14 16:27:43) [GET]
+  Session ID: BAh7CjoMdXNlcl9pZGkGIht1c2Vyc19wYWdpbmF0aW9uX3N0YXRlewk6Cmxp
+bWl0aQo6D3NvcnRfZmllbGQiB2lkOgtvZmZzZXRpADoTc29ydF9kaXJlY3Rp
+b24iCEFTQyIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsGaQo7ByIHaWQ7
+CGkAOwkiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7BmkKOwci
+B2lkOwhpADsJIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--9f8db38dd63291d01eddbd42ec8703da264a52bf
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"groups", "sort"=>"id", "_dc"=>"1229279263442", "limit"=>"5"}
+  [4;35;1mGroup Load (0.000193)[0m   [0mSELECT * FROM "groups" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mSELECT count(*) AS count_all FROM "groups" [0m
+Completed in 0.00916 (109 reqs/sec) | Rendering: 0.00035 (3%) | DB: 0.00033 (3%) | 200 OK [http://localhost/groups?format=ext_json&_dc=1229279263442&start=0&limit=5&sort=id&dir=ASC]
