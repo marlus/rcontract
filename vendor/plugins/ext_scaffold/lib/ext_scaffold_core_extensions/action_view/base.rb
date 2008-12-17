@@ -4,6 +4,8 @@ module ExtScaffoldCoreExtensions
 
       def ext_grid_for(object_name, options = {})
         element = options[:element]
+        idTab = options[:idTab]
+        nameTab = options[:nameTab]
         datastore = options[:datastore] || "#{object_name.to_s.demodulize.underscore}_datastore"
         offset = params[:start] || (controller.send(:previous_pagination_state, object_name))[:offset] || 0
         page_size = options[:page_size] || 5
@@ -45,7 +47,7 @@ module ExtScaffoldCoreExtensions
                       tooltip:'Adicionar novo #{object_name.to_s.demodulize.humanize}',
                       handler: function(){
                                  grid.suspendEvents();
-                                 window.location.href = '#{new_member_path}';
+                                 parent.updateTab('#{idTab}', '#{nameTab}', '#{new_member_path}');
                                },
                       iconCls:'add'
                   }, '-', {

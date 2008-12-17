@@ -6,4 +6,4 @@
     {header: 'Name', dataIndex: 'group[name]'}
   ]);
 <% end -%>
-<%= ext_grid_for 'Group', :element => 'indexGroups' %>
+<%= ext_grid_for 'Group', :element => 'indexGroups', :idTab => params[:tabId], :nameTab => params[:title] %>
