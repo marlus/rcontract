@@ -8,4 +8,4 @@
     {header: 'Tipo de aviso', dataIndex: 'alarm[warning_type]'}
   ]);
 <% end -%>
-<%= ext_grid_for 'Alarm', :element => 'alarm-grid' %>
+<%= ext_grid_for 'Alarm', :element => 'alarm-grid', :idTab => params[:tabId], :nameTab => params[:title] %>

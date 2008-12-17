@@ -9,4 +9,4 @@
   	{header: 'Descrição', dataIndex: 'contract[description]'}
   ]);
 <% end -%>
-<%= ext_grid_for 'Contract', :element => 'contract-grid' %>
+<%= ext_grid_for 'Contract', :element => 'contract-grid', :idTab => params[:tabId], :nameTab => params[:title] %>

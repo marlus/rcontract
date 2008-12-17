@@ -6,4 +6,4 @@
     {header: 'Name', dataIndex: 'person_type[name]'}
   ]);
 <% end -%>
-<%= ext_grid_for 'PersonType', :element => 'indexPernsonTypes' %>
+<%= ext_grid_for 'PersonType', :element => 'indexPernsonTypes', :idTab => params[:tabId], :nameTab => params[:title] %>

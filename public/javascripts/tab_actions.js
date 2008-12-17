@@ -52,7 +52,7 @@ var main = Ext.onReady(function(){
 		items:[{
 			id:'tab1',
 			contentEl:'tabs',
-    		title: 'Main',
+    		title: 'Inicio',
     		closable:false,
     		autoScroll:true
 		}]
