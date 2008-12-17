@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  warning_date: 2008-12-16
+  order: MyString
+  warning_type: MyString
+
+two:
+  warning_date: 2008-12-16
+  order: MyString
+  warning_type: MyString

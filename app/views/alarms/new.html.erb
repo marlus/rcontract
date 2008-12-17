@@ -1,0 +1,6 @@
+<div id="alarm-form"></div>
+<%= render :partial => 'form_items', :object => :alarm_form_items %>
+<%= ext_form_for 'Alarm',
+                 :element => 'alarm-form',
+                 :form_items => :alarm_form_items,
+                 :mode => :new %>

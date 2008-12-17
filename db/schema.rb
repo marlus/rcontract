@@ -9,7 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081214191509) do
+ActiveRecord::Schema.define(:version => 20081217002200) do
+
+  create_table "alarms", :force => true do |t|
+    t.date     "warning_date"
+    t.string   "order"
+    t.string   "warning_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "categories", :force => true do |t|
     t.integer  "parent_id"
