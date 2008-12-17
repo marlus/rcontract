@@ -34493,3 +34493,76 @@ Rendering users/new
   [4;36;1mGroup Load (0.000347)[0m   [0;1mSELECT * FROM "groups" [0m
 Rendered users/_form_items (0.00801)
 Completed in 0.01739 (57 reqs/sec) | Rendering: 0.00966 (55%) | DB: 0.00035 (1%) | 200 OK [http://localhost/users/new?tabId=10&title=Listar%20Usuarios]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-12-16 23:55:44) [GET]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOgpsaW1pdGkKOgtvZmZz
+ZXRpADoPc29ydF9maWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0MiHGdy
+b3Vwc19wYWdpbmF0aW9uX3N0YXRlewk7AGkKOwZpADsHIgdpZDsIIghBU0M6
+DHVzZXJfaWRpBiIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7AGkKOwZp
+ADsHIgdpZDsIIghBU0MiHGFsYXJtc19wYWdpbmF0aW9uX3N0YXRlewk7AGkK
+OwZpADsHIgdpZDsIIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewAiH2NvbnRyYWN0c19wYWdp
+bmF0aW9uX3N0YXRlewk7AGkKOwZpADsHIgdpZDsIIghBU0M=--2198f6dc0580d5337f29fb4395702e662a5bf18c
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/home
+Rendering home/index
+Completed in 0.00455 (219 reqs/sec) | Rendering: 0.00200 (43%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-16 23:55:45) [GET]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOgpsaW1pdGkKOgtvZmZz
+ZXRpADoPc29ydF9maWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0MiHGdy
+b3Vwc19wYWdpbmF0aW9uX3N0YXRlewk7AGkKOwZpADsHIgdpZDsIIghBU0M6
+DHVzZXJfaWRpBiIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7AGkKOwZp
+ADsHIgdpZDsIIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewAiHGFsYXJtc19wYWdpbmF0aW9u
+X3N0YXRlewk7AGkKOwZpADsHIgdpZDsIIghBU0MiH2NvbnRyYWN0c19wYWdp
+bmF0aW9uX3N0YXRlewk7AGkKOwZpADsHIgdpZDsIIghBU0M=--4d9fa3a7091b25f4764dc1793027b5291ff5974b
+  Parameters: {"format"=>"json", "node"=>"ynode-6", "action"=>"index", "controller"=>"categories", "_dc"=>"1229478945669"}
+  [4;35;1mCategory Load (0.000711)[0m   [0mSELECT * FROM "categories" WHERE (parent_id IS NULL) [0m
+Completed in 0.01188 (84 reqs/sec) | Rendering: 0.00289 (24%) | DB: 0.00071 (5%) | 200 OK [http://localhost/categories?_dc=1229478945669&format=json&node=ynode-6]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-16 23:55:48) [GET]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOgpsaW1pdGkKOgtvZmZz
+ZXRpADoPc29ydF9maWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0MiHGdy
+b3Vwc19wYWdpbmF0aW9uX3N0YXRlewk7AGkKOwZpADsHIgdpZDsIIghBU0M6
+DHVzZXJfaWRpBiIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7AGkKOwZp
+ADsHIgdpZDsIIghBU0MiHGFsYXJtc19wYWdpbmF0aW9uX3N0YXRlewk7AGkK
+OwZpADsHIgdpZDsIIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewAiH2NvbnRyYWN0c19wYWdp
+bmF0aW9uX3N0YXRlewk7AGkKOwZpADsHIgdpZDsIIghBU0M=--2198f6dc0580d5337f29fb4395702e662a5bf18c
+  Parameters: {"format"=>"json", "node"=>"1", "action"=>"index", "controller"=>"categories", "_dc"=>"1229478948822"}
+  [4;36;1mCategory Load (0.000274)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCategory Load (0.001097)[0m   [0mSELECT * FROM "categories" WHERE (1 = 1 and parent_id = 1) ORDER BY lft[0m
+Completed in 0.01338 (74 reqs/sec) | Rendering: 0.00403 (30%) | DB: 0.00137 (10%) | 200 OK [http://localhost/categories?_dc=1229478948822&format=json&node=1]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-12-16 23:55:50) [GET]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOgpsaW1pdGkKOgtvZmZz
+ZXRpADoPc29ydF9maWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0MiHGdy
+b3Vwc19wYWdpbmF0aW9uX3N0YXRlewk7AGkKOwZpADsHIgdpZDsIIghBU0M6
+DHVzZXJfaWRpBiIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7AGkKOwZp
+ADsHIgdpZDsIIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewAiHGFsYXJtc19wYWdpbmF0aW9u
+X3N0YXRlewk7AGkKOwZpADsHIgdpZDsIIghBU0MiH2NvbnRyYWN0c19wYWdp
+bmF0aW9uX3N0YXRlewk7AGkKOwZpADsHIgdpZDsIIghBU0M=--4d9fa3a7091b25f4764dc1793027b5291ff5974b
+  Parameters: {"action"=>"index", "controller"=>"home"}
+Rendering template within layouts/home
+Rendering home/index
+Completed in 0.00468 (213 reqs/sec) | Rendering: 0.00186 (39%) | DB: 0.00000 (0%) | 200 OK [http://localhost/home]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-16 23:55:51) [GET]
+  Session ID: BAh7DCIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOgpsaW1pdGkKOgtvZmZz
+ZXRpADoPc29ydF9maWVsZCIHaWQ6E3NvcnRfZGlyZWN0aW9uIghBU0MiHGdy
+b3Vwc19wYWdpbmF0aW9uX3N0YXRlewk7AGkKOwZpADsHIgdpZDsIIghBU0M6
+DHVzZXJfaWRpBiIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7AGkKOwZp
+ADsHIgdpZDsIIghBU0MiHGFsYXJtc19wYWdpbmF0aW9uX3N0YXRlewk7AGkK
+OwZpADsHIgdpZDsIIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6
+OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewAiH2NvbnRyYWN0c19wYWdp
+bmF0aW9uX3N0YXRlewk7AGkKOwZpADsHIgdpZDsIIghBU0M=--2198f6dc0580d5337f29fb4395702e662a5bf18c
+  Parameters: {"format"=>"json", "node"=>"ynode-6", "action"=>"index", "controller"=>"categories", "_dc"=>"1229478951568"}
+  [4;36;1mCategory Load (0.000711)[0m   [0;1mSELECT * FROM "categories" WHERE (parent_id IS NULL) [0m
+Completed in 0.01024 (97 reqs/sec) | Rendering: 0.00294 (28%) | DB: 0.00071 (6%) | 200 OK [http://localhost/categories?_dc=1229478951568&format=json&node=ynode-6]

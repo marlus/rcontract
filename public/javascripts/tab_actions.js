@@ -3,7 +3,7 @@ var main = Ext.onReady(function(){
 	// Menu containing actions
     var tabActions = new Ext.Panel({
 		frame:true,
-		title: 'Actions',
+		title: 'Navegação',
 		collapsible:true,
 		contentEl:'actions',
 		titleCollapse: true
