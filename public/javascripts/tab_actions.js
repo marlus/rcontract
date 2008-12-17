@@ -1,4 +1,4 @@
-Ext.onReady(function(){
+var main = Ext.onReady(function(){
 
 	// Menu containing actions
     var tabActions = new Ext.Panel({
@@ -74,8 +74,9 @@ Ext.onReady(function(){
     }
 
     // Update the contents of a tab if it exists, otherwise create a new one
-    function updateTab(tabId, title, url) {
+    updateTab = function updateTab(tabId, title, url) {
     	var tab = tabPanel.getItem(tabId);
+		url = url + '?tabId=' + tabId + '&title=' + title;
     	if(tab){
     		tab.getUpdater().update(url);
     		tab.setTitle(title);
@@ -88,7 +89,7 @@ Ext.onReady(function(){
     // Verify when click on leaf element of tree
     treePanel.on('click', function(n){
 		if(n.attributes.leaf == true)
-			updateTab(n.attributes.id, n.attributes.text, n.attributes.link);			
+			updateTab(n.attributes.parent_id, n.attributes.text, n.attributes.link);			
 		else
 			return false;
     });
