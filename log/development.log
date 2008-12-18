@@ -29095,3 +29095,173 @@ aDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--d46711efbb1410d586f3b04d6c5beef961374279
   [4;35;1mGroup Load (0.000198)[0m   [0mSELECT * FROM "groups" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
   [4;36;1mSQL (0.000136)[0m   [0;1mSELECT count(*) AS count_all FROM "groups" [0m
 Completed in 0.00893 (112 reqs/sec) | Rendering: 0.00032 (3%) | DB: 0.00033 (3%) | 200 OK [http://localhost/groups?format=ext_json&_dc=1229477695428&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2008-12-16 23:41:42) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGIhxncm91cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOgps
+aW1pdGkKOg9zb3J0X2ZpZWxkIgdpZDoLb2Zmc2V0aQA6E3NvcnRfZGlyZWN0
+aW9uIghBU0MiHWNsaWVudHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdp
+ZDsIaQA7CSIIQVNDIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFz
+aDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--d46711efbb1410d586f3b04d6c5beef961374279
+  Parameters: {"title"=>"Inserir Grupo", "action"=>"new", "controller"=>"groups", "tabId"=>"13"}
+Rendering groups/new
+Rendered groups/_form_items (0.00028)
+Completed in 0.00796 (125 reqs/sec) | Rendering: 0.00177 (22%) | DB: 0.00000 (0%) | 200 OK [http://localhost/groups/new?tabId=13&title=Inserir%20Grupo]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2008-12-16 23:41:43) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGIhxncm91cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOgps
+aW1pdGkKOg9zb3J0X2ZpZWxkIgdpZDoLb2Zmc2V0aQA6E3NvcnRfZGlyZWN0
+aW9uIghBU0MiHWNsaWVudHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdp
+ZDsIaQA7CSIIQVNDIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFz
+aDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--d46711efbb1410d586f3b04d6c5beef961374279
+  Parameters: {"title"=>"Listar Grupos", "action"=>"index", "controller"=>"groups", "tabId"=>"13"}
+Rendering template within layouts/groups
+Rendering groups/index
+Completed in 0.00808 (123 reqs/sec) | Rendering: 0.00567 (70%) | DB: 0.00000 (0%) | 200 OK [http://localhost/groups?tabId=13&title=Listar%20Grupos]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2008-12-16 23:41:43) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGIhxncm91cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOgps
+aW1pdGkKOg9zb3J0X2ZpZWxkIgdpZDoLb2Zmc2V0aQA6E3NvcnRfZGlyZWN0
+aW9uIghBU0MiHWNsaWVudHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdp
+ZDsIaQA7CSIIQVNDIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFz
+aDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--d46711efbb1410d586f3b04d6c5beef961374279
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"groups", "sort"=>"id", "_dc"=>"1229478103747", "limit"=>"5"}
+  [4;35;1mGroup Load (0.000195)[0m   [0mSELECT * FROM "groups" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mSELECT count(*) AS count_all FROM "groups" [0m
+Completed in 0.00914 (109 reqs/sec) | Rendering: 0.00032 (3%) | DB: 0.00034 (3%) | 200 OK [http://localhost/groups?format=ext_json&_dc=1229478103747&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2008-12-16 23:41:44) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGIhxncm91cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOgps
+aW1pdGkKOg9zb3J0X2ZpZWxkIgdpZDoLb2Zmc2V0aQA6E3NvcnRfZGlyZWN0
+aW9uIghBU0MiHWNsaWVudHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdp
+ZDsIaQA7CSIIQVNDIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFz
+aDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--d46711efbb1410d586f3b04d6c5beef961374279
+  Parameters: {"title"=>"Inserir Grupo", "action"=>"new", "controller"=>"groups", "tabId"=>"13"}
+Rendering groups/new
+Rendered groups/_form_items (0.00134)
+Completed in 0.01131 (88 reqs/sec) | Rendering: 0.00356 (31%) | DB: 0.00000 (0%) | 200 OK [http://localhost/groups/new?tabId=13&title=Inserir%20Grupo]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2008-12-16 23:41:46) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGIhxncm91cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOgps
+aW1pdGkKOg9zb3J0X2ZpZWxkIgdpZDoLb2Zmc2V0aQA6E3NvcnRfZGlyZWN0
+aW9uIghBU0MiHWNsaWVudHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdp
+ZDsIaQA7CSIIQVNDIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFz
+aDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--d46711efbb1410d586f3b04d6c5beef961374279
+  Parameters: {"title"=>"Listar Grupos", "action"=>"index", "controller"=>"groups", "tabId"=>"13"}
+Rendering template within layouts/groups
+Rendering groups/index
+Completed in 0.00866 (115 reqs/sec) | Rendering: 0.00624 (72%) | DB: 0.00000 (0%) | 200 OK [http://localhost/groups?tabId=13&title=Listar%20Grupos]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2008-12-16 23:41:46) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGIhxncm91cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOgps
+aW1pdGkKOg9zb3J0X2ZpZWxkIgdpZDoLb2Zmc2V0aQA6E3NvcnRfZGlyZWN0
+aW9uIghBU0MiHWNsaWVudHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdp
+ZDsIaQA7CSIIQVNDIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFz
+aDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--d46711efbb1410d586f3b04d6c5beef961374279
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"groups", "sort"=>"id", "_dc"=>"1229478106235", "limit"=>"5"}
+  [4;35;1mGroup Load (0.000195)[0m   [0mSELECT * FROM "groups" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1mSELECT count(*) AS count_all FROM "groups" [0m
+Completed in 0.00954 (104 reqs/sec) | Rendering: 0.00080 (8%) | DB: 0.00035 (3%) | 200 OK [http://localhost/groups?format=ext_json&_dc=1229478106235&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2008-12-16 23:41:47) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGIhxncm91cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOgps
+aW1pdGkKOg9zb3J0X2ZpZWxkIgdpZDoLb2Zmc2V0aQA6E3NvcnRfZGlyZWN0
+aW9uIghBU0MiHWNsaWVudHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdp
+ZDsIaQA7CSIIQVNDIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFz
+aDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--d46711efbb1410d586f3b04d6c5beef961374279
+  Parameters: {"title"=>"Inserir Grupo", "action"=>"new", "controller"=>"groups", "tabId"=>"13"}
+Rendering groups/new
+Rendered groups/_form_items (0.00040)
+Completed in 0.00811 (123 reqs/sec) | Rendering: 0.00192 (23%) | DB: 0.00000 (0%) | 200 OK [http://localhost/groups/new?tabId=13&title=Inserir%20Grupo]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2008-12-16 23:42:06) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGIhxncm91cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOgps
+aW1pdGkKOg9zb3J0X2ZpZWxkIgdpZDoLb2Zmc2V0aQA6E3NvcnRfZGlyZWN0
+aW9uIghBU0MiHWNsaWVudHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdp
+ZDsIaQA7CSIIQVNDIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFz
+aDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--d46711efbb1410d586f3b04d6c5beef961374279
+  Parameters: {"title"=>"Listar Grupos", "action"=>"index", "controller"=>"groups", "tabId"=>"13"}
+Rendering template within layouts/groups
+Rendering groups/index
+Completed in 0.00844 (118 reqs/sec) | Rendering: 0.00589 (69%) | DB: 0.00000 (0%) | 200 OK [http://localhost/groups?tabId=13&title=Listar%20Grupos]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2008-12-16 23:42:06) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGIhxncm91cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOgps
+aW1pdGkKOg9zb3J0X2ZpZWxkIgdpZDoLb2Zmc2V0aQA6E3NvcnRfZGlyZWN0
+aW9uIghBU0MiHWNsaWVudHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdp
+ZDsIaQA7CSIIQVNDIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFz
+aDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--d46711efbb1410d586f3b04d6c5beef961374279
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"groups", "sort"=>"id", "_dc"=>"1229478126267", "limit"=>"5"}
+  [4;35;1mGroup Load (0.000300)[0m   [0mSELECT * FROM "groups" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mSELECT count(*) AS count_all FROM "groups" [0m
+Completed in 0.01075 (92 reqs/sec) | Rendering: 0.00043 (3%) | DB: 0.00044 (4%) | 200 OK [http://localhost/groups?format=ext_json&_dc=1229478126267&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2008-12-16 23:42:07) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGIhxncm91cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOgps
+aW1pdGkKOg9zb3J0X2ZpZWxkIgdpZDoLb2Zmc2V0aQA6E3NvcnRfZGlyZWN0
+aW9uIghBU0MiHWNsaWVudHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdp
+ZDsIaQA7CSIIQVNDIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFz
+aDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--d46711efbb1410d586f3b04d6c5beef961374279
+  Parameters: {"title"=>"Listar Grupos", "action"=>"new", "controller"=>"groups", "tabId"=>"13"}
+Rendering groups/new
+Rendered groups/_form_items (0.00039)
+Completed in 0.00859 (116 reqs/sec) | Rendering: 0.00222 (25%) | DB: 0.00000 (0%) | 200 OK [http://localhost/groups/new?tabId=13&title=Listar%20Grupos]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-16 23:42:11) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGIhxncm91cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOgps
+aW1pdGkKOg9zb3J0X2ZpZWxkIgdpZDoLb2Zmc2V0aQA6E3NvcnRfZGlyZWN0
+aW9uIghBU0MiHWNsaWVudHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdp
+ZDsIaQA7CSIIQVNDIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFz
+aDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--d46711efbb1410d586f3b04d6c5beef961374279
+  Parameters: {"format"=>"json", "node"=>"10", "action"=>"index", "controller"=>"categories", "_dc"=>"1229478131885"}
+  [4;35;1mCategory Load (0.000239)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 10) [0m
+  [4;36;1mCategory Load (0.000907)[0m   [0;1mSELECT * FROM "categories" WHERE (1 = 1 and parent_id = 10) ORDER BY lft[0m
+Completed in 0.01024 (97 reqs/sec) | Rendering: 0.00207 (20%) | DB: 0.00115 (11%) | 200 OK [http://localhost/categories?_dc=1229478131885&format=json&node=10]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-16 23:42:13) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGIhxncm91cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOgps
+aW1pdGkKOg9zb3J0X2ZpZWxkIgdpZDoLb2Zmc2V0aQA6E3NvcnRfZGlyZWN0
+aW9uIghBU0MiHWNsaWVudHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdp
+ZDsIaQA7CSIIQVNDIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFz
+aDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--d46711efbb1410d586f3b04d6c5beef961374279
+  Parameters: {"title"=>"Listar Usuarios", "action"=>"index", "controller"=>"users", "tabId"=>"10"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 0.01011 (98 reqs/sec) | Rendering: 0.00729 (72%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users?tabId=10&title=Listar%20Usuarios]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-12-16 23:42:13) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGIhxncm91cHNfcGFnaW5hdGlvbl9zdGF0ZXsJOgps
+aW1pdGkKOg9zb3J0X2ZpZWxkIgdpZDoLb2Zmc2V0aQA6E3NvcnRfZGlyZWN0
+aW9uIghBU0MiHWNsaWVudHNfcGFnaW5hdGlvbl9zdGF0ZXsJOwZpCjsHIgdp
+ZDsIaQA7CSIIQVNDIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFz
+aDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--d46711efbb1410d586f3b04d6c5beef961374279
+  Parameters: {"format"=>"ext_json", "dir"=>"ASC", "action"=>"index", "start"=>"0", "controller"=>"users", "sort"=>"id", "_dc"=>"1229478133698", "limit"=>"5"}
+  [4;35;1mUser Load (0.000285)[0m   [0mSELECT * FROM "users" ORDER BY id ASC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 0.01082 (92 reqs/sec) | Rendering: 0.00035 (3%) | DB: 0.00043 (3%) | 200 OK [http://localhost/users?format=ext_json&_dc=1229478133698&start=0&limit=5&sort=id&dir=ASC]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2008-12-16 23:42:15) [GET]
+  Session ID: BAh7CiIbdXNlcnNfcGFnaW5hdGlvbl9zdGF0ZXsJOgpsaW1pdGkKOg9zb3J0
+X2ZpZWxkIgdpZDoLb2Zmc2V0aQA6E3NvcnRfZGlyZWN0aW9uIghBU0M6DHVz
+ZXJfaWRpBiIcZ3JvdXBzX3BhZ2luYXRpb25fc3RhdGV7CTsAaQo7BiIHaWQ7
+B2kAOwgiCEFTQyIdY2xpZW50c19wYWdpbmF0aW9uX3N0YXRlewk7AGkKOwYi
+B2lkOwdpADsIIghBU0MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--863fd5cda689257b9d0234ec89c8a7f86bd15a79
+  Parameters: {"title"=>"", "action"=>"new", "controller"=>"users", "tabId"=>""}
+Rendering users/new
+  [4;35;1mGroup Load (0.000371)[0m   [0mSELECT * FROM "groups" [0m
+Rendered users/_form_items (0.01022)
+Completed in 0.04382 (22 reqs/sec) | Rendering: 0.03702 (84%) | DB: 0.00037 (0%) | 200 OK [http://localhost/users/new?tabId=&title=]
