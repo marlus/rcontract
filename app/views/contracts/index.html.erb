@@ -1,0 +1,12 @@
+<div id="contract-grid" style="height:100%"></div>
+<%= ext_datastore_for 'Contract' %>
+<% javascript_tag do -%>
+  var contract_column_model = new Ext.grid.ColumnModel([
+    {id: 'id', header: "#", width: 20, dataIndex: 'id'},
+    {header: 'Data inicial', dataIndex: 'contract[date_start]'},
+    {header: 'Data final', dataIndex: 'contract[date_end]'},
+    {header: 'Valor', dataIndex: 'contract[value]'},
+  	{header: 'Descrição', dataIndex: 'contract[description]'}
+  ]);
+<% end -%>
+<%= ext_grid_for 'Contract', :element => 'contract-grid', :idTab => params[:tabId], :nameTab => params[:title] %>

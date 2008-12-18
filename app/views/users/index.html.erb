@@ -9,7 +9,7 @@
     {header: 'Password', dataIndex: 'user[password]'}
   ]);
 <% end -%>
-<%= ext_grid_for 'User', :element => 'indexUsers' %>
+<%= ext_grid_for 'User', :element => 'indexUsers', :idTab => params[:tabId], :nameTab => params[:title] %>
 
 
 
