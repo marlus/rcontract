@@ -57,7 +57,7 @@ module ExtScaffoldCoreExtensions
                                  var selected = grid.getSelectionModel().getSelected();
                                  if(selected) {
                                    grid.suspendEvents();
-                                   window.location.href = '#{collection_path}/' + selected.data.id + '/edit';
+                                   parent.updateTab('#{idTab}', '#{nameTab}', '#{collection_path}/' + selected.data.id + '/edit');
                                  } else { 
                                    alert('Por favor selecione uma linha.');
                                  }
@@ -112,6 +112,8 @@ module ExtScaffoldCoreExtensions
 
       def ext_form_for(object_name, options = {})
         element = options[:element]
+        idTab = options[:idTab]
+        nameTab = options[:nameTab]
         object = options[:object] || instance_variable_get("@#{object_name.to_s.demodulize.underscore}")
         mode = options[:mode] || :edit
         form_items = options[:form_items] || '[]'
@@ -147,7 +149,7 @@ module ExtScaffoldCoreExtensions
                                           :handler => (mode == :edit ?
                                             "function(){ panel.getForm().submit({url:'#{send member_path_method, object, :format => :ext_json}', params: { _method: 'PUT' }, waitMsg:'Saving...'}); }" :
                                             "function(){ panel.getForm().submit({url:'#{send collection_path_method, :format => :ext_json}', waitMsg:'Saving...'}); }")) + ',' unless mode == :show}
-                             #{ext_button(:text => 'Back', :handler => "function(){ panel.suspendEvents(); window.location.href = '#{collection_path}'; }")}
+                             #{ext_button(:text => 'Back', :handler => "function(){ panel.suspendEvents(); parent.updateTab('#{idTab}', '#{nameTab}', '#{collection_path}'); }")}
                            ]
               });
 

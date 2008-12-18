@@ -34,7 +34,9 @@ class GroupsController < ApplicationController
     respond_to do |format|
       if @group.save
         flash[:notice] = 'Group was successfully created.'
-        format.ext_json { render(:update) {|page| page.redirect_to groups_path } }
+        index
+        #format.ext_json { render(:update) {|page| page.redirect_to groups_path } }
+        #format.ext_json { render(:update) {} }
       else
         format.ext_json { render :json => @group.to_ext_json(:success => false) }
       end

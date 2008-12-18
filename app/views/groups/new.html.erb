@@ -3,4 +3,6 @@
 <%= ext_form_for 'Group',
                  :element => 'group-form',
                  :form_items => :group_form_items,
-                 :mode => :new %>
+                 :mode => :new,
+				 :idTab => params[:tabId], 
+				 :nameTab => params[:title] %>
