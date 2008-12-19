@@ -3,4 +3,6 @@
 <%= ext_form_for 'Contract',
                  :element => 'contract-form',
                  :form_items => :contract_form_items,
-                 :mode => :edit %>
+                 :mode => :edit, 
+				 :tabId => params[:tabId], 
+				 :tabTitle => params[:tabTitle] %>

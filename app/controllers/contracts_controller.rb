@@ -33,8 +33,9 @@ class ContractsController < ApplicationController
 
     respond_to do |format|
       if @contract.save
-        flash[:notice] = 'Contract was successfully created.'
-        format.ext_json { render(:update) {|page| page.redirect_to contracts_path } }
+        notice = 'Contract was successfully created.'
+        format.ext_json { render(:update) {|page| page.alert notice
+           page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + contracts_path + "');" } }
       else
         format.ext_json { render :json => @contract.to_ext_json(:success => false) }
       end
@@ -45,8 +46,9 @@ class ContractsController < ApplicationController
   def update
     respond_to do |format|
       if @contract.update_attributes(params[:contract])
-        flash[:notice] = 'Contract was successfully updated.'
-        format.ext_json { render(:update) {|page| page.redirect_to contracts_path } }
+        notice = 'Contract was successfully updated.'
+        format.ext_json { render(:update) {|page| page.alert notice
+           page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + contracts_path + "');" } }
       else
         format.ext_json { render :json => @contract.to_ext_json(:success => false) }
       end

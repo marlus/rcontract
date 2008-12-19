@@ -3,4 +3,6 @@
 <%= ext_form_for 'User',
                  :element => 'user-form',
                  :form_items => :user_form_items,
-                 :mode => :new %>
+                 :mode => :new, 
+				 :tabId => params[:tabId], 
+				 :tabTitle => params[:tabTitle] %>

@@ -33,10 +33,9 @@ class GroupsController < ApplicationController
 
     respond_to do |format|
       if @group.save
-        flash[:notice] = 'Group was successfully created.'
-        index
-        #format.ext_json { render(:update) {|page| page.redirect_to groups_path } }
-        #format.ext_json { render(:update) {} }
+        notice = 'Group was successfully created.'
+        format.ext_json { render(:update) {|page| page.alert notice
+           page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + groups_path + "');" } }
       else
         format.ext_json { render :json => @group.to_ext_json(:success => false) }
       end
@@ -47,8 +46,9 @@ class GroupsController < ApplicationController
   def update
     respond_to do |format|
       if @group.update_attributes(params[:group])
-        flash[:notice] = 'Group was successfully updated.'
-        format.ext_json { render(:update) {|page| page.redirect_to groups_path } }
+        notice = 'Group was successfully updated.'
+        format.ext_json { render(:update) {|page| page.alert notice
+           page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + groups_path + "');" } }
       else
         format.ext_json { render :json => @group.to_ext_json(:success => false) }
       end

@@ -33,8 +33,9 @@ class ClientsController < ApplicationController
 
     respond_to do |format|
       if @client.save
-        flash[:notice] = 'Client was successfully created.'
-        format.ext_json { render(:update) {|page| page.redirect_to clients_path } }
+        notice = 'Client was successfully created.'
+        format.ext_json { render(:update) {|page| page.alert notice
+           page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + clients_path + "');" } }
       else
         format.ext_json { render :json => @client.to_ext_json(:success => false) }
       end
@@ -45,8 +46,9 @@ class ClientsController < ApplicationController
   def update
     respond_to do |format|
       if @client.update_attributes(params[:client])
-        flash[:notice] = 'Client was successfully updated.'
-        format.ext_json { render(:update) {|page| page.redirect_to clients_path } }
+        notice = 'Client was successfully updated.'
+        format.ext_json { render(:update) {|page| page.alert notice
+           page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + clients_path + "');" } }
       else
         format.ext_json { render :json => @client.to_ext_json(:success => false) }
       end

@@ -3,4 +3,6 @@
 <%= ext_form_for 'Client',
                  :element => 'client-form',
                  :form_items => :client_form_items,
-                 :mode => :new %>
+                 :mode => :new, 
+				 :tabId => params[:tabId], 
+				 :tabTitle => params[:tabTitle] %>

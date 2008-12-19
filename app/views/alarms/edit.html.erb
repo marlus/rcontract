@@ -3,4 +3,6 @@
 <%= ext_form_for 'Alarm',
                  :element => 'alarm-form',
                  :form_items => :alarm_form_items,
-                 :mode => :edit %>
+                 :mode => :edit, 
+				 :tabId => params[:tabId], 
+				 :tabTitle => params[:tabTitle] %>

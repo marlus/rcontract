@@ -33,8 +33,9 @@ class PersonTypesController < ApplicationController
 
     respond_to do |format|
       if @person_type.save
-        flash[:notice] = 'PersonType was successfully created.'
-        format.ext_json { render(:update) {|page| page.redirect_to person_types_path } }
+        notice = 'PersonType was successfully created.'
+        format.ext_json { render(:update) {|page| page.alert notice
+           page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + person_types_path + "');" } }
       else
         format.ext_json { render :json => @person_type.to_ext_json(:success => false) }
       end
@@ -45,8 +46,9 @@ class PersonTypesController < ApplicationController
   def update
     respond_to do |format|
       if @person_type.update_attributes(params[:person_type])
-        flash[:notice] = 'PersonType was successfully updated.'
-        format.ext_json { render(:update) {|page| page.redirect_to person_types_path } }
+        notice = 'PersonType was successfully updated.'
+        format.ext_json { render(:update) {|page| page.alert notice
+           page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + person_types_path + "');" } }
       else
         format.ext_json { render :json => @person_type.to_ext_json(:success => false) }
       end

@@ -33,8 +33,9 @@ class AlarmsController < ApplicationController
 
     respond_to do |format|
       if @alarm.save
-        flash[:notice] = 'Alarm was successfully created.'
-        format.ext_json { render(:update) {|page| page.redirect_to alarms_path } }
+        notice = 'Alarm was successfully created.'
+        format.ext_json { render(:update) {|page| page.alert notice
+           page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + alarms_path + "');" } }
       else
         format.ext_json { render :json => @alarm.to_ext_json(:success => false) }
       end
@@ -45,8 +46,9 @@ class AlarmsController < ApplicationController
   def update
     respond_to do |format|
       if @alarm.update_attributes(params[:alarm])
-        flash[:notice] = 'Alarm was successfully updated.'
-        format.ext_json { render(:update) {|page| page.redirect_to alarms_path } }
+        notice = 'Alarm was successfully updated.'
+        format.ext_json { render(:update) {|page| page.alert notice
+           page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + alarms_path + "');" } }
       else
         format.ext_json { render :json => @alarm.to_ext_json(:success => false) }
       end

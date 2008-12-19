@@ -74,14 +74,14 @@ var main = Ext.onReady(function(){
     }
 
     // Update the contents of a tab if it exists, otherwise create a new one
-    updateTab = function updateTab(tabId, title, url) {
+    updateTab = function updateTab(tabId, tabTitle, url) {
     	var tab = tabPanel.getItem(tabId);
-		url = url + '?tabId=' + tabId + '&title=' + title;
+		url = url + '?tabId=' + tabId + '&tabTitle=' + tabTitle;
     	if(tab){
     		tab.getUpdater().update(url);
-    		tab.setTitle(title);
+    		tab.setTitle(tabTitle);
     	}else{
-    		tab = addTab(tabId, title, url);
+    		tab = addTab(tabId, tabTitle, url);
     	}
     	tabPanel.setActiveTab(tab);
     }

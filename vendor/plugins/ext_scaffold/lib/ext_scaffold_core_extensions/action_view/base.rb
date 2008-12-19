@@ -4,8 +4,8 @@ module ExtScaffoldCoreExtensions
 
       def ext_grid_for(object_name, options = {})
         element = options[:element]
-        idTab = options[:idTab]
-        nameTab = options[:nameTab]
+        tabId = options[:tabId]
+        tabTitle = options[:tabTitle]
         datastore = options[:datastore] || "#{object_name.to_s.demodulize.underscore}_datastore"
         offset = params[:start] || (controller.send(:previous_pagination_state, object_name))[:offset] || 0
         page_size = options[:page_size] || 5
@@ -47,7 +47,7 @@ module ExtScaffoldCoreExtensions
                       tooltip:'Adicionar novo #{object_name.to_s.demodulize.humanize}',
                       handler: function(){
                                  grid.suspendEvents();
-                                 parent.updateTab('#{idTab}', '#{nameTab}', '#{new_member_path}');
+                                 parent.updateTab('#{tabId}', '#{tabTitle}', '#{new_member_path}');
                                },
                       iconCls:'add'
                   }, '-', {
@@ -57,7 +57,7 @@ module ExtScaffoldCoreExtensions
                                  var selected = grid.getSelectionModel().getSelected();
                                  if(selected) {
                                    grid.suspendEvents();
-                                   parent.updateTab('#{idTab}', '#{nameTab}', '#{collection_path}/' + selected.data.id + '/edit');
+                                   parent.updateTab('#{tabId}', '#{tabTitle}', '#{collection_path}/' + selected.data.id + '/edit');
                                  } else { 
                                    alert('Por favor selecione uma linha.');
                                  }
@@ -112,8 +112,8 @@ module ExtScaffoldCoreExtensions
 
       def ext_form_for(object_name, options = {})
         element = options[:element]
-        idTab = options[:idTab]
-        nameTab = options[:nameTab]
+        tabId = options[:tabId]
+        tabTitle = options[:tabTitle]
         object = options[:object] || instance_variable_get("@#{object_name.to_s.demodulize.underscore}")
         mode = options[:mode] || :edit
         form_items = options[:form_items] || '[]'
@@ -147,9 +147,9 @@ module ExtScaffoldCoreExtensions
 
                   buttons: [ #{ext_button(:text => 'Save', :type => 'submit',
                                           :handler => (mode == :edit ?
-                                            "function(){ panel.getForm().submit({url:'#{send member_path_method, object, :format => :ext_json}', params: { _method: 'PUT' }, waitMsg:'Saving...'}); }" :
-                                            "function(){ panel.getForm().submit({url:'#{send collection_path_method, :format => :ext_json}', waitMsg:'Saving...'}); }")) + ',' unless mode == :show}
-                             #{ext_button(:text => 'Back', :handler => "function(){ panel.suspendEvents(); parent.updateTab('#{idTab}', '#{nameTab}', '#{collection_path}'); }")}
+                                            "function(){ panel.getForm().submit({url:'#{send member_path_method, object, :format => :ext_json}', params: { tabId: '#{tabId}', tabTitle: '#{tabTitle}', _method: 'PUT' }, waitMsg:'Saving...'}); }" :
+                                            "function(){ panel.getForm().submit({url:'#{send collection_path_method, :format => :ext_json}', waitMsg:'Saving...', params: {tabId: '#{tabId}', tabTitle: '#{tabTitle}'}}); }")) + ',' unless mode == :show}
+                             #{ext_button(:text => 'Back', :handler => "function(){ panel.suspendEvents(); parent.updateTab('#{tabId}', '#{tabTitle}', '#{collection_path}'); }")}
                            ]
               });
 

@@ -3,4 +3,6 @@
 <%= ext_form_for 'PersonType',
                  :element => 'person_type-form',
                  :form_items => :person_type_form_items,
-                 :mode => :edit %>
+                 :mode => :edit, 
+				 :tabId => params[:tabId], 
+				 :tabTitle => params[:tabTitle] %>
