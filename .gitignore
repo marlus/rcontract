@@ -1,0 +1,6 @@
+config/database.locaweb.yml
+config/deploy.rb
+config/ssh_helper.rb
+config/database.yml
+tmp/*
+log/*
