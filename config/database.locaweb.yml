@@ -1,0 +1,7 @@
+production:
+  adapter: mysql
+  encoding: utf8
+  database: jpericia1
+  username: jpericia1
+  password: arise00
+  host: mysql02.jpericia.org
