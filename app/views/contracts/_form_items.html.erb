@@ -1,8 +1,19 @@
+<%= select :contract, :person_type_id,
+       PersonType.find(:all).collect {|c| [ c.name, c.id ] },
+       { :include_blank => true } %>
 <% javascript_tag do -%>
   var <%= "#{form_items}" %> = [
     <%= ext_field(:field_label => 'Data inicial', :name => 'contract[date_start]', :xtype => :date_select) %>,
     <%= ext_field(:field_label => 'Data final', :name => 'contract[date_end]', :xtype => :date_select) %>,
-    <%= ext_field(:field_label => 'Valor', :name => 'contract[value]', :xtype => :text_field) %>,
-    <%= ext_field(:field_label => 'Descrição', :name => 'contract[description]', :xtype => :text_field) %>
+    <%= ext_field(:field_label => 'Valor (R$)', :name => 'contract[value]', :xtype => :text_field) %>,
+    { fieldLabel:    'Tipo Pessoa',
+      xtype:         'combo',
+      triggerAction: 'all',
+      typeAhead:      true,
+      forceSelection: true,
+      transform:     'contract_person_type_id',
+      lazyRender:     true
+    },
+    <%= ext_field(:field_label => 'Descrição', :name => 'contract[description]', :xtype => :htmleditor) %>,
   ];
 <% end -%>
