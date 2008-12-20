@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(:version => 20081220133611) do
     t.date     "date_end"
     t.decimal  "value"
     t.string   "description"
+    t.integer  "person_type_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

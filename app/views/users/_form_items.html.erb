@@ -4,16 +4,23 @@
 <% javascript_tag do -%>
   var <%= "#{form_items}" %> = [
     <%= ext_field(:field_label => 'Usuário', :name => 'user[username]', :xtype => :text_field) %>,
-    <%= ext_field(:field_label => 'Senha', :name => 'user[password]', :xtype => :text_field) %>,
+	{
+		fieldLabel:    'Senha',
+		xtype:         'textfield',
+		name:		   'user_password',
+		allowBlank:	   'false',
+		inputType:	   'password'
+	},
     <%= ext_field(:field_label => 'Nome', :name => 'user[name]', :xtype => :text_field) %>,
     <%= ext_field(:field_label => 'E-mail', :name => 'user[email]', :xtype => :text_field) %>,
-    { fieldLabel:    'Grupo',
-      xtype:         'combo',
-      triggerAction: 'all',
-      typeAhead:      true,
-      forceSelection: true,
-      transform:     'user_group_id',
-      lazyRender:     true
+    { 
+		fieldLabel:    'Grupo',
+		xtype:         'combo',
+		triggerAction: 'all',
+		typeAhead:      true,
+		forceSelection: true,
+		transform:     'user_group_id',
+		lazyRender:     true
     }
   ];
 <% end -%>

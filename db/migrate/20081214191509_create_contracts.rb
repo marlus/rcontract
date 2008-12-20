@@ -5,6 +5,7 @@ class CreateContracts < ActiveRecord::Migration
       t.date :date_end
       t.decimal :value
       t.string :description
+      t.integer :person_type_id
 
       t.timestamps
     end

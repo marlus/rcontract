@@ -137,8 +137,8 @@ module ExtScaffoldCoreExtensions
                   waitMsgTarget: true,
                   title:         '#{form_title}',
                   bodyStyle:     'padding:5px 5px 0',
-                  width:         350,
-                  defaults:      {width: 230},
+                  //width:         350,
+                  //defaults:      {width: 230},
                   defaultType:   'textfield',
                   renderTo:      '#{element}',
 
