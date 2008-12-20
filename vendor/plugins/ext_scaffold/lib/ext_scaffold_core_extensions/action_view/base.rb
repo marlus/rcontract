@@ -8,7 +8,7 @@ module ExtScaffoldCoreExtensions
         tabTitle = options[:tabTitle]
         datastore = options[:datastore] || "#{object_name.to_s.demodulize.underscore}_datastore"
         offset = params[:start] || (controller.send(:previous_pagination_state, object_name))[:offset] || 0
-        page_size = options[:page_size] || 5
+        page_size = options[:page_size] || 25
         column_model = options[:column_model] || "#{object_name.to_s.demodulize.underscore}_column_model"
         collection_path_method = "#{object_name.to_s.tableize.tr('/','_')}_path"
         collection_path = send collection_path_method
@@ -202,8 +202,8 @@ module ExtScaffoldCoreExtensions
         js << "  allowBlank: #{options[:allow_blank] == false ? 'false' : 'true'}," unless options[:allow_blank].nil?
         js << "  vtype: '#{options[:vtype]}'," if options[:vtype]
         js << "  xtype: '#{options[:xtype]}'," if options[:xtype]
-        js << "  format: 'Y/m/d'," if options[:xtype] == 'datefield'
-        js << "  dateFormat: 'Y/m/d', timeFormat: 'H:i:s'," if options[:xtype] == 'xdatetime'
+        js << "  format: 'd/m/Y'," if options[:xtype] == 'datefield'
+        js << "  dateFormat: 'd/m/Y', timeFormat: 'H:i:s'," if options[:xtype] == 'xdatetime'
         js << "  inputValue: '1', width: 18, height: 21," if options[:xtype] == 'checkbox'
         js << "  name: '#{options[:name]}'"
         js << "}"
