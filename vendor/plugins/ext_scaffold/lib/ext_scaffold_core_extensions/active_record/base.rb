@@ -28,7 +28,7 @@ module ExtScaffoldCoreExtensions
             #   "success": false }
             error_hash = errors.inject({}) do |result, error| # error is [attribute, message]
               field_key = "#{self.class.to_s.demodulize.underscore}[#{error.first}]"
-              result[field_key] ||= 'Field ' + Array(errors[error.first]).join(' and ')
+              result[field_key] ||= 'Campo ' + Array(errors[error.first]).join(' and ')
               result
             end
             { :success => false, :errors => error_hash }.to_json(options)
