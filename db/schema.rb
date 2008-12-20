@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081220133611) do
+ActiveRecord::Schema.define(:version => 20081220154742) do
 
   create_table "alarm_orders", :force => true do |t|
     t.string   "name"
@@ -17,9 +17,15 @@ ActiveRecord::Schema.define(:version => 20081220133611) do
     t.datetime "updated_at"
   end
 
+  create_table "alarm_period_warnings", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "alarms", :force => true do |t|
-    t.date     "warning_date"
-    t.string   "alarm_order_id"
+    t.integer  "alarm_period_warning_id"
+    t.integer  "alarm_order_id"
     t.string   "warning_type"
     t.datetime "created_at"
     t.datetime "updated_at"
