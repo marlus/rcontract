@@ -27,7 +27,7 @@ var main = Ext.onReady(function(){
 	var northComponent = new Ext.BoxComponent({ // raw
         region:'north',
         el: 'north',
-        height:32
+        height: 99
     });
     	    
   	// Tree Component
@@ -61,10 +61,12 @@ var main = Ext.onReady(function(){
     // Configure viewport
     viewport = new Ext.Viewport({
 		layout:'border',
-		items:[northComponent, actionPanel, tabPanel]});
-		// Adds tab to center panel
-	    function addTab(tabId, tabTitle, targetUrl){
-	        tabPanel.add({
+		items:[northComponent, actionPanel, tabPanel]
+	});
+	
+	// Adds tab to center panel
+    function addTab(tabId, tabTitle, targetUrl){
+        tabPanel.add({
 			id: tabId,
 		    title: tabTitle,
 		    iconCls: 'tabs',
