@@ -1,8 +1,8 @@
 <%= select :contract_category, :contract_category_id,
        ContractCategory.find(:all).collect {|c| [ c.name, c.id ] },
        { :include_blank => true } %>
-<%= select :contract_type, :contract_type_id, :contract_category_id,
-       ContractType.find(:all).collect {|c| [ c.document, c.id, c.contract_category_id ] },
+<%= select :contract_type, :contract_type_id,
+       ContractType.find(:all).collect {|c| [ c.document, c.id ] },
        { :include_blank => true } %>
 <% javascript_tag do -%>
   var <%= "#{form_items}" %> = [
