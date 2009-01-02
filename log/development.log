@@ -50504,3 +50504,379 @@ Processing CategoriesController#index to json (for 127.0.0.1 at 2008-12-31 22:23
   Parameters: {"node"=>"ynode-6", "_dc"=>"1230769399214"}
   [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" WHERE (parent_id IS NULL) [0m
 Completed in 32ms (View: 25, DB: 1) | 200 OK [http://localhost/categories?_dc=1230769399214&format=json&node=ynode-6]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-01-01 23:46:53) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 57ms (View: 55, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-01-01 23:54:44) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-01-01 23:55:43) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-01-02 00:09:16) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-01-02 00:09:23) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-01-02 00:09:43) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-01-02 00:10:07) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-01-02 00:13:04) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-01-02 00:13:20) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-01-02 00:14:30) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-01-02 00:14:50) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-01-02 00:16:05) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-01-02 00:16:27) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-01-02 00:16:50) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-01-02 00:17:46) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-01-02 00:17:59) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-01-02 00:18:20) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-01-02 00:18:33) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-01-02 00:19:15) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2009-01-02 00:19:32) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2009-01-02 00:20:21) [POST]
+  Parameters: {"username"=>"psaux", "password"=>"qwe123"}
+  [4;36;1mUser Load (2.1ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'psaux') LIMIT 1[0m
+Completed in 28ms (View: 0, DB: 2) | 200 OK [http://localhost/login/do_login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-01-02 00:20:21) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 26ms (View: 24, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing CategoriesController#index to json (for 127.0.0.1 at 2009-01-02 00:20:22) [GET]
+  Parameters: {"node"=>"ynode-6", "_dc"=>"1230862822656"}
+  [4;35;1mCategory Load (17.5ms)[0m   [0mSELECT * FROM "categories" WHERE (parent_id IS NULL) [0m
+Completed in 116ms (View: 81, DB: 18) | 200 OK [http://localhost/categories?_dc=1230862822656&format=json&node=ynode-6]
+
+
+Processing LoginController#do_logout (for 127.0.0.1 at 2009-01-02 00:20:32) [GET]
+Redirected to actionlogin
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/login/do_logout]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2009-01-02 00:20:32) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2009-01-02 00:21:33) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2009-01-02 00:22:02) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2009-01-02 00:25:47) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2009-01-02 00:33:40) [POST]
+  Parameters: {"username"=>"psaux", "password"=>"qwe123"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'psaux') LIMIT 1[0m
+Completed in 7ms (View: 0, DB: 1) | 200 OK [http://localhost/login/do_login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-01-02 00:33:40) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 71ms (View: 69, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing CategoriesController#index to json (for 127.0.0.1 at 2009-01-02 00:33:41) [GET]
+  Parameters: {"node"=>"ynode-6", "_dc"=>"1230863621187"}
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE (parent_id IS NULL) [0m
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/categories?_dc=1230863621187&format=json&node=ynode-6]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-01-02 00:34:10) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing CategoriesController#index to json (for 127.0.0.1 at 2009-01-02 00:34:11) [GET]
+  Parameters: {"node"=>"ynode-6", "_dc"=>"1230863651808"}
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" WHERE (parent_id IS NULL) [0m
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/categories?_dc=1230863651808&format=json&node=ynode-6]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-01-02 00:34:24) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing CategoriesController#index to json (for 127.0.0.1 at 2009-01-02 00:34:25) [GET]
+  Parameters: {"node"=>"ynode-6", "_dc"=>"1230863665681"}
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE (parent_id IS NULL) [0m
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/categories?_dc=1230863665681&format=json&node=ynode-6]
+
+
+Processing LoginController#do_logout (for 127.0.0.1 at 2009-01-02 00:34:39) [GET]
+Redirected to actionlogin
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/login/do_logout]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2009-01-02 00:34:39) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#do_login (for 127.0.0.1 at 2009-01-02 00:34:56) [POST]
+  Parameters: {"username"=>"psaux", "password"=>"qwe123"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'psaux') LIMIT 1[0m
+Completed in 7ms (View: 0, DB: 1) | 200 OK [http://localhost/login/do_login]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-01-02 00:34:56) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing CategoriesController#index to json (for 127.0.0.1 at 2009-01-02 00:34:57) [GET]
+  Parameters: {"node"=>"ynode-6", "_dc"=>"1230863697443"}
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" WHERE (parent_id IS NULL) [0m
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://localhost/categories?_dc=1230863697443&format=json&node=ynode-6]
+
+
+Processing CategoriesController#index to json (for 127.0.0.1 at 2009-01-02 00:35:26) [GET]
+  Parameters: {"node"=>"1", "_dc"=>"1230863726027"}
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCategory Load (2.6ms)[0m   [0mSELECT * FROM "categories" WHERE (1 = 1 and parent_id = 1) ORDER BY lft[0m
+Completed in 70ms (View: 7, DB: 3) | 200 OK [http://localhost/categories?_dc=1230863726027&format=json&node=1]
+
+
+Processing CategoriesController#index to json (for 127.0.0.1 at 2009-01-02 00:35:27) [GET]
+  Parameters: {"node"=>"5", "_dc"=>"1230863727431"}
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 5) [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE (1 = 1 and parent_id = 5) ORDER BY lft[0m
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/categories?_dc=1230863727431&format=json&node=5]
+
+
+Processing ContractsController#index (for 127.0.0.1 at 2009-01-02 00:35:28) [GET]
+  Parameters: {"tabTitle"=>"Listar Contratos", "tabId"=>"5"}
+Rendering template within layouts/contracts
+Rendering contracts/index
+Completed in 22ms (View: 19, DB: 0) | 200 OK [http://localhost/contracts?tabId=5&tabTitle=Listar%20Contratos]
+
+
+Processing ContractsController#index to ext_json (for 127.0.0.1 at 2009-01-02 00:35:29) [GET]
+  Parameters: {"dir"=>"ASC", "start"=>"0", "_dc"=>"1230863729127", "sort"=>"id", "limit"=>"25"}
+  [4;36;1mContract Load (0.1ms)[0m   [0;1mSELECT * FROM "contracts" ORDER BY id ASC LIMIT 25 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "contracts" [0m
+Completed in 7ms (View: 0, DB: 0) | 200 OK [http://localhost/contracts?format=ext_json&_dc=1230863729127&start=0&limit=25&sort=id&dir=ASC]
+
+
+Processing CategoriesController#index to json (for 127.0.0.1 at 2009-01-02 00:35:31) [GET]
+  Parameters: {"node"=>"10", "_dc"=>"1230863731783"}
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 10) [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE (1 = 1 and parent_id = 10) ORDER BY lft[0m
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/categories?_dc=1230863731783&format=json&node=10]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-02 00:35:33) [GET]
+  Parameters: {"tabTitle"=>"Listar Usuarios", "tabId"=>"10"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 23ms (View: 20, DB: 0) | 200 OK [http://localhost/users?tabId=10&tabTitle=Listar%20Usuarios]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-02 00:35:34) [GET]
+  Parameters: {"tabTitle"=>"Listar Usuarios", "tabId"=>"10"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/users?tabId=10&tabTitle=Listar%20Usuarios]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-01-02 00:35:38) [GET]
+  Parameters: {"tabTitle"=>"Listar Usuarios", "tabId"=>"10"}
+Rendering template within layouts/users
+Rendering users/index
+Completed in 76ms (View: 74, DB: 0) | 200 OK [http://localhost/users?tabId=10&tabTitle=Listar%20Usuarios]
+
+
+Processing UsersController#index to ext_json (for 127.0.0.1 at 2009-01-02 00:35:38) [GET]
+  Parameters: {"dir"=>"ASC", "start"=>"0", "_dc"=>"1230863738653", "sort"=>"id", "limit"=>"25"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" ORDER BY id ASC LIMIT 25 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 11ms (View: 0, DB: 1) | 200 OK [http://localhost/users?format=ext_json&_dc=1230863738653&start=0&limit=25&sort=id&dir=ASC]
+
+
+Processing CategoriesController#index to json (for 127.0.0.1 at 2009-01-02 00:35:51) [GET]
+  Parameters: {"node"=>"13", "_dc"=>"1230863751548"}
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 13) [0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE (1 = 1 and parent_id = 13) ORDER BY lft[0m
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/categories?_dc=1230863751548&format=json&node=13]
+
+
+Processing CategoriesController#index to json (for 127.0.0.1 at 2009-01-02 00:35:54) [GET]
+  Parameters: {"node"=>"16", "_dc"=>"1230863754771"}
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 16) [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE (1 = 1 and parent_id = 16) ORDER BY lft[0m
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/categories?_dc=1230863754771&format=json&node=16]
+
+
+Processing ClientsController#index (for 127.0.0.1 at 2009-01-02 00:35:56) [GET]
+  Parameters: {"tabTitle"=>"Listar Clientes/Fornecedores", "tabId"=>"16"}
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 24ms (View: 21, DB: 0) | 200 OK [http://localhost/clients?tabId=16&tabTitle=Listar%20Clientes/Fornecedores]
+
+
+Processing ClientsController#index to ext_json (for 127.0.0.1 at 2009-01-02 00:35:56) [GET]
+  Parameters: {"dir"=>"ASC", "start"=>"0", "_dc"=>"1230863756617", "sort"=>"id", "limit"=>"25"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" ORDER BY id ASC LIMIT 25 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "clients" [0m
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://localhost/clients?format=ext_json&_dc=1230863756617&start=0&limit=25&sort=id&dir=ASC]
+
+
+Processing CategoriesController#index to json (for 127.0.0.1 at 2009-01-02 00:36:01) [GET]
+  Parameters: {"node"=>"2", "_dc"=>"1230863761932"}
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" WHERE (1 = 1 and parent_id = 2) ORDER BY lft[0m
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/categories?_dc=1230863761932&format=json&node=2]
+
+
+Processing AlarmsController#new (for 127.0.0.1 at 2009-01-02 00:36:02) [GET]
+  Parameters: {"tabTitle"=>"Inserir Alarme", "tabId"=>"2"}
+Rendering template within layouts/alarms
+Rendering alarms/new
+  [4;36;1mAlarmOrder Load (0.5ms)[0m   [0;1mSELECT * FROM "alarm_orders" [0m
+  [4;35;1mAlarmPeriodWarning Load (0.6ms)[0m   [0mSELECT * FROM "alarm_period_warnings" [0m
+Rendered alarms/_form_items (28.0ms)
+Completed in 51ms (View: 36, DB: 0) | 200 OK [http://localhost/alarms/new?tabId=2&tabTitle=Inserir%20Alarme]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-01-02 00:36:31) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing CategoriesController#index to json (for 127.0.0.1 at 2009-01-02 00:36:32) [GET]
+  Parameters: {"node"=>"ynode-6", "_dc"=>"1230863792832"}
+  [4;36;1mCategory Load (2.1ms)[0m   [0;1mSELECT * FROM "categories" WHERE (parent_id IS NULL) [0m
+Completed in 13ms (View: 3, DB: 2) | 200 OK [http://localhost/categories?_dc=1230863792832&format=json&node=ynode-6]
+
+
+Processing CategoriesController#index to json (for 127.0.0.1 at 2009-01-02 00:36:37) [GET]
+  Parameters: {"node"=>"1", "_dc"=>"1230863797680"}
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCategory Load (1.1ms)[0m   [0;1mSELECT * FROM "categories" WHERE (1 = 1 and parent_id = 1) ORDER BY lft[0m
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/categories?_dc=1230863797680&format=json&node=1]
+
+
+Processing LoginController#do_logout (for 127.0.0.1 at 2009-01-02 00:36:39) [GET]
+Redirected to actionlogin
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/login/do_logout]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2009-01-02 00:36:39) [GET]
+Rendering template within layouts/login
+Rendering login/login
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/login/login]
