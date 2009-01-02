@@ -20,6 +20,7 @@ class LoginController < ApplicationController
       else 
           if @user.password == password
             session[:user_id] = @user.id
+            session[:name] = @user.name
             render :text => '{ success: true}'
             #redirect_to :controller => "users", :action => "index"
             #puts "sucess"
