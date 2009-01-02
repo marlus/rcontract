@@ -1,3 +1,4 @@
 class Contract < ActiveRecord::Base
-  belongs_to :person_type
+  belongs_to :contract_category
+  belongs_to :contract_type
 end

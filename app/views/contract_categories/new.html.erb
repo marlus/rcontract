@@ -1,0 +1,8 @@
+<div id="contract_category-form"></div>
+<%= render :partial => 'form_items', :object => :contract_category_form_items %>
+<%= ext_form_for 'ContractCategory',
+                 :element => 'contract_category-form',
+                 :form_items => :contract_category_form_items,
+                 :mode => :new,
+				 :tabId => params[:tabId], 
+				 :tabTitle => params[:tabTitle] %>

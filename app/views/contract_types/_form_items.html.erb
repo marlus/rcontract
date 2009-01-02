@@ -1,0 +1,18 @@
+<%= select :contract_type, :contract_category_id,
+       ContractCategory.find(:all).collect {|c| [ c.name, c.id ] },
+       { :include_blank => true } %>
+<% javascript_tag do -%>
+  var <%= "#{form_items}" %> = [
+	{ 
+		fieldLabel:    'Categoria',
+		xtype:         'combo',
+		triggerAction: 'all',
+		typeAhead:      true,
+		forceSelection: true,
+		transform:     'contract_type_contract_category_id',
+		lazyRender:     true
+	},   
+	<%= ext_field(:field_label => 'Documento', :name => 'contract_type[document]', :xtype => :text_field) %>,
+    <%= ext_field(:field_label => 'Fields', :name => 'contract_type[fields]', :xtype => :htmleditor) %>
+  ];
+<% end -%>
