@@ -1,0 +1,6 @@
+<div id="contract_type-form"></div>
+<%= render :partial => 'form_items', :object => :contract_type_form_items %>
+<%= ext_form_for 'ContractType',
+                 :element => 'contract_type-form',
+                 :form_items => :contract_type_form_items,
+                 :mode => :show %>

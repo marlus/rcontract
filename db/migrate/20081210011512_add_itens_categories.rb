@@ -9,6 +9,10 @@ class AddItensCategories < ActiveRecord::Migration
     
     #Contract
     root.add_child(contrato = Category.create(:text => 'Contratos'))
+    contrato.add_child(Category.create(:text => 'Inserir Categoria de Contrato', :link => '/contract_categories/new'))
+    contrato.add_child(Category.create(:text => 'Listar Categoria de Contratos', :link => '/contract_categories'))
+    contrato.add_child(Category.create(:text => 'Inserir Tipo de Contrato', :link => '/contract_types/new'))
+    contrato.add_child(Category.create(:text => 'Listar Tipo de Contratos', :link => '/contract_types'))    
     contrato.add_child(Category.create(:text => 'Inserir Contrato', :link => '/contracts/new'))
     contrato.add_child(Category.create(:text => 'Listar Contratos', :link => '/contracts'))
     
