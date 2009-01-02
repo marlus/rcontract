@@ -1,9 +1,21 @@
 <%= select :alarm, :alarm_order_id,
        AlarmOrder.find(:all).collect {|c| [ c.name, c.id ] },
        { :include_blank => true } %>
+
+<%= select :alarm, :alarm_period_warning_id,
+       AlarmPeriodWarning.find(:all).collect {|c| [ c.name, c.id ] },
+       { :include_blank => true } %>
+
 <% javascript_tag do -%>
   var <%= "#{form_items}" %> = [
-    <%= ext_field(:field_label => 'Data de aviso', :name => 'alarm[warning_date]', :xtype => :date_select) %>,
+    { fieldLabel:    'Data de aviso',
+      xtype:         'combo',
+      triggerAction: 'all',
+      typeAhead:      true,
+      forceSelection: true,
+      transform:     'alarm_alarm_period_warning_id',
+      lazyRender:     true
+    },
     { fieldLabel:    'Ordem',
       xtype:         'combo',
       triggerAction: 'all',
@@ -12,6 +24,6 @@
       transform:     'alarm_alarm_order_id',
       lazyRender:     true
     },
-    <%= ext_field(:field_label => 'Tipo aviso', :name => 'alarm[warning_type]', :xtype => :checkbox) %>
+    <%= ext_field(:field_label => 'Tipo aviso', :name => 'alarm[warning_type]', :xtype => :text_field) %>
   ];
 <% end -%>

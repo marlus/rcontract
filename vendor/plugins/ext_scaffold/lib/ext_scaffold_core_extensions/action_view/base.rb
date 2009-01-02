@@ -145,11 +145,11 @@ module ExtScaffoldCoreExtensions
                   #{"baseParams:    {#{request_forgery_protection_token}: '#{form_authenticity_token}'}," if protect_against_forgery?}
                   items: #{form_items},
 
-                  buttons: [ #{ext_button(:text => 'Save', :type => 'submit',
+                  buttons: [ #{ext_button(:text => 'Salvar', :type => 'submit',
                                           :handler => (mode == :edit ?
                                             "function(){ panel.getForm().submit({url:'#{send member_path_method, object, :format => :ext_json}', params: { tabId: '#{tabId}', tabTitle: '#{tabTitle}', _method: 'PUT' }, waitMsg:'Saving...'}); }" :
                                             "function(){ panel.getForm().submit({url:'#{send collection_path_method, :format => :ext_json}', waitMsg:'Saving...', params: {tabId: '#{tabId}', tabTitle: '#{tabTitle}'}}); }")) + ',' unless mode == :show}
-                             #{ext_button(:text => 'Back', :handler => "function(){ panel.suspendEvents(); parent.updateTab('#{tabId}', '#{tabTitle}', '#{collection_path}'); }")}
+                             #{ext_button(:text => 'Cancelar', :handler => "function(){ panel.suspendEvents(); parent.updateTab('#{tabId}', '#{tabTitle}', '#{collection_path}'); }")}
                            ]
               });
 
