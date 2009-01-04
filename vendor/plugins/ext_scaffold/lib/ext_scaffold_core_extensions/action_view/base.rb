@@ -130,7 +130,8 @@ module ExtScaffoldCoreExtensions
               // turn on validation errors beside the field globally
               Ext.form.Field.prototype.msgTarget = 'side';
 
-              var panel = new Ext.FormPanel({
+              //var panel = new Ext.FormPanel({
+              panel = new Ext.FormPanel({
                   labelWidth:   75, // label settings here cascade unless overridden
                   url:          '#{collection_path}',
                   frame:         true,
