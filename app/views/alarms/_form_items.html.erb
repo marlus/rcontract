@@ -24,6 +24,15 @@
       transform:     'alarm_alarm_order_id',
       lazyRender:     true
     },
-    <%= ext_field(:field_label => 'Tipo aviso', :name => 'alarm[warning_type]', :xtype => :text_field) %>
+	{ xtype: 'checkboxgroup',
+	  fieldLabel: 'Tipo Alarme',
+	  itemCls: 'x-check-group-alt',
+	  columns: 1,
+	  items: [
+		  <% AlarmTypeWarning.find(:all).each do |a| %>
+			  {boxLabel: '<%= a.name %>', name: 'alarm[alarm_type_warning_ids][]', inputValue: '<%= a.id %>', <%= @alarm.alarm_type_warnings.include?(a) == false ? '' : 'checked: true' %>},
+		  <% end %>
+	  ]
+	}
   ];
 <% end -%>

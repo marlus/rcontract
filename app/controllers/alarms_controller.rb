@@ -44,6 +44,7 @@ class AlarmsController < ApplicationController
 
   # PUT /alarms/1
   def update
+    params[:alarm][:alarm_type_warning_ids] ||= []
     respond_to do |format|
       if @alarm.update_attributes(params[:alarm])
         notice = 'Alarm was successfully updated.'

@@ -9,11 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD:db/schema.rb
-ActiveRecord::Schema.define(:version => 20081220154742) do
-=======
-ActiveRecord::Schema.define(:version => 20090101014147) do
->>>>>>> marlus/master:db/schema.rb
+ActiveRecord::Schema.define(:version => 20090104011955) do
 
   create_table "alarm_orders", :force => true do |t|
     t.string   "name"
@@ -27,10 +23,22 @@ ActiveRecord::Schema.define(:version => 20090101014147) do
     t.datetime "updated_at"
   end
 
+  create_table "alarm_type_warnings", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "alarm_type_warnings_alarms", :id => false, :force => true do |t|
+    t.integer  "alarm_type_warning_id"
+    t.integer  "alarm_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "alarms", :force => true do |t|
     t.integer  "alarm_period_warning_id"
     t.integer  "alarm_order_id"
-    t.string   "warning_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

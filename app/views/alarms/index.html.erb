@@ -3,8 +3,8 @@
 <% javascript_tag do -%>
   var alarm_column_model = new Ext.grid.ColumnModel([
     {id: 'id', header: "#", width: 20, dataIndex: 'id'},
-    {header: 'Data de aviso', dataIndex: 'alarm[warning_date]'},
-    {header: 'Ordem', dataIndex: 'alarm[order]'},
+    {header: 'Data de aviso', dataIndex: 'alarm[alarm_period_warning_id]'},
+    {header: 'Ordem', dataIndex: 'alarm[alarm_order_id]'},
     {header: 'Tipo de aviso', dataIndex: 'alarm[warning_type]'}
   ]);
 <% end -%>
