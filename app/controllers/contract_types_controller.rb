@@ -5,9 +5,25 @@ class ContractTypesController < ApplicationController
   # GET /contract_types
   # GET /contract_types.ext_json
   def index
+      respond_to do |format|
+        format.html     # index.html.erb (no data required)
+        format.ext_json { render :json => find_contract_types.to_ext_json(:class => ContractType, :count => ContractType.count(options_from_search(ContractType))) }
+      end
+    end
+
+  #GET /contract_types/list_types/1
+  def list_types
+    contract_category_id = params[:id]    
     respond_to do |format|
-      format.html     # index.html.erb (no data required)
-      format.ext_json { render :json => find_contract_types.to_ext_json(:class => ContractType, :count => ContractType.count(options_from_search(ContractType))) }
+      format.json { render :json => ContractType.find(:all, :order => 'id DESC',:conditions => ['contract_category_id = ?', contract_category_id]) }
+    end
+  end
+
+  #GET /contract_types/list_fields/1
+  def list_fields
+    id = params[:id]    
+    respond_to do |format|
+      format.json { render :json => ContractType.find(:all, :order => 'id DESC',:conditions => ['id = ?', id]) }
     end
   end
 

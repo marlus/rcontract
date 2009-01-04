@@ -8,7 +8,8 @@ class AddCategoryTypeContract < ActiveRecord::Migration
     outros = ContractCategory.create(:name => 'Outros')
     
     #Tipos de contrato
-    
+    #futebol = futebol_profissinal.find(:first)
+    #futebol.create()
   end
 
   def self.down

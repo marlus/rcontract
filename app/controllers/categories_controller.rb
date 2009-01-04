@@ -5,4 +5,5 @@ class CategoriesController < ApplicationController
       format.json { render :json => Category.find_children(id) }
     end
   end
+  
 end
