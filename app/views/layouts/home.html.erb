@@ -3,29 +3,29 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-	<title>RContract</title>
-	<%= stylesheet_link_tag 'ext_scaffold' %>
-	<%= stylesheet_link_tag "../ext/resources/css/ext-all.css" %>
-	<%= stylesheet_link_tag "../ext/resources/css/xtheme-gray.css" %>
-	<%= stylesheet_link_tag "../stylesheets/rcontract.css" %>
-	<%= javascript_include_tag :defaults %>
-	<%= javascript_include_tag "../ext/adapter/prototype/ext-prototype-adapter.js" %>
-	<%= javascript_include_tag RAILS_ENV == "development" ? "../ext/ext-all-debug.js" : "../ext/ext-all.js" %>
-	<%= javascript_include_tag "ext_datetime.js" %>
-	<%= javascript_include_tag "ext_searchfield.js" %>
-	<%= javascript_include_tag "../ext/build/locale/ext-lang-pt_BR.js" %>
-	<%= javascript_include_tag "../javascripts/tab_actions.js" %>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>RContract</title>
+    <%= stylesheet_link_tag 'ext_scaffold' %>
+    <%= stylesheet_link_tag "../ext/resources/css/ext-all.css" %>
+    <%= stylesheet_link_tag "../ext/resources/css/xtheme-gray.css" %>
+    <%= stylesheet_link_tag "../stylesheets/rcontract.css" %>
+    <%= javascript_include_tag :defaults %>
+    <%= javascript_include_tag "../ext/adapter/prototype/ext-prototype-adapter.js" %>
+    <%= javascript_include_tag RAILS_ENV == "development" ? "../ext/ext-all-debug.js" : "../ext/ext-all.js" %>
+    <%= javascript_include_tag "ext_datetime.js" %>
+    <%= javascript_include_tag "ext_searchfield.js" %>
+    <%= javascript_include_tag "../ext/build/locale/ext-lang-pt_BR.js" %>
+    <%= javascript_include_tag "../javascripts/tab_actions.js" %>
 </head>
 <body>
-	<div style="padding-left:20px">
-		<div id="north" class="top">
-			<div class="topleft"><img src="../images/layout/topo_coritiba.png">&nbsp;<img src="../images/layout/letter_head.png"></div>
-			<div class="topright"><%= session[:name] %> | <span class="toplink"><%=link_to "Logout", :controller => "login", :action => "do_logout"%></span></div>
-		</div>
-		<ul id="actions" class="x-hidden">
-			<div id="category-tree"></div>
-		</ul>
-		<div id="tabs"><%= yield  %></div>
+    <div style="padding-left:20px">
+        <div id="north" class="top">
+            <div class="topleft"><img src="../images/layout/topo_coritiba.png">&nbsp;<img src="../images/layout/letter_head.png"></div>
+            <div class="topright"><%= session[:name] %> | <span class="toplink"><%=link_to "Logout", :controller => "login", :action => "do_logout"%></span></div>
+        </div>
+        <ul id="actions" class="x-hidden">
+            <div id="category-tree"></div>
+        </ul>
+        <div id="tabs"><%= yield  %></div>
 </body>
 </html>
