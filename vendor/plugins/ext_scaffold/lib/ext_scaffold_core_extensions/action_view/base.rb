@@ -167,7 +167,8 @@ module ExtScaffoldCoreExtensions
         collection_path_method = "#{object_name.to_s.tableize.tr('/','_')}_path"
         datastore_name = options[:datastore] || "#{object_name.to_s.demodulize.underscore}_datastore"
         primary_key = object_name.to_s.classify.constantize.primary_key
-        javascript_tag <<-_JS  
+        debugger
+        javascript_tag <<-_JS 
           var #{datastore_name} = new Ext.data.Store({
                   proxy: new Ext.data.HttpProxy({
                              url: '#{send collection_path_method, :format => :ext_json}',
@@ -178,7 +179,7 @@ module ExtScaffoldCoreExtensions
                               id: '#{primary_key}',
                               totalProperty: 'results'
                           },
-                          [ {name: 'id', mapping: '#{field_mapping(object_name, primary_key)}'}, #{attribute_mappings_for object_name, :skip_id => true} ]),
+                          [ {name: 'id', mapping: '#{field_mapping(object_name, primary_key)}'}, #{attribute_mappings_for object_name, :skip_id => true}]),
                   // turn on remote sorting
                   remoteSort: true,
                   sortInfo: {field: '#{options[:sort_field] || primary_key}', direction: '#{options[:sort_direction] || "ASC"}'}
