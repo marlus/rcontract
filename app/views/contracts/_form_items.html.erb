@@ -123,6 +123,14 @@
 						style: 'margin-bottom:4px'
 					});				
 				}
+				else if (fieldType == 'Arquivo')
+				{					
+					componentField = new Ext.form.TextField({
+						name:  		'contract[' + fieldName + ']',
+						inputType:  'file',
+						style: 		'margin-bottom:4px'
+					});					
+				}
 				else
 				{
 					componentField = new Ext.form.TextField({
