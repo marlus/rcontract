@@ -170,7 +170,7 @@
 									var campos_contrato = "";
 									store.each(function(record) 
 									{ 
-										campos_contrato +=  store.getAt(key).data.nome_campo + ":" + store.getAt(key).data.tipo_campo + ",";
+										campos_contrato +=  store.getAt(key).data.nome_campo + ":" + store.getAt(key).data.tipo_campo + ":" + store.getAt(key).data.obrigatorio + ",";
 										//TODO - adicionar o campo obrigatorio.
 										//store.getAt(key).data.obrigatorio)
 										key++;

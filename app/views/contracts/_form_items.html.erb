@@ -67,6 +67,9 @@
 				select: {
 					fn:function()
 					{
+						//Valor do contractType
+						var contract_type_hidden = this.value;
+						
 						//Remove o panel com os campos
 						unLoadFields();
 						
@@ -78,7 +81,7 @@
 								var fields = records[0].get('fields');
 								if (fields.length > 0)
 								{
-									loadFields(fields);
+									loadFields(fields, contract_type_hidden);
 								}
 							}
 						});
@@ -88,7 +91,7 @@
 		}		
 	];
 
-	function loadFields(fields){	
+	function loadFields(fields, contract_type_hidden){	
 		//Cria outro FormPanel e o adiciona no FormPanel antigo
 		panelFields = new Ext.Panel({
 		  id:			 'panelFields',
@@ -110,6 +113,7 @@
 				var fieldsTokensTypes = fieldsTokens[i].split( ":" );
 				var fieldName = fieldsTokensTypes[0];
 				var fieldType = fieldsTokensTypes[1];
+				var fieldAllowBlank = (fieldsTokensTypes[2] == 'true') ? false : true;
 			
 				label = new Ext.form.Label({
 					text:    fieldName + ": ",
@@ -119,14 +123,16 @@
 				if (fieldType == 'Data')
 				{
 					componentField = new Ext.form.DateField({
-						name:		   'contract[' + fieldName + ']',
-						style: 'margin-bottom:4px'
+						name:		   	'contract[' + fieldName + ']',
+						allowBlank:		fieldAllowBlank,
+						style: 		  	'margin-bottom:4px'
 					});				
 				}
 				else if (fieldType == 'Arquivo')
 				{					
 					componentField = new Ext.form.TextField({
 						name:  		'contract[' + fieldName + ']',
+						allowBlank:	fieldAllowBlank,
 						inputType:  'file',
 						style: 		'margin-bottom:4px'
 					});					
@@ -135,7 +141,7 @@
 				{
 					componentField = new Ext.form.TextField({
 						name:		   'contract[' + fieldName + ']',
-						allowBlank:	   'false',
+						allowBlank:		fieldAllowBlank,
 						cls: 'x-form-item'
 					});
 				}
@@ -146,6 +152,14 @@
 			}
 		}
 		
+		//Primeiro cria o hidden com valor da combo
+		componentValueHidden = new Ext.form.TextField({
+			name:  		'contract_type_hidden',
+			hidden: 	true,
+			value: 		contract_type_hidden
+		});
+
+		panelFields.add(componentValueHidden);
 		
 		//Faz o refresh no FormPanel
 		panelFields.doLayout();
