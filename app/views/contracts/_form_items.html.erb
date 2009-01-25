@@ -104,35 +104,38 @@
 		var fieldsTokens = fields.split( "," );
 
 		for ( var i = 0; i < fieldsTokens.length; i++ )
-		{			
-			var fieldsTokensTypes = fieldsTokens[i].split( ":" );
-			var fieldName = fieldsTokensTypes[0];
-			var fieldType = fieldsTokensTypes[1];
-			
-			label = new Ext.form.Label({
-				text:    fieldName + ": ",
-				cls: 	 'x-form-item'
-			});
-			
-			if (fieldType == 'date')
+		{		
+			if (fieldsTokens[i] != "")
 			{
-				componentField = new Ext.form.DateField({
-					name:		   'contract[' + fieldName + ']',
-					style: 'margin-bottom:4px'
-				});				
-			}
-			else
-			{
-				componentField = new Ext.form.TextField({
-					name:		   'contract[' + fieldName + ']',
-					allowBlank:	   'false',
-					cls: 'x-form-item'
+				var fieldsTokensTypes = fieldsTokens[i].split( ":" );
+				var fieldName = fieldsTokensTypes[0];
+				var fieldType = fieldsTokensTypes[1];
+			
+				label = new Ext.form.Label({
+					text:    fieldName + ": ",
+					cls: 	 'x-form-item'
 				});
-			}
 			
-			//Adiciona os campos no FormPanel
-			panelFields.add(label);
-			panelFields.add(componentField);
+				if (fieldType == 'Data')
+				{
+					componentField = new Ext.form.DateField({
+						name:		   'contract[' + fieldName + ']',
+						style: 'margin-bottom:4px'
+					});				
+				}
+				else
+				{
+					componentField = new Ext.form.TextField({
+						name:		   'contract[' + fieldName + ']',
+						allowBlank:	   'false',
+						cls: 'x-form-item'
+					});
+				}
+			
+				//Adiciona os campos no FormPanel
+				panelFields.add(label);
+				panelFields.add(componentField);
+			}
 		}
 		
 		

@@ -1,8 +1,8 @@
 <%= select :contract_type, :contract_category_id,
        ContractCategory.find(:all).collect {|c| [ c.name, c.id ] },
        { :include_blank => true } %>
-<% javascript_tag do -%>
-  var <%= "#{form_items}" %> = [
+<script>
+  var contract_type_form_items = [
 	{ 
 		fieldLabel:    'Categoria',
 		xtype:         'combo',
@@ -15,50 +15,16 @@
 	{
 		fieldLabel:    'Documento',
 		xtype:         'textfield',
-		name:		   'contract_types[document]',
+		name:		   'contract_type[document]',
 		allowBlank:	   'false',
 		width:         250
-	}
+	},
+	{
+		xtype:         'hidden',
+		name:		   'contract_type[fields]',
+		value: 		   'teste Hidden'
+	}	
   ];
-
-
-	Ext.grid.CheckColumn = function(config){
-	    Ext.apply(this, config);
-	    if(!this.id){
-	        this.id = Ext.id();
-	    }
-	    this.renderer = this.renderer.createDelegate(this);
-	};
-
-	Ext.grid.CheckColumn.prototype ={
-	    init : function(grid){
-	        this.grid = grid;
-	        this.grid.on('render', function(){
-	            var view = this.grid.getView();
-	            view.mainBody.on('mousedown', this.onMouseDown, this);
-	        }, this);
-	    },
-
-	    onMouseDown : function(e, t){
-	        if(t.className && t.className.indexOf('x-grid3-cc-'+this.id) != -1){
-	            e.stopEvent();
-	            var index = this.grid.getView().findRowIndex(t);
-	            var record = this.grid.store.getAt(index);
-	            record.set(this.dataIndex, !record.data[this.dataIndex]);
-	        }
-	    },
-
-	    renderer : function(v, p, record){
-	        p.css += ' x-grid3-check-col-td'; 
-	        return '<div class="x-grid3-check-col'+(v?'-on':'')+' x-grid3-cc-'+this.id+'">&#160;</div>';
-	    }
-	};
-
-
-	//Adiciona na 2 posicao do array o Panel
-	<%= "#{form_items}" %>[2] = grid;
-
-	    Ext.QuickTips.init();
 
 	    function formatDate(value){
 	        return value ? value.dateFormat('M d, Y') : '';
@@ -69,7 +35,7 @@
 	    // custom column plugin example
 	    var checkColumn = new Ext.grid.CheckColumn({
 	       header: "Obrigatório?",
-	       dataIndex: 'indoor',
+	       dataIndex: 'obrigatorio',
 	       width: 85
 	    });
 
@@ -77,21 +43,21 @@
 	    // dataIndex maps the column to the specific data field in
 	    // the data store (created below)
 	    var cm = new Ext.grid.ColumnModel([{
-	           id:'common',
+	           id:'nome_campo',
 	           header: "Nome do campo",
-	           dataIndex: 'common',
+	           dataIndex: 'nome_campo',
 	           width: 220,
 	           editor: new fm.TextField({
 	               allowBlank: false
 	           })
 	        },{
 	           header: "Tipo do campo",
-	           dataIndex: 'light',
+	           dataIndex: 'tipo_campo',
 	           width: 130,
 	           editor: new Ext.form.ComboBox({
 	               typeAhead: true,
 	               triggerAction: 'all',
-	               transform:'light',
+	               transform:'tipo_campo',
 	               lazyRender:true,
 	               listClass: 'x-combo-list-small'
 	            })
@@ -107,35 +73,26 @@
 	    var Plant = Ext.data.Record.create([
 	           // the "name" below matches the tag name to read, except "availDate"
 	           // which is mapped to the tag "availability"
-	           {name: 'common', type: 'string'},
-	           {name: 'light'},
-	           {name: 'indoor', type: 'bool'}
+	           {name: 'nome_campo', type: 'string'},
+	           {name: 'tipo_campo'},
+	           {name: 'obrigatorio', type: 'bool'}
 	      ]);
 
 		//create dados
-		var myData = "'plant' : [{'common':'Novo campo 1','light':'Texto','indoor':'false'}]";
-
-	    var storeNew = new Ext.data.Store({
-			data:myData,
-	         reader: new Ext.data.JsonReader({record: 'plant'}, Plant)
+		//var myData = { 'rows': [{ 'nome_campo': 'Novo Campo', 'tipo_campo': 'Texto', 'obrigatorio': true }] };
+		var myData = "";
+		
+	    var store = new Ext.data.Store({
+			 proxy: new Ext.data.MemoryProxy(myData),
+	         reader: new Ext.data.JsonReader({root: "rows"}, Plant)
 	         });
 
-	    // create the Data Store
-	    var store = new Ext.data.Store({
-	        // load using HTTP
-	        url: 'http://extjs.com/deploy/dev/examples/grid/plants.xml',
 
-	        // the return will be XML, so lets set up a reader
-	        reader: new Ext.data.XmlReader({
-	               // records will have a "plant" tag
-	               record: 'plant'
-	           }, Plant),
-
-	        sortInfo:{field:'common', direction:'ASC'}
-	    });
 
 	    // trigger the data store load
 	    store.load();
+
+		var idGrid = 0;
 
 	    // create the editor grid
 	    var grid = new Ext.grid.EditorGridPanel({
@@ -143,7 +100,7 @@
 	        cm: cm,
 	        width:600,
 	        height:300,
-	        autoExpandColumn:'common',
+	        autoExpandColumn:'nome_campo',
 	        //title:'Edit Plants?',
 	        frame:true,
 	        plugins:checkColumn,
@@ -151,27 +108,131 @@
 			datachanged : this,
 	        tbar: [{
 	            text: 'Adicionar Campo',
+				iconCls:'add',
 	            handler : function(){
 	                var p = new Plant({
-	                    common: 'Novo Campo',
-	                    light: 'Texto',
-	                    indoor: false
+	                    nome_campo: 'Novo Campo',
+	                    tipo_campo: 'Texto',
+	                    obrigatorio: true
 	                });
 	                grid.stopEditing();
 	                store.insert(0, p);
 	                grid.startEditing(0, 0);
-					store.reload();
-					//panel.doLayout();
+					store.load();	
 	            }
 	        }]
 	    });
 
 	store.reload();
-	//panel.doLayout();
 
-<% end -%>
+	//Adiciona na 3 posicao do array o Panel
+	contract_type_form_items[3] = grid;
 
-<select name="light" id="light" style="display: none;">
+</script>
+
+<select name="tipo_campo" id="tipo_campo" style="display: none;">
 	<option value="Data">Data</option>
 	<option value="Texto">Texto</option>
 </select>
+
+<script>
+	Ext.onReady(function(){
+
+	              Ext.QuickTips.init();
+
+	              // turn on validation errors beside the field globally
+	              Ext.form.Field.prototype.msgTarget = 'side';
+
+	              //var panel = new Ext.FormPanel({
+	              panel = new Ext.FormPanel({
+	                  labelWidth:   75, // label settings here cascade unless overridden
+	                  url:          '/contract_types',
+	                  frame:         true,
+	                  waitMsgTarget: true,
+	                  title:         'Inserir Tipo de Contrato',
+	                  bodyStyle:     'padding:5px 5px 0',
+	                  defaultType:   'textfield',
+	                  renderTo:      'contract_type-form',
+	                  items: contract_type_form_items,
+	                  buttons: [ {  
+								text: 'Salvar',  
+								type: 'submit',  
+								handler: function()
+								{ 
+									//for (key in store.data.fields) {
+									    //store.data.items[key];
+									//	alert('key -> ' + store.data.items[key]);
+									//}
+									//return false;
+									//alert("Total: " + store.length + " teste: " + store.getAt(0).data.nome_campo);
+									key = 0;
+									var campos_contrato = "";
+									store.each(function(record) 
+									{ 
+										campos_contrato +=  store.getAt(key).data.nome_campo + ":" + store.getAt(key).data.tipo_campo + ",";
+										//TODO - adicionar o campo obrigatorio.
+										//store.getAt(key).data.obrigatorio)
+										key++;
+									});
+									
+									//Adiciona no campo fields os valores do grid
+									panel.getForm().setValues([{
+										"value": campos_contrato, 
+										"id": "contract_type[fields]"
+									}]);
+									
+									
+									panel.getForm().submit(
+										{
+											url:'/contract_types?format=ext_json', 
+											waitMsg:'Saving...', 
+											params: 
+											{
+												tabId: '5', 
+												tabTitle : 'Inserir Tipo de Contrato'
+											}
+										}); 
+									}
+								},
+	                            {  
+									text: 'Cancelar',  
+									handler: function()
+									{ 
+										panel.suspendEvents(); 
+										parent.updateTab('5', 'Inserir Tipo de Contrato', '/contract_types'); 
+									}
+								}
+	                           ]
+	              });
+
+	              // populate form values
+	              panel.getForm().setValues([
+									{
+										"value": null, 
+										"id": "contract_type[updated_at]"
+									}, 
+									{
+										"value": null, 
+										"id": "contract_type[fields]"
+									}, 
+									{
+										"value": null, 
+										"id": "contract_type[document]"
+									}, 
+									{
+										"value": null, 
+										"id": "contract_type[contract_category_id]"
+									}, 
+									{
+										"value": null, 
+										"id": "contract_type[created_at]"
+									}
+									]);
+	          });
+	
+	
+</script>
+
+
+
+
