@@ -34,7 +34,7 @@
 					fn:function()
 					{
 						var contractCategory = this;
-						var contractType  = Ext.getCmp('contractType');
+						var contractType  = Ext.getCmp('contract_type_id');
 
 						//Remove o panel com os campos
 						unLoadFields();
@@ -50,7 +50,7 @@
 			}
 		},
 		{ 
-			id: 		   'contractType',
+			id: 		   'contract_type_id',
 			fieldLabel:    'Tipo',
 			xtype:         'combo',
 			triggerAction: 'all',
