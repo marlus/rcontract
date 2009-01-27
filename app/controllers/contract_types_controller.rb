@@ -15,7 +15,7 @@ class ContractTypesController < ApplicationController
   def list_types
     contract_category_id = params[:id]    
     respond_to do |format|
-      format.json { render :json => ContractType.find(:all, :order => 'id DESC',:conditions => ['contract_category_id = ?', contract_category_id]) }
+      format.json { render :json => ContractType.find(:all, :order => 'id DESC', :select => 'id,document', :conditions => ['contract_category_id = ?', contract_category_id]) }
     end
   end
 
