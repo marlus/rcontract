@@ -32,10 +32,10 @@ class ContractsController < ApplicationController
     debugger
     @contract_fields = ""
     params[:contract].each do |field|
-      @contract_fields << field[0] + ": " + field[1] + ", "
+      @contract_fields << "{" + field[0] + ": " + field[1] + "}, "
     end
     
-    params[:contract] = {:contract_category_id => params[:contract_category_id], :contract_type_id => '1', :contract => @contract_fields}
+    params[:contract] = {:contract_category_id => params[:contract_category].to_a[0][1], :contract_type_id => params[:contract_type_hidden], :contract => @contract_fields}
     @contract = Contract.new(params[:contract])
 
     respond_to do |format|
