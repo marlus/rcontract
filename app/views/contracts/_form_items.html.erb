@@ -123,7 +123,7 @@
 				if (fieldType == 'Data')
 				{
 					componentField = new Ext.form.DateField({
-						name:		   	'contract[' + fieldName + ']',
+						name:		   	'contract[' + fieldName + '_data]',
 						allowBlank:		fieldAllowBlank,
 						style: 		  	'margin-bottom:4px'
 					});				
@@ -131,7 +131,7 @@
 				else if (fieldType == 'Arquivo')
 				{					
 					componentField = new Ext.form.TextField({
-						name:  		'contract[' + fieldName + ']',
+						name:  		'contract[' + fieldName + '_arquivo]',
 						allowBlank:	fieldAllowBlank,
 						inputType:  'file',
 						style: 		'margin-bottom:4px'
@@ -140,7 +140,7 @@
 				else
 				{
 					componentField = new Ext.form.TextField({
-						name:		   'contract[' + fieldName + ']',
+						name:		   'contract[' + fieldName + '_texto]',
 						allowBlank:		fieldAllowBlank,
 						cls: 'x-form-item'
 					});
