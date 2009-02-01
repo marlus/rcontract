@@ -13,6 +13,7 @@
 	},
     <%= ext_field(:field_label => 'Nome', :name => 'user[name]', :xtype => :text_field) %>,
     <%= ext_field(:field_label => 'E-mail', :name => 'user[email]', :xtype => :text_field) %>,
+	<%= file_field 'upload', 'datafile' %>,
     { 
 		fieldLabel:    'Grupo',
 		xtype:         'combo',
