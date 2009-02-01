@@ -31,7 +31,7 @@ class ContractsController < ApplicationController
   def create
     @contract_fields = ""
     @total_size = params[:contract].length
-    @file = nil
+    @files = Array.new
     @i = 0
     
     debugger
@@ -40,7 +40,7 @@ class ContractsController < ApplicationController
       field_type = field[0].split("_")
       
       if(field_type[1] == 'arquivo')
-        @file = field[1]
+        @files << field[1]
         field[1] = field[1].original_filename
       end
       
@@ -57,9 +57,9 @@ class ContractsController < ApplicationController
 
     respond_to do |format|
       if @contract.save
-        @contract.saveFile(@file)
+        @contract.saveFile(@files)
         notice = 'Contract was successfully created.'
-        format.ext_json { render(:update) {|page| page.alert notice 
+        format.html { render(:update) {|page| page.alert notice 
           page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + contracts_path + "');" } }
       else
         format.ext_json { render :json => @contract.to_ext_json(:success => false) }

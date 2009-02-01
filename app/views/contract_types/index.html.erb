@@ -3,8 +3,8 @@
 <% javascript_tag do -%>
   var contract_type_column_model = new Ext.grid.ColumnModel([
     {id: 'id', header: "#", width: 20, dataIndex: 'id'},
-    {header: 'Document', dataIndex: 'contract_type[document]'},
-    {header: 'Fields', dataIndex: 'contract_type[fields]'}
+    {header: 'Documento', dataIndex: 'contract_type[document]'},
+    {header: 'Campos', dataIndex: 'contract_type[fields]'}
   ]);
 <% end -%>
 <%= ext_grid_for 'ContractType', :element => 'contract_type-grid', :tabId => params[:tabId], :tabTitle => params[:tabTitle] %>
