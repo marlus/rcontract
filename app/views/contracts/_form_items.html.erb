@@ -137,10 +137,20 @@
 						style: 		'margin-bottom:4px'
 					});					
 				}
+				else if (fieldType == 'Texto')
+				{					
+					componentField = new Ext.form.HtmlEditor({
+			            name:  		'contract[' + fieldName + '_texto]',
+			            width: 		550,
+			            height: 	200,
+						style: 		'margin-bottom:8px'
+			        });				
+						
+				}
 				else
 				{
 					componentField = new Ext.form.TextField({
-						name:		   'contract[' + fieldName + '_texto]',
+						name:		   'contract[' + fieldName + '_caracter]',
 						allowBlank:		fieldAllowBlank,
 						cls: 'x-form-item'
 					});

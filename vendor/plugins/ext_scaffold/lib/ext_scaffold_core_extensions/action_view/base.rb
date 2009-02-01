@@ -91,8 +91,8 @@ module ExtScaffoldCoreExtensions
                             pageSize: #{page_size},
                             store: ds,
                             displayInfo: true,
-                            displayMsg: 'Record {0} - {1} of {2}',
-                            emptyMsg: "No records found"
+                            displayMsg: 'Registro {0} - {1} de {2}',
+                            emptyMsg: "Nenhum registro encontrado"
                   }),
                   plugins:[new Ext.ux.grid.Search({
                               position:'top'
