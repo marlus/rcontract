@@ -7,7 +7,7 @@ class AlarmsController < ApplicationController
   def index
     respond_to do |format|
       format.html     # index.html.erb (no data required)
-      format.ext_json { render :json => find_alarms.to_ext_json(:class => Alarm, :count => Alarm.count(options_from_search(Alarm))) }
+      format.ext_json { render :json => find_alarms.to_ext_json(:class => Alarm, :count => Alarm.count(options_from_search(Alarm)), :include => [:alarm_order, :alarm_period_warning]) }
     end
   end
 

@@ -1,7 +1,7 @@
 <%= select :contract_category, :contract_category_id,
        ContractCategory.find(:all).collect {|c| [ c.name, c.id ] },
        { :include_blank => true } %>
-<% javascript_tag do -%>
+<script>
 	var typeStore = new Ext.data.JsonStore({
 		url: '/contract_types/list_types/',  
 		fields: [
@@ -34,7 +34,7 @@
 					fn:function()
 					{
 						var contractCategory = this;
-						var contractType  = Ext.getCmp('contractType');
+						var contractType  = Ext.getCmp('contract_type_id');
 
 						//Remove o panel com os campos
 						unLoadFields();
@@ -50,7 +50,7 @@
 			}
 		},
 		{ 
-			id: 		   'contractType',
+			id: 		   'contract_type_id',
 			fieldLabel:    'Tipo',
 			xtype:         'combo',
 			triggerAction: 'all',
@@ -95,8 +95,8 @@
 		//Cria outro FormPanel e o adiciona no FormPanel antigo
 		panelFields = new Ext.Panel({
 		  id:			 'panelFields',
-		  frame:         true,
-		  waitMsgTarget: true,
+		  frame:          true,
+		  waitMsgTarget:  true,
 		  bodyStyle:     'padding:5px 5px 0',
 		  layout:		 'table',
 		  layoutConfig: {
@@ -172,4 +172,50 @@
 		panel.remove('panelFields');
 	}
 	
-<% end -%>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+          Ext.onReady(function(){
+
+              Ext.QuickTips.init();
+
+              // turn on validation errors beside the field globally
+              Ext.form.Field.prototype.msgTarget = 'side';
+
+              //var panel = new Ext.FormPanel({
+              panel = new Ext.FormPanel({
+                  labelWidth:   75, // label settings here cascade unless overridden
+                  url:          '/contracts',
+                  frame:         true,
+				  enctype:		 'multipart/form-data',
+				  fileUpload: 	  true,
+				  isUpload: true,
+                  waitMsgTarget: true,
+                  title:         'Inserir Contrato',
+                  bodyStyle:     'padding:5px 5px 0',
+                  //width:         350,
+                  //defaults:      {width: 230},
+                  defaultType:   'textfield',
+                  renderTo:      'contract-form',
+
+                  
+                  items: contract_form_items,
+
+                  buttons: [ 
+							{  text: 'Salvar',  type: 'submit',  handler: function(){ panel.getForm
+().submit({url:'/contracts?format=ext_json', waitMsg:'Saving...', params: {tabId: '5', tabTitle: 'Inserir Contrato'}}); }},
+                             {  text: 'Cancelar',  handler: function(){ panel.suspendEvents(); parent.updateTab('5', 'Inserir Contrato', '/contracts'); }}
+                           ]
+              });
+
+              // populate form values
+              panel.getForm().setValues([{"value": null, "id": "contract[updated_at]"}, {"value": null
+, "id": "contract[contract_type_id]"}, {"value": null, "id": "contract[contract]"}, {"value": null, "id"
+: "contract[contract_category_id]"}, {"value": null, "id": "contract[created_at]"}]);
+
+              
+              
+          });
+
+//]]>
+</script>

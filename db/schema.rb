@@ -9,22 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD:db/schema.rb
 ActiveRecord::Schema.define(:version => 20090104011955) do
-=======
-<<<<<<< HEAD:db/schema.rb
-<<<<<<< HEAD:db/schema.rb
-ActiveRecord::Schema.define(:version => 20090101014147) do
-=======
-ActiveRecord::Schema.define(:version => 20081220154742) do
->>>>>>> murilo/master:db/schema.rb
-=======
-ActiveRecord::Schema.define(:version => 20081220154742) do
-=======
-ActiveRecord::Schema.define(:version => 20090101014147) do
->>>>>>> marlus/master:db/schema.rb
->>>>>>> murilo/master:db/schema.rb
->>>>>>> marlus/master:db/schema.rb
 
   create_table "alarm_orders", :force => true do |t|
     t.string   "name"
@@ -92,8 +77,9 @@ ActiveRecord::Schema.define(:version => 20090101014147) do
   end
 
   create_table "contracts", :force => true do |t|
+    t.integer  "contract_category_id"
     t.integer  "contract_type_id"
-    t.string   "data_fields"
+    t.string   "contract"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -29,13 +29,38 @@ class ContractsController < ApplicationController
 
   # POST /contracts
   def create
-    @contract = Contract.new(params[:contract])
+    @contract_fields = ""
+    @total_size = params[:contract].length
+    @file = nil
+    @i = 0
+    
+    debugger
+    
+    params[:contract].each do |field|
+      field_type = field[0].split("_")
+      
+      if(field_type[1] == 'arquivo')
+        @file = field[1]
+        field[1] = field[1].original_filename
+      end
+      
+      @i = @i + 1
+      if(@total_size != @i)
+        @contract_fields << field_type[1] + "=>{" + field_type[0] + ": " + field[1] + "}|" 
+      else
+        @contract_fields << field_type[1] + "=>{" + field_type[0] + ": " + field[1] + "}"
+      end
+      
+    end
+    contract = {:contract_category_id => params[:contract_category].to_a[0][1], :contract_type_id => params[:contract_type_hidden], :contract => @contract_fields}
+    @contract = Contract.new(contract)
 
     respond_to do |format|
       if @contract.save
+        @contract.saveFile(@file)
         notice = 'Contract was successfully created.'
-        format.ext_json { render(:update) {|page| page.alert notice
-           page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + contracts_path + "');" } }
+        format.ext_json { render(:update) {|page| page.alert notice 
+          page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + contracts_path + "');" } }
       else
         format.ext_json { render :json => @contract.to_ext_json(:success => false) }
       end
@@ -54,6 +79,28 @@ class ContractsController < ApplicationController
       end
     end
   end
+  
+  def file
+    # file.html.erb
+  end
+  
+  def uploadFile
+    
+    debugger
+    upload = params[:upload]
+    name =  upload['datafile'].original_filename
+    directory = CONTRACT_FILE_PATH
+    
+    debugger
+    
+    # create the file path
+    path = File.join(directory, name)
+    # write the file
+    File.open(path, "wb") { |f| f.write(upload['datafile'].read) }
+    
+    render :text => "File has been uploaded successfully"
+  end
+  
 
   # DELETE /contracts/1
   def destroy
