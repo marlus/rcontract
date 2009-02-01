@@ -3,6 +3,7 @@ class CreateContracts < ActiveRecord::Migration
     create_table :contracts do |t|
       t.integer :contract_category_id
       t.integer :contract_type_id
+      t.integer :user_id
       t.string :contract
       t.timestamps
     end
