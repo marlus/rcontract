@@ -62,7 +62,7 @@ class ContractTypesController < ApplicationController
   def update
     respond_to do |format|
       if @contract_type.update_attributes(params[:contract_type])
-        notice = 'Tipo de Contrato alterada com sucesso.'
+        notice = 'Tipo de Contrato alterado com sucesso.'
         format.ext_json { render(:update) {|page| page.alert notice
            page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + contract_types_path + "');" } }
       else

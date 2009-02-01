@@ -58,7 +58,7 @@ class ContractsController < ApplicationController
     respond_to do |format|
       if @contract.save
         @contract.saveFile(@files)
-        notice = 'Contract was successfully created.'
+        notice = 'Contrato inserido com sucesso.'
         format.html { render(:update) {|page| page.alert notice 
           page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + contracts_path + "');" } }
       else
@@ -71,7 +71,7 @@ class ContractsController < ApplicationController
   def update
     respond_to do |format|
       if @contract.update_attributes(params[:contract])
-        notice = 'Contract was successfully updated.'
+        notice = 'Contrato atualizado com sucesso.'
         format.ext_json { render(:update) {|page| page.alert notice
            page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + contracts_path + "');" } }
       else
@@ -98,7 +98,7 @@ class ContractsController < ApplicationController
     # write the file
     File.open(path, "wb") { |f| f.write(upload['datafile'].read) }
     
-    render :text => "File has been uploaded successfully"
+    render :text => "Arquivo copiado com sucesso."
   end
   
 
