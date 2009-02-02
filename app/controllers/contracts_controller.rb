@@ -52,7 +52,7 @@ class ContractsController < ApplicationController
       end
       
     end
-    contract = {:contract_category_id => params[:contract_category].to_a[0][1], :contract_type_id => params[:contract_type_hidden], :contract => @contract_fields}
+    contract = {:contract_category_id => params[:contract_category].to_a[0][1], :contract_type_id => params[:contract_type_hidden], :contract => @contract_fields, :user_id => session[:user_id]}
     @contract = Contract.new(contract)
 
     respond_to do |format|
@@ -80,32 +80,10 @@ class ContractsController < ApplicationController
     end
   end
   
-  def file
-    # file.html.erb
-  end
-  
-  def uploadFile
-    
-    debugger
-    upload = params[:upload]
-    name =  upload['datafile'].original_filename
-    directory = CONTRACT_FILE_PATH
-    
-    debugger
-    
-    # create the file path
-    path = File.join(directory, name)
-    # write the file
-    File.open(path, "wb") { |f| f.write(upload['datafile'].read) }
-    
-    render :text => "Arquivo copiado com sucesso."
-  end
-  
-
   # DELETE /contracts/1
   def destroy
     @contract.destroy
-
+    @contract.destroyFile
     respond_to do |format|
       format.js  { head :ok }
     end
