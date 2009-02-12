@@ -6,7 +6,7 @@ class Contract < ActiveRecord::Base
     files.each do |file|
       name =  file.original_filename
       directory = "#{CONTRACT_FILE_PATH}/contract/#{self.id}"
-
+      debugger
       # create the file path
       FileUtils.mkdir(directory) unless File.exists?(directory) 
       path = File.join(directory, name)
