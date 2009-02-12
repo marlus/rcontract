@@ -5,6 +5,8 @@ class CreateContracts < ActiveRecord::Migration
       t.integer :contract_type_id
       t.integer :user_id
       t.string :contract
+      t.date :contract_end_date
+      t.string :file
       t.timestamps
     end
   end

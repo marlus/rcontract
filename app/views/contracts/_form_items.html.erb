@@ -88,7 +88,18 @@
 					}
 				}
 			}
-		}		
+		},
+	    { 
+		  fieldLabel:    'Vencimento',
+		  name:          'contract[contract_end_date]',
+	      xtype:         'datefield',
+		  allowBlank:    'false'
+	    },
+		{
+		  fieldLabel:    'Arquivo',
+		  name:          'contract[file]',
+		  inputType:     'file'
+		}
 	];
 
 	function loadFields(fields, contract_type_hidden){	
