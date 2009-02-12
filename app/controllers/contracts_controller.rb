@@ -50,12 +50,14 @@ class ContractsController < ApplicationController
       end
       
     end
-    contract = {:contract_category_id => params[:contract_category].to_a[0][1], :contract_type_id => params[:contract_type_hidden], :contract => @contract_fields, :user_id => session[:user_id]}
+    
+    contract = {:contract_category_id => params[:contract_category].to_a[0][1], :contract_type_id => params[:contract_type_hidden], :contract => @contract_fields, :user_id => session[:user_id], :file => params[:file].original_filename, :contract_end_date => params[:contract_end_date]}
     @contract = Contract.new(contract)
 
     respond_to do |format|
       if @contract.save
-        @contract.saveFile(@files)
+        @contract.saveFile(params[:file])
+        @contract.saveFiles(@files)
         notice = 'Contrato inserido com sucesso.'
         format.html { render(:update) {|page| page.alert notice 
           page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + contracts_path + "');" } }

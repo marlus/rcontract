@@ -81,6 +81,8 @@ ActiveRecord::Schema.define(:version => 20090104011955) do
     t.integer  "contract_type_id"
     t.integer  "user_id"
     t.string   "contract"
+    t.date     "contract_end_date"
+    t.string   "file"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
