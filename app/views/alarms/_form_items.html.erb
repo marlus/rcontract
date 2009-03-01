@@ -1,3 +1,7 @@
+<%= select :contract_category, :contract_category_id,
+       ContractCategory.find(:all).collect {|c| [ c.name, c.id ] },
+       { :include_blank => true } %>
+
 <%= select :alarm, :alarm_order_id,
        AlarmOrder.find(:all).collect {|c| [ c.name, c.id ] },
        { :include_blank => true } %>
@@ -7,8 +11,106 @@
        { :include_blank => true } %>
 
 <% javascript_tag do -%>
+
+var contractTypes = new Ext.data.JsonStore({
+	url: '/contract_types/list_types/',  
+	fields: [
+		{name: 'id'},
+		{name: 'document'}
+	]
+});
+
+var contracts = new Ext.data.JsonStore({
+	url: '/contracts/list/',  
+	fields: [
+		{name: 'id'},
+		{name: 'contract'}
+	]
+});
+
   var <%= "#{form_items}" %> = [
-    { fieldLabel:    'Data de aviso',
+    { 
+		id:			   'contractCategoryAlarm',
+		fieldLabel:    'Categoria Contrato',
+		xtype:         'combo',
+		triggerAction: 'all',
+		typeAhead:      true,
+		forceSelection: true,
+		grow: true,
+		editable: 		false,
+		transform:     'contract_category_contract_category_id',
+		lazyRender:     true,
+		listeners: {
+			select: {
+				fn:function()
+				{
+					var contractCategoryAlarm = this;
+					var contractType  = Ext.getCmp('alarm_contract_type_id');
+
+					//Remove o panel com os campos
+					unLoadFields();
+					
+					//Carrega a segunda combo.
+					contractType.setValue('');
+					contractType.reset();
+					contractType.setDisabled(false);
+					contractType.store.load({params: ("id=" + contractCategoryAlarm.value)});
+
+				}
+			}
+		}
+	},
+	{ 
+		id: 		   'alarm_contract_type_id',
+		fieldLabel:    'Tipo Contrato',
+		xtype:         'combo',
+		triggerAction: 'all',
+		typeAhead:      true,
+		forceSelection: true,
+		width: 			350,
+		grow: 			true,
+		editable: 		false,
+		mode: 			'local',
+		valueField:		'id',
+		displayField:	'document',
+		store:			contractTypes,
+		listeners: {
+			select: {
+				fn:function()
+				{
+					var contractTypeAlarm = this;
+					var contract  = Ext.getCmp('alarm_contract_id');
+
+					//Remove o panel com os campos
+					unLoadFields();
+					
+					//Carrega a terceira combo.
+					contract.setValue('');
+					contract.reset();
+					contract.setDisabled(false);
+					contract.store.load({params: ("id=" + contractTypeAlarm.value)});
+
+				}
+			}
+		}
+	},
+	{ 
+		id: 		   'alarm_contract_id',
+		fieldLabel:    'Contrato',
+		xtype:         'combo',
+		triggerAction: 'all',
+		typeAhead:      true,
+		forceSelection: true,
+		width: 			350,
+		grow: 			true,
+		editable: 		false,
+		mode: 			'local',
+		hiddenName:		'alarm[contract_id]',
+		valueField:		'id',
+		displayField:	'contract',
+		store:			contracts
+	},
+	{ fieldLabel:    'Data de aviso',
       xtype:         'combo',
       triggerAction: 'all',
       typeAhead:      true,
@@ -35,4 +137,8 @@
 	  ]
 	}
   ];
+	function unLoadFields()
+	{
+		panel.remove('panelFields');
+	}
 <% end -%>

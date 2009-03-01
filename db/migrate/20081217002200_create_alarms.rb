@@ -3,7 +3,7 @@ class CreateAlarms < ActiveRecord::Migration
     create_table :alarms do |t|
       t.integer :alarm_period_warning_id
       t.integer :alarm_order_id
-
+      t.integer :contract_id
       t.timestamps
     end
   end

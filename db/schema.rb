@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20090104011955) do
   create_table "alarms", :force => true do |t|
     t.integer  "alarm_period_warning_id"
     t.integer  "alarm_order_id"
+    t.integer  "contract_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

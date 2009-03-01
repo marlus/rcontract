@@ -11,6 +11,14 @@ class ContractsController < ApplicationController
     end
   end
 
+  #GET /contract/list/1
+  def list
+    contract_type_id = params[:id]    
+    respond_to do |format|
+      format.json { render :json => Contract.find(:all, :order => 'id DESC', :select => 'id,contract', :conditions => ['contract_type_id = ?', contract_type_id]) }
+    end
+  end
+
   # GET /contracts/1
   def show
     # show.html.erb
@@ -50,12 +58,14 @@ class ContractsController < ApplicationController
       end
       
     end
-    contract = {:contract_category_id => params[:contract_category].to_a[0][1], :contract_type_id => params[:contract_type_hidden], :contract => @contract_fields, :user_id => session[:user_id]}
+    
+    contract = {:contract_category_id => params[:contract_category].to_a[0][1], :contract_type_id => params[:contract_type_hidden], :contract => @contract_fields, :user_id => session[:user_id], :file => params[:file].original_filename, :contract_end_date => params[:contract_end_date]}
     @contract = Contract.new(contract)
 
     respond_to do |format|
       if @contract.save
-        @contract.saveFile(@files)
+        @contract.saveFile(params[:file])
+        @contract.saveFiles(@files)
         notice = 'Contrato inserido com sucesso.'
         format.html { render(:update) {|page| page.alert notice 
           page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + contracts_path + "');" } }

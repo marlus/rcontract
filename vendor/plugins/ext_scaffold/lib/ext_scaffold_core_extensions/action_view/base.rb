@@ -13,7 +13,7 @@ module ExtScaffoldCoreExtensions
         collection_path_method = "#{object_name.to_s.tableize.tr('/','_')}_path"
         collection_path = send collection_path_method
         new_member_path = send "new_#{object_name.to_s.underscore.tr('/','_')}_path"
-        panel_title = options[:title] || "Listing #{object_name.to_s.demodulize.titleize.pluralize}"
+        panel_title = options[:title] || "Listar #{object_name.to_s.demodulize.titleize.pluralize}"
 
         javascript_tag <<-_JS
           Ext.onReady(function(){

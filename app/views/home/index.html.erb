@@ -1,1 +1,28 @@
-Bem-vindo!
+<div id="alarm-grid-venc" style="height:100%"></div>
+<%#= ext_datastore_for 'Alarm' %>
+<% javascript_tag do -%>
+var alarm_datastore = new Ext.data.Store({
+proxy: new Ext.data.HttpProxy({
+         url: '/alarms?format=ext_json',
+         method: 'GET'
+     }),
+reader: new Ext.data.JsonReader({
+          root: 'alarms',
+          id: 'id',
+          totalProperty: 'results'
+      },
+      [ {name: 'id', mapping: 'alarm.id'}, {name: 'alarm[alarm_period_warning_name]', mapping: 'alarm.alarm_period_warning.name'},{name: 'alarm[alarm_order_name]', mapping: 'alarm.alarm_order.name'},{name: 'alarm[created_at]', mapping: 'alarm.created_at'},{name: 'alarm[updated_at]', mapping: 'alarm.updated_at'}]),
+// turn on remote sorting
+remoteSort: true,
+sortInfo: {field: '#{options[:sort_field] || "id"}', direction: '#{options[:sort_direction] || "ASC"}'}
+});
+<% end -%>
+<% javascript_tag do -%>
+  var alarm_column_model = new Ext.grid.ColumnModel([
+    {id: 'id', header: "#", width: 20, dataIndex: 'id'},
+    {header: 'Data de aviso', dataIndex: 'alarm[alarm_period_warning_name]'},
+    {header: 'Ordem', dataIndex: 'alarm[alarm_order_name]'},
+    {header: 'Tipo de aviso', dataIndex: 'alarm[warning_type]'}
+  ]);
+<% end -%>
+<%= ext_grid_for 'Alarm', :element => 'alarm-grid-venc', :tabId => '2', :tabTitle => 'Listar Alarmes' %>
