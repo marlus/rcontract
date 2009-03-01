@@ -11,6 +11,14 @@ class ContractsController < ApplicationController
     end
   end
 
+  #GET /contract/list/1
+  def list
+    contract_type_id = params[:id]    
+    respond_to do |format|
+      format.json { render :json => Contract.find(:all, :order => 'id DESC', :select => 'id,contract', :conditions => ['contract_type_id = ?', contract_type_id]) }
+    end
+  end
+
   # GET /contracts/1
   def show
     # show.html.erb

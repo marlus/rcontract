@@ -1,6 +1,7 @@
 class Contract < ActiveRecord::Base
   belongs_to :contract_category
   belongs_to :contract_type
+  has_many :alarms
   
   def saveFiles(files)
     files.each do |file|

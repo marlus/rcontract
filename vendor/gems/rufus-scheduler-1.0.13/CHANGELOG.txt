@@ -1,0 +1,82 @@
+
+= rufus-scheduler CHANGELOG.txt
+
+
+== rufus-scheduler - 1.0.13    released 2009/02/02
+
+- todo  #23779 : removed lib/openwfe/ and restructured to lib/rufus/scheduler/
+- todo  #23774 : adapted to Ruby 1.9.1
+- todo  #23483 : removed gemspec from Rakefile
+- bug   #23458 : :timeout not working on JRuby (reported by Chris Evans). Fixed.
+- patch #23430 : gemspec patch by Ryan Sonnek
+- patch #23412 : faster CronLine#next_time patch by TobyH
+
+
+== rufus-scheduler - 1.0.12    released 2008/12/18
+
+- todo  #23257 : added :timeout parameter for cron/in/at/every
+- bug   #22546 : added note about CronLine#next_time, K Liu
+- todo  #22489 : find_jobs(tag=nil) patch by Xianhang Zhang
+
+
+== rufus-scheduler - 1.0.11    released 2008/09/03
+
+- todo  #21781 : added lib/rufus-scheduler.rb to make Railsists' lives easier
+
+
+== rufus-scheduler - 1.0.10    released 2008/08/28
+
+- todo  #21357 : added Rufus::Scheduler::VERSION
+- bug   #21358 : start_new() not accepting parameters. Fixed.
+
+
+== rufus-scheduler - 1.0.9    released 2008/07/18
+
+- bug   #21262 : brought back (proxy) duration_to_f to Rufus::Scheduler
+- todo  #21251 : added 'at', 'cron', 'in' and 'every' shortcut methods
+- todo  #21203 : keeping track of At and EveryJob until last trigger is over
+- todo  #20823 : now raising exception in case of bad 'at' parameter
+- todo  #21194 : added trigger_thread to Job class
+- todo  #21193 : spinned CronLine out to rufus/cronline.rb
+- bug   #20893 : sometimes unschedule(every_job) not working when job was
+                 active (performing). Fixed.
+
+
+== rufus-scheduler - 1.0.7    released 2008/06/16
+
+- todo  #20669 : implemented CronJob.next_time()
+- todo  #20667 : now passing params to schedule() blocks as well.
+- bug   #20648 : find_schedulable(tag) broken. Fixed.
+
+
+== rufus-scheduler - 1.0.6    released 2008/05/02
+
+- bug   #20476 : no cron jobs on sundays (wday == 0). Fixed.
+                 (thanks to Manfred Usselmann)
+- todo  #19619 : added :thread_name options to Scheduler.new
+- source moved to http://github.com/jmettraux/rufus-scheduler
+
+
+== rufus-scheduler - 1.0.5    released 2008/03/17
+
+- bug   #18363 : constrained precision to 0.0 < p <= 1.0 - s188
+- todo  #18821 : best effort drift correction integrated - s187
+- bug   #18513 : 0 seconds and :drop_seconds => "0m". Fixed - s186
+
+
+== rufus-scheduler - 1.0.4    released 2008/02/29
+
+- todo  #18474 : implemented to_duration_array() - s183
+- todo  #18472 : added Rufus::to_time_string - s181
+
+
+== rufus-scheduler - 1.0.2    released 2008/01/26
+
+- patch #17505 : added params :first_at and :first_in for schedule_every()
+                 a patch by John Didion - s115
+
+
+== rufus-scheduler - 1.0    released 2008/01/24
+
+- initial release after "openwferu-scheduler" - 0.9.16
+
