@@ -27,6 +27,29 @@ class ContractTypesController < ApplicationController
     end
   end
 
+  def list_grid_fields
+    id = params[:id]    
+    respond_to do |format|
+      json_response = "{'rows': ["
+      contractType = ContractType.find(:first, :select=>'fields', :conditions=>['id = ?', id])
+
+      fields = contractType.fields.split(',');
+      fields.each do |field|
+        field_properties = field.split(':')
+        field_name = field_properties[0]
+        field_type = field_properties[1]
+        field_required = field_properties[2]
+        if fields.last != field
+          json_response << "{'nome_campo': '" + field_name + "', 'tipo_campo': '" + field_type + "', 'obrigatorio': " + field_required + "},"
+        else
+          json_response << "{'nome_campo': '" + field_name + "', 'tipo_campo': '" + field_type + "', 'obrigatorio': " + field_required + "}"
+        end
+      end
+      json_response << "]}"
+      format.json { render :json => json_response }
+    end
+  end
+
   # GET /contract_types/1
   def show
     # show.html.erb
@@ -40,6 +63,7 @@ class ContractTypesController < ApplicationController
 
   # GET /contract_types/1/edit
   def edit
+    @contract_type = ContractType.find(params[:id])
     # edit.html.erb
   end
 

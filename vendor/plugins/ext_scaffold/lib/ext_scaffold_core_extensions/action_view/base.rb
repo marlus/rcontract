@@ -167,7 +167,6 @@ module ExtScaffoldCoreExtensions
         collection_path_method = "#{object_name.to_s.tableize.tr('/','_')}_path"
         datastore_name = options[:datastore] || "#{object_name.to_s.demodulize.underscore}_datastore"
         primary_key = object_name.to_s.classify.constantize.primary_key
-        debugger
         javascript_tag <<-_JS 
           var #{datastore_name} = new Ext.data.Store({
                   proxy: new Ext.data.HttpProxy({

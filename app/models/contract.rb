@@ -17,7 +17,6 @@ class Contract < ActiveRecord::Base
   end
   
   def destroyFile
-    debugger
     directory = "#{CONTRACT_FILE_PATH}/contract/#{self.id}"
     #FileUtils.rmdir(directory)
     FileUtils.rm_r directory, :force => true

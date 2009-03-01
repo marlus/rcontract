@@ -34,8 +34,6 @@ class ContractsController < ApplicationController
     @files = Array.new
     @i = 0
     
-    debugger
-    
     params[:contract].each do |field|
       field_type = field[0].split("_")
       
