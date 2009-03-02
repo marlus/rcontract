@@ -1,7 +1,9 @@
 ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings = {
+   :tls => true,
    :address => "smtp.gmail.com",
-   :port => 587,
+   :port =>587, 
+   :domain => "rcontract.com",
    :user_name => "",
    :password => "",
    :authentication => :plain

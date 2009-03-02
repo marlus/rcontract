@@ -7,7 +7,7 @@ class AlarmsController < ApplicationController
   def index
     respond_to do |format|
       format.html     # index.html.erb (no data required)
-      format.ext_json { render :json => find_alarms.to_ext_json(:class => Alarm, :count => Alarm.count(options_from_search(Alarm)), :include => [:alarm_order, :alarm_period_warning]) }
+      format.ext_json { render :json => find_alarms.to_ext_json(:class => Alarm, :count => Alarm.count(options_from_search(Alarm)), :include => [:alarm_order, :alarm_period_warning, :contract]) }
     end
   end
 
@@ -77,6 +77,7 @@ class AlarmsController < ApplicationController
     
     def find_alarms
       pagination_state = update_pagination_state_with_params!(Alarm)
+      debugger
       @alarms = Alarm.find(:all, options_from_pagination_state(pagination_state).merge(options_from_search(Alarm)))
     end
 end

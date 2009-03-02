@@ -5,8 +5,7 @@
     {id: 'id', header: "#", width: 20, dataIndex: 'id'},
     {header: 'Name', dataIndex: 'user[name]'},
     {header: 'Email', dataIndex: 'user[email]'},
-    {header: 'Username', dataIndex: 'user[username]'},
-    {header: 'Password', dataIndex: 'user[password]'}
+    {header: 'Username', dataIndex: 'user[username]'}
   ]);
 <% end -%>
 <%= ext_grid_for 'User', :element => 'indexUsers', :tabId => params[:tabId], :tabTitle => params[:tabTitle] %>

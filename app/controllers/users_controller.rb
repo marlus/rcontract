@@ -33,7 +33,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        notice = 'User was successfully created.'
+        notice = 'Usuário inserido com sucesso.'
         format.ext_json { render(:update) {|page| page.alert notice
            page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + users_path + "');" } }
       else
@@ -46,7 +46,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        notice = 'User was successfully updated.'
+        notice = 'Usuário alterado com sucesso.'
         format.ext_json { render(:update) {|page| page.alert notice
            page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + users_path + "');" } }
       else

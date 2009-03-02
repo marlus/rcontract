@@ -296,3 +296,14 @@ Processing UsersController#update (for 0.0.0.0 at 2008-12-14 16:57:22) [PUT]
 Redirected to http://test.host/login/login
 Filter chain halted as [:authorize] rendered_or_redirected.
 Completed in 0.00024 (4253 reqs/sec) | DB: 0.00023 (97%) | 302 Found [http://test.host/users/update/953125641.ext_json?]
+Sent mail to murilocadanus@rcontract.com
+
+From: sender.address@example.com
+To: murilocadanus@rcontract.com
+Subject: Hi murilocadanus@rcontract.com
+Mime-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+
+Hi ,
+
+your inspirational thought for the day...
