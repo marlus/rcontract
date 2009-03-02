@@ -32,6 +32,32 @@ class ContractsController < ApplicationController
 
   # GET /contracts/1/edit
   def edit
+    @contract = Contract.find(params[:id])
+    @contract_values = Hash.new
+    @contract_names = Array.new
+    contract_fields = @contract['contract']
+    fields = contract_fields.split('|')
+    regexp_field_type = Regexp.new(/^[^=]+/)
+    regexp_field_name = Regexp.new(/\{+[^:]+/)
+    regexp_field_value = Regexp.new(/\:.[^\}]+/)
+    fields.each do |row|
+      field_type_reg = regexp_field_type.match(row)
+      field_name_reg = regexp_field_name.match(row)
+      field_value_reg = regexp_field_value.match(row)
+      
+      field_type = field_type_reg[0]
+      field_name = field_name_reg[0]
+      field_value = field_value_reg[0]
+      
+      field_name.slice!(0)
+      field_value.slice!(0, 2)
+      
+      @contract_names << field_name
+      @contract_values[field_name + "_value"] = field_value
+      @contract_values[field_name + "_name"] = field_name
+      @contract_values[field_name + "_type"] = field_type
+    end
+    #{}"caracter=>{CPF: 04220312919}|caracter=>{Nome: Marlus Cadanus da Costa}|caracter=>{RG: 87343740}"
     # edit.html.erb
   end
 

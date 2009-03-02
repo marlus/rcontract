@@ -33,7 +33,7 @@ class ContractTypesController < ApplicationController
       json_response = "{'rows': ["
       contractType = ContractType.find(:first, :select=>'fields', :conditions=>['id = ?', id])
 
-      fields = contractType.fields.split(',');
+      fields = contractType.fields.split(',')
       fields.each do |field|
         field_properties = field.split(':')
         field_name = field_properties[0]
