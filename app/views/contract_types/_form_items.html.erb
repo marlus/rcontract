@@ -2,9 +2,13 @@
        ContractCategory.find(:all).collect {|c| [ c.name, c.id ] },
        { :include_blank => true } %>
 <script>
+  //Id usado para editar o tipo de contrato
+  var id = '<%=params["id"]%>';
+
   var contract_type_form_items = [
 	{ 
 		fieldLabel:    'Categoria',
+		id:            'categoria',
 		xtype:         'combo',
 		triggerAction: 'all',
 		typeAhead:      true,
@@ -14,6 +18,7 @@
 	},
 	{
 		fieldLabel:    'Documento',
+		id:            'documento',
 		xtype:         'textfield',
 		name:		   'contract_type[document]',
 		allowBlank:	   'false',
@@ -24,8 +29,8 @@
 		name:		   'contract_type[fields]',
 		value: 		   'teste Hidden'
 	}	
-  ];
-
+  ]
+		
 	    function formatDate(value){
 	        return value ? value.dateFormat('M d, Y') : '';
 	    };
@@ -68,9 +73,9 @@
 	    // by default columns are sortable
 	    cm.defaultSortable = true;
 
-	    // this could be inline, but we want to define the Plant record
+	    // this could be inline, but we want to define the ContractType record
 	    // type so we can add records dynamically
-	    var Plant = Ext.data.Record.create([
+	    var ContractType = Ext.data.Record.create([
 	           // the "name" below matches the tag name to read, except "availDate"
 	           // which is mapped to the tag "availability"
 	           {name: 'nome_campo', type: 'string'},
@@ -79,15 +84,22 @@
 	      ]);
 
 		//create dados
-		//var myData = { 'rows': [{ 'nome_campo': 'Novo Campo', 'tipo_campo': 'Texto', 'obrigatorio': true }] };
 		var myData = "";
 		
-	    var store = new Ext.data.Store({
-			 proxy: new Ext.data.MemoryProxy(myData),
-	         reader: new Ext.data.JsonReader({root: "rows"}, Plant)
-	         });
-
-
+		if (id)
+		{
+	    	var store = new Ext.data.Store({
+			 	proxy: new Ext.data.HttpProxy({url: '/contract_types/list_grid_fields/' + id}),
+	         	reader: new Ext.data.JsonReader({root: "rows"}, ContractType)
+	         	});
+		}
+		else
+		{
+	    	var store = new Ext.data.Store({
+			 	proxy: new Ext.data.MemoryProxy(myData),
+	         	reader: new Ext.data.JsonReader({root: "rows"}, ContractType)
+	         	});			
+		}
 
 	    // trigger the data store load
 	    store.load();
@@ -101,7 +113,7 @@
 	        width:600,
 	        height:300,
 	        autoExpandColumn:'nome_campo',
-	        //title:'Edit Plants?',
+	        //title:'Edit ContractTypes?',
 	        frame:true,
 	        plugins:checkColumn,
 	        clicksToEdit:1,
@@ -110,7 +122,7 @@
 	            text: 'Adicionar Campo',
 				iconCls:'add',
 	            handler : function(){
-	                var p = new Plant({
+	                var p = new ContractType({
 	                    nome_campo: 'Novo Campo',
 	                    tipo_campo: 'Texto',
 	                    obrigatorio: true
@@ -118,8 +130,20 @@
 	                grid.stopEditing();
 	                store.insert(0, p);
 	                grid.startEditing(0, 0);
-					store.load();	
-	            }
+	            }					
+	        },
+	        {
+	            text: 'Remover Campo',
+				iconCls:'remove',
+	            handler : function(){
+		            var sm = grid.getSelectionModel();
+		            var cell = sm.getSelectedCell();
+		            var record = store.getAt(cell[0]);
+
+	                grid.stopEditing();
+	                store.remove(record);
+	                grid.startEditing(0, 0);
+	            }					
 	        }]
 	    });
 
@@ -161,19 +185,12 @@
 								type: 'submit',  
 								handler: function()
 								{ 
-									//for (key in store.data.fields) {
-									    //store.data.items[key];
-									//	alert('key -> ' + store.data.items[key]);
-									//}
-									//return false;
-									//alert("Total: " + store.length + " teste: " + store.getAt(0).data.nome_campo);
+
 									key = 0;
 									var campos_contrato = "";
 									store.each(function(record) 
 									{ 
 										campos_contrato +=  store.getAt(key).data.nome_campo + ":" + store.getAt(key).data.tipo_campo + ":" + store.getAt(key).data.obrigatorio + ",";
-										//TODO - adicionar o campo obrigatorio.
-										//store.getAt(key).data.obrigatorio)
 										key++;
 									});
 									
@@ -184,16 +201,33 @@
 									}]);
 									
 									
-									panel.getForm().submit(
+										if (id)
 										{
-											url:'/contract_types?format=ext_json', 
-											waitMsg:'Saving...', 
-											params: 
-											{
-												tabId: '5', 
-												tabTitle : 'Inserir Tipo de Contrato'
-											}
-										}); 
+											panel.getForm().submit(
+												{
+													url:'/contract_types/' + id + '?format=ext_json', 
+													waitMsg:'Saving...', 
+													params: 
+													{
+														tabId: '5', 
+														tabTitle : 'Inserir Tipo de Contrato',
+														_method:  'PUT'
+													}
+												}); 										
+										}
+										else
+										{
+											panel.getForm().submit(
+												{
+													url:'/contract_types?format=ext_json', 
+													waitMsg:'Saving...', 
+													params: 
+													{
+														tabId: '5', 
+														tabTitle : 'Inserir Tipo de Contrato'
+													}
+												}); 
+										}
 									}
 								},
 	                            {  
@@ -206,30 +240,18 @@
 								}
 	                           ]
 	              });
-
-	              // populate form values
-	              panel.getForm().setValues([
+	
+	                 // populate form values
+	                 panel.getForm().setValues([
 									{
-										"value": null, 
-										"id": "contract_type[updated_at]"
-									}, 
-									{
-										"value": null, 
-										"id": "contract_type[fields]"
-									}, 
-									{
-										"value": null, 
+										"value": "<%=@contract_type.document%>", 
 										"id": "contract_type[document]"
 									}, 
 									{
-										"value": null, 
+										"value": "<%=@contract_type.contract_category_id%>", 
 										"id": "contract_type[contract_category_id]"
-									}, 
-									{
-										"value": null, 
-										"id": "contract_type[created_at]"
 									}
-									]);
+				  					]);
 	          });
 	
 	

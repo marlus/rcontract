@@ -17,6 +17,9 @@
 		]
 	});
 	
+	//Id usado para editar o contrato
+	var id = '<%=params["id"]%>';
+	
 	var <%= "#{form_items}" %> = [
 		{ 
 			id:			   'contractCategory',
@@ -133,16 +136,18 @@
 			
 				if (fieldType == 'Data')
 				{
-					componentField = new Ext.form.DateField({
+					var componentField = new Ext.form.DateField({
 						name:		   	'contract[' + fieldName + '_data]',
+						id:		   	    'field_' + fieldName,
 						allowBlank:		fieldAllowBlank,
 						style: 		  	'margin-bottom:4px'
-					});				
+					});			
 				}
 				else if (fieldType == 'Arquivo')
 				{					
-					componentField = new Ext.form.TextField({
+					var componentField = new Ext.form.TextField({
 						name:  		'contract[' + fieldName + '_arquivo]',
+						id:  		'field_' + fieldName,
 						allowBlank:	fieldAllowBlank,
 						inputType:  'file',
 						style: 		'margin-bottom:4px'
@@ -150,8 +155,9 @@
 				}
 				else if (fieldType == 'Texto')
 				{					
-					componentField = new Ext.form.HtmlEditor({
+					var componentField = new Ext.form.HtmlEditor({
 			            name:  		'contract[' + fieldName + '_texto]',
+			            id:  		'field_' + fieldName,
 			            width: 		550,
 			            height: 	200,
 						style: 		'margin-bottom:8px'
@@ -160,8 +166,9 @@
 				}
 				else
 				{
-					componentField = new Ext.form.TextField({
+					var componentField = new Ext.form.TextField({
 						name:		   'contract[' + fieldName + '_caracter]',
+						id:			   'field_' + fieldName,
 						allowBlank:		fieldAllowBlank,
 						cls: 'x-form-item'
 					});
@@ -229,11 +236,71 @@
                            ]
               });
 
-              // populate form values
-              panel.getForm().setValues([{"value": null, "id": "contract[updated_at]"}, {"value": null
-, "id": "contract[contract_type_id]"}, {"value": null, "id": "contract[contract]"}, {"value": null, "id"
-: "contract[contract_category_id]"}, {"value": null, "id": "contract[created_at]"}]);
-
+							
+			//Utility to edit the contract
+		  	if (id)
+		  	{
+				contract_category_id = "<%=@contract.contract_category_id%>";
+			    contractType  = Ext.getCmp('contract_type_id');
+				
+				// pupulate the contract type combo.
+				contractType.setValue('');
+				contractType.reset();
+				contractType.setDisabled(false);
+				contractType.store.load({
+							params: ("id=" + contract_category_id),
+							callback: function()
+							{
+								panel.getForm().setValues([
+										{
+											"value": "<%=@contract.contract_type_id%>", 
+											"id": "contract_type_id"
+										}
+									]);
+							}
+				});
+				
+				//populate the fields panel
+				fieldsStore.load({
+					params: ("id=<%=@contract.contract_type_id%>"),
+					callback: function(records,o,s){
+						//Obtem os registros do campo
+						var fields = records[0].get('fields');
+						if (fields.length > 0)
+						{
+							loadFields(fields, "<%=@contract.contract_type_id%>");
+							
+							// populate the values of the fields of panel
+							<%
+							if (@contract != nil && @contract_names != nil)
+								@contract_names.each do |row|
+									field_value = @contract_values[row + "_value"]
+									field_name = @contract_values[row + "_name"]
+									field_type = @contract_values[row + "_type"]
+							%>
+							<%= "
+									panelComponent =  panelFields.getComponent('field_#{field_name}');
+									panelComponent.setRawValue('#{field_value}');
+							" %>
+								<% end %>
+							<% end %>
+							
+						}
+					}
+				});	
+				
+				// populate form values
+				panel.getForm().setValues([ 
+							{
+								"value": "<%=@contract.contract_category_id%>", 
+								"id": "contract_category[contract_category_id]"
+							}, 
+							{
+								"value": "<%=@contract.contract_end_date%>", 
+								"id": "contract_end_date"
+							}]);
+				
+			}
               
               
           });
