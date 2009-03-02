@@ -4,8 +4,8 @@ ActionMailer::Base.smtp_settings = {
    :address => "smtp.gmail.com",
    :port =>587, 
    :domain => "rcontract.com",
-   :user_name => "murilocadanus@gmail.com",
-   :password => "arise000",
+   :user_name => "",
+   :password => "",
    :authentication => :plain
 }
 ActionMailer::Base.perform_deliveries = true
