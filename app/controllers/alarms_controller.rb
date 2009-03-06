@@ -33,7 +33,7 @@ class AlarmsController < ApplicationController
 
     respond_to do |format|
       if @alarm.save
-        notice = 'Alarm was successfully created.'
+        notice = 'Alarme inserido com sucesso.'
         format.ext_json { render(:update) {|page| page.alert notice
            page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + alarms_path + "');" } }
       else
@@ -47,7 +47,7 @@ class AlarmsController < ApplicationController
     params[:alarm][:alarm_type_warning_ids] ||= []
     respond_to do |format|
       if @alarm.update_attributes(params[:alarm])
-        notice = 'Alarm was successfully updated.'
+        notice = 'Alarme alterado com sucesso.'
         format.ext_json { render(:update) {|page| page.alert notice
            page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + alarms_path + "');" } }
       else
