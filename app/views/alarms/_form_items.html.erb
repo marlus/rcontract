@@ -10,7 +10,7 @@
        AlarmPeriodWarning.find(:all).collect {|c| [ c.name, c.id ] },
        { :include_blank => true } %>
 
-<% javascript_tag do -%>
+<script language="javascript">
 
 var contractTypes = new Ext.data.JsonStore({
 	url: '/contract_types/list_types/',  
@@ -27,7 +27,7 @@ var contracts = new Ext.data.JsonStore({
 		{name: 'contract'}
 	]
 });
-
+  var id = '<%=params["id"]%>';
   var <%= "#{form_items}" %> = [
     { 
 		id:			   'contractCategoryAlarm',
@@ -141,4 +141,142 @@ var contracts = new Ext.data.JsonStore({
 	{
 		panel.remove('panelFields');
 	}
-<% end -%>
+	
+	// populate form values	
+	Ext.onReady(function(){
+
+	              Ext.QuickTips.init();
+
+	              // turn on validation errors beside the field globally
+	              Ext.form.Field.prototype.msgTarget = 'side';
+
+	              panel = new Ext.FormPanel({
+	                  labelWidth:   75, // label settings here cascade unless overridden
+	                  url:          '/alarms',
+	                  frame:         true,
+	                  waitMsgTarget: true,
+	                  title:         'Edit Alarm',
+	                  bodyStyle:     'padding:5px 5px 0',
+	                  defaultType:   'textfield',
+	                  renderTo:      'alarm-form',
+
+
+	                  items: alarm_form_items,
+
+					  buttons: [{  
+								 text: 'Salvar',  
+								 type: 'submit',  
+								 handler: function(){ 
+										if (id)
+										{
+											panel.getForm().submit({
+												url:'/alarms/' + id + '?format=ext_json', 
+												params: 
+												{ 
+													tabId: '2', 
+													tabTitle: 'Listar Alarmes', 
+													_method: 'PUT' 
+										    	}, 
+								 				waitMsg:'Saving...'
+								   			});
+							 			}
+										else
+										{
+											panel.getForm().submit({
+												url:'/alarms/?format=ext_json', 
+												params: 
+												{ 
+													tabId: '2', 
+													tabTitle: 'Listar Alarmes'
+										    	}, 
+								 				waitMsg:'Saving...'
+								   			});											
+										}
+								}},
+								{  
+									text: 'Cancelar',  
+									handler: function(){ 
+										panel.suspendEvents(); 
+										parent.updateTab('2', 'Listar Alarmes', '/alarms'); 
+									}
+								}
+	                           ]});
+
+				  //Utility to edit the contract
+			      <% if params["id"] %>
+			
+					contract_category_id = "<%=@alarm.contract.contract_category_id%>";
+					var contractType  = Ext.getCmp('alarm_contract_type_id');
+
+					//Remove o panel com os campos
+					unLoadFields();
+					
+					//Carrega a segunda combo.
+					contractType.setValue('');
+					contractType.reset();
+					contractType.setDisabled(false);
+					contractType.store.load({
+									params: ("id=" + contract_category_id),
+									callback: function()
+										{	
+											panel.getForm().setValues([
+													{
+														"value": "<%=@alarm.contract.contract_type_id%>", 
+														"id": "alarm_contract_type_id"
+													}
+													]);
+										}										
+									});
+
+					//Carrega a terceira combo
+					var contract  = Ext.getCmp('alarm_contract_id');
+					var contractTypeAlarm = "<%=@alarm.contract.contract_type_id%>";
+
+					//Remove o panel com os campos
+					unLoadFields();
+					
+					//Carrega a terceira combo.
+					contract.setValue('');
+					contract.reset();
+					contract.setDisabled(false);
+					contract.store.load({
+								params: ("id=" + contractTypeAlarm),
+								callback: function()
+									{	
+										panel.getForm().setValues([
+												{
+													"value": "<%=@alarm.contract.id%>", 
+													"id": "alarm[contract_id]"
+												}
+												]);
+									}								
+								});
+
+	              	// populate form values
+	              	panel.getForm().setValues([
+						{
+							"value": "<%=@alarm.contract.contract_category_id%>", 
+							"id": "contract_category[contract_category_id]"
+						},
+						{
+							"value": "<%=@alarm.updated_at%>", 
+							"id": "alarm[updated_at]"
+						}, 
+						{
+							"value": "<%=@alarm.alarm_period_warning_id%>", 
+							"id": "alarm[alarm_period_warning_id]"
+						},
+						{
+							"value": "<%=@alarm.alarm_order_id%>", 
+							"id": "alarm[alarm_order_id]"
+						}, 
+						{
+							"value": "<%=@alarm.created_at%>", 
+							"id": "alarm[created_at]"
+						}
+					]);
+				<% end %>
+
+	          });
+	
+</script>

@@ -18,7 +18,7 @@ class AddItensCategories < ActiveRecord::Migration
     
     #Report
     root.add_child(report = Category.create(:text => 'Relatorios'))
-    report.add_child(Category.create(:text => 'Visualizar Relatorios', :link => '/reports'))
+    report.add_child(Category.create(:text => 'Relatorio de Contratos', :link => '/report'))
     
     #User
     root.add_child(user = Category.create(:text => 'Usuarios'))

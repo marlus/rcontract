@@ -24,6 +24,7 @@ class AlarmsController < ApplicationController
 
   # GET /alarms/1/edit
   def edit
+    @alarm = Alarm.find(params[:id])
     # edit.html.erb
   end
 
