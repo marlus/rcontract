@@ -2,6 +2,9 @@
        ContractCategory.find(:all).collect {|c| [ c.name, c.id ] },
        { :include_blank => true } %>
 <script>
+	//Id usado para editar o contrato
+	var id = '<%=params["id"]%>';
+	
 	var typeStore = new Ext.data.JsonStore({
 		url: '/contract_types/list_types/',  
 		fields: [
@@ -21,6 +24,11 @@
 	var id = '<%=params["id"]%>';
 	
 	var <%= "#{form_items}" %> = [
+		{ 
+	  		fieldLabel:    'Identificação',
+	  		name:          'contract_identification',
+	  		allowBlank:    'false'
+    	},
 		{ 
 			id:			   'contractCategory',
 			fieldLabel:    'Categoria',
@@ -102,6 +110,10 @@
 		  fieldLabel:    'Arquivo',
 		  name:          'file',
 		  inputType:     'file'
+		},
+		{
+		  xtype: 'box',
+	  	  autoEl: {cn: 'Arquivo atual: <%=@contract.file%>'}
 		}
 	];
 
@@ -215,9 +227,9 @@
                   labelWidth:   75, // label settings here cascade unless overridden
                   url:          '/contracts',
                   frame:         true,
-				  enctype:		 'multipart/form-data',
-				  fileUpload: 	  true,
-				  isUpload: true,
+				  // enctype:		 'multipart/form-data',
+				  fileUpload: 	 true,
+				  // isUpload: 	 true,
                   waitMsgTarget: true,
                   title:         'Inserir Contrato',
                   bodyStyle:     'padding:5px 5px 0',
@@ -230,9 +242,48 @@
                   items: contract_form_items,
 
                   buttons: [ 
-							{  text: 'Salvar',  type: 'submit',  handler: function(){ panel.getForm
-().submit({url:'/contracts?format=ext_json', waitMsg:'Saving...', params: {tabId: '5', tabTitle: 'Inserir Contrato'}}); }},
-                             {  text: 'Cancelar',  handler: function(){ panel.suspendEvents(); parent.updateTab('5', 'Inserir Contrato', '/contracts'); }}
+							{
+								text: 'Salvar',
+								type: 'submit',
+								handler: function()
+								{
+									if (id)
+									{
+										panel.getForm().submit(
+											{
+												url:'/contracts/' + id + '?format=ext_json', 
+												waitMsg:'Saving...', 
+												params: 
+												{
+													tabId: '5', 
+													tabTitle : 'Inserir Contrato',
+													_method:  'PUT'
+												}
+											}); 										
+									}
+									else
+									{
+										panel.getForm().submit(
+											{
+												url:'/contracts?format=ext_json',
+												waitMsg:'Saving...',
+												params:
+												{
+													tabId: '5',
+													tabTitle: 'Inserir Contrato'
+												}
+											}); 
+									}
+								}
+							},
+                            {
+								text: 'Cancelar',
+								handler: function()
+								{
+									panel.suspendEvents();
+									parent.updateTab('5', 'Inserir Contrato', '/contracts');
+								}
+							}
                            ]
               });
 
@@ -291,6 +342,10 @@
 				
 				// populate form values
 				panel.getForm().setValues([ 
+							{
+								"value": "<%=@contract.contract_identification%>", 
+								"id": "contract_identification"
+							},
 							{
 								"value": "<%=@contract.contract_category_id%>", 
 								"id": "contract_category[contract_category_id]"

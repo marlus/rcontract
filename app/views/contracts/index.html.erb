@@ -1,9 +1,33 @@
 <div id="contract-grid" style="height:100%"></div>
-<%= ext_datastore_for 'Contract' %>
+<%#= ext_datastore_for 'Contract' %>
+<script type="text/javascript">
+		//<![CDATA[
+          var contract_datastore = new Ext.data.Store({
+                  proxy: new Ext.data.HttpProxy({
+                             url: '/contracts?format=ext_json',
+                             method: 'GET'
+                         }),
+                  reader: new Ext.data.JsonReader({
+                              root: 'contracts',
+                              id: 'id',
+                              totalProperty: 'results'
+                          },
+                          [ {name: 'id', mapping: 'id'}, {name: 'contract[contract_category_id]', mapping: 'contract_category.name'},{name: 'contract[contract_type_id]', mapping: 'contract_type.document'},{name: 'contract[user_id]', mapping: 'user_id'},{name: 'contract[contract_identification]', mapping: 'contract_identification'},{name: 'contract[contract_end_date]', mapping: 'contract_end_date'},{name: 'contract[file]', mapping: 'file'},{name: 'contract[created_at]', mapping: 'created_at'},{name: 'contract[updated_at]', mapping: 'updated_at'}]),
+                  // turn on remote sorting
+                  remoteSort: true,
+                  sortInfo: {field: 'id', direction: 'ASC'}
+              });
+
+		//]]>
+</script>
+
 <% javascript_tag do -%>
   var contract_column_model = new Ext.grid.ColumnModel([
     {id: 'id', header: "#", width: 20, dataIndex: 'id'},
-  	{header: 'Contrato', dataIndex: 'contract[contract]'}
+  	{header: 'Identificação contrato', dataIndex: 'contract[contract_identification]'},
+  	{header: 'Categoria', dataIndex: 'contract[contract_category_id]'},
+  	{header: 'Tipo', dataIndex: 'contract[contract_type_id]'},
+  	{header: 'Vencimento', dataIndex: 'contract[contract_end_date]'}
   ]);
 <% end -%>
 <%= ext_grid_for 'Contract', :title => 'Listar Contratos', :element => 'contract-grid', :tabId => params[:tabId], :tabTitle => params[:tabTitle] %>

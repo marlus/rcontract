@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(:version => 20090104011955) do
   end
 
   create_table "contracts", :force => true do |t|
+    t.string   "contract_identification"
     t.integer  "contract_category_id"
     t.integer  "contract_type_id"
     t.integer  "user_id"

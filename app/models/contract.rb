@@ -5,7 +5,6 @@ class Contract < ActiveRecord::Base
   
   def saveFiles(files)
     files.each do |file|
-      debugger
       name =  file.original_filename
       directory = "#{CONTRACT_FILE_PATH}/contract/#{self.id}"
       # create the file path
@@ -18,7 +17,6 @@ class Contract < ActiveRecord::Base
   end
   
   def saveFile(file)
-    debugger
     name =  file.original_filename
     directory = "#{CONTRACT_FILE_PATH}/contract/#{self.id}"
     # create the file path
@@ -33,5 +31,10 @@ class Contract < ActiveRecord::Base
     directory = "#{CONTRACT_FILE_PATH}/contract/#{self.id}"
     #FileUtils.rmdir(directory)
     FileUtils.rm_r directory, :force => true
+  end
+  def destroyUniqueFile
+    file = "#{CONTRACT_FILE_PATH}/contract/#{self.id}/#{self.file}"
+    #FileUtils.rmdir(directory)
+    FileUtils.remove_file file, :force => true
   end
 end
