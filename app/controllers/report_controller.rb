@@ -24,9 +24,21 @@ class ReportController < ApplicationController
         sql << " AND a.contract_type_id = '" + tipo + "'"
       end
 
-      #if (data_criacao != nil && data_criacao != "undefined")
-      #  sql << " AND a.created_at > '" + data_criacao + "'"
-      #end
+      if (data_criacao != nil && data_criacao != "undefined")
+        data_criacao_arr = data_criacao.split('/')
+        data_criacao_dia = data_criacao_arr[0]
+        data_criacao_mes = data_criacao_arr[1]
+        data_criacao_ano = data_criacao_arr[2]
+        sql << " AND a.created_at > '" + data_criacao_ano + '-' + data_criacao_mes + '-' + data_criacao_dia + " 00:00:00'"
+      end
+      
+      if (data_vencimento != nil && data_vencimento != "undefined")
+        data_vencimento_arr = data_vencimento.split('/')
+        data_vencimento_dia = data_vencimento_arr[0]
+        data_vencimento_mes = data_vencimento_arr[1]
+        data_vencimento_ano = data_vencimento_arr[2]
+        sql << " AND a.contract_end_date < '" + data_vencimento_ano + '-' + data_vencimento_mes + '-' + data_vencimento_dia + " 00:00:00'"
+      end
       
       contracts = Contract.find_by_sql [sql]
       
