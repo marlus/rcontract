@@ -8,10 +8,6 @@ class ContractsController < ApplicationController
     respond_to do |format|
       format.html     # index.html.erb (no data required)
       format.ext_json { render :json => find_contracts.to_ext_json(:class => Contract, :count => Contract.count(options_from_search(Contract)), :include => [:contract_category, :contract_type]) }
-      format.pdf { 
-        @data_report = Contract.find(:all).collect{|contract| [contract.id, contract.contract_identification, contract.contract_category.name, contract.contract_type.document, contract.contract_end_date]} 
-        render :layout => false
-      }
     end
   end
 

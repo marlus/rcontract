@@ -41,8 +41,12 @@ class ReportController < ApplicationController
       end
       
       contracts = Contract.find_by_sql [sql]
-      
+          
       format.ext_json {render :json => { :contracts => contracts }}
+      format.pdf { 
+        @data_report = contracts.collect{|contract| [contract.contract_identification, contract.contract_category_name, contract.contract_type_name, contract.created_at, contract.contract_end_date]} 
+        render :layout => false
+      }
     end
   end
   

@@ -173,16 +173,20 @@
             text: 'Exportar PDF',
 			iconCls:'add',
             handler : function(){
-                alert('exporta para PDF...');
+				contractCategoryReport = Ext.getCmp('contractCategoryReport');
+				contractTypeReport = Ext.getCmp('contractTypeReport');
+				contract_start_date = Ext.getCmp('contract_start_date');
+				contract_end_date = Ext.getCmp('contract_end_date');
+                document.location.replace("/report/list_contracts/0.pdf?categoria=" + contractCategoryReport.value + "&tipo=" + contractTypeReport.value + "&data_criacao=" + contract_start_date.value + "&data_vencimento=" + contract_end_date.value);
             }					
-        },
+        }/*,
         {
             text: 'Exportar XLS',
 			iconCls:'edit',
             handler : function(){
 	        	alert('exporta para XLS...');
             }					
-        }]
+        }*/]
     });
 
 	var lblSeparator = new Ext.form.Label({
