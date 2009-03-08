@@ -1,8 +1,8 @@
 class MailerAlarm < ActionMailer::Base
-  def mail(recipient)
+  def mail(user, alarm)
     from        "system@rcontract.com"
-    recipients  recipient.email
+    recipients  user.email
     subject     "Alarme de vencimento de contrato."
-    body        :recipient => recipient
+    body        :user => user, :alarm => alarm
   end
 end

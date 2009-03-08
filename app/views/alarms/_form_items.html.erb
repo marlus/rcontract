@@ -24,7 +24,7 @@ var contracts = new Ext.data.JsonStore({
 	url: '/contracts/list/',  
 	fields: [
 		{name: 'id'},
-		{name: 'contract'}
+		{name: 'contract_identification'}
 	]
 });
   var id = '<%=params["id"]%>';
@@ -107,7 +107,7 @@ var contracts = new Ext.data.JsonStore({
 		mode: 			'local',
 		hiddenName:		'alarm[contract_id]',
 		valueField:		'id',
-		displayField:	'contract',
+		displayField:	'contract_identification',
 		store:			contracts
 	},
 	{ fieldLabel:    'Data de aviso',

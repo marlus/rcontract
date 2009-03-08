@@ -8,6 +8,10 @@ class ContractsController < ApplicationController
     respond_to do |format|
       format.html     # index.html.erb (no data required)
       format.ext_json { render :json => find_contracts.to_ext_json(:class => Contract, :count => Contract.count(options_from_search(Contract)), :include => [:contract_category, :contract_type]) }
+      format.pdf { 
+        @data_report = Contract.find(:all).collect{|contract| [contract.id, contract.contract_identification, contract.contract_category.name, contract.contract_type.document, contract.contract_end_date]} 
+        render :layout => false
+      }
     end
   end
 
@@ -15,7 +19,7 @@ class ContractsController < ApplicationController
   def list
     contract_type_id = params[:id]    
     respond_to do |format|
-      format.json { render :json => Contract.find(:all, :order => 'id DESC', :select => 'id,contract', :conditions => ['contract_type_id = ?', contract_type_id]) }
+      format.json { render :json => Contract.find(:all, :order => 'id DESC', :select => 'id,contract_identification', :conditions => ['contract_type_id = ?', contract_type_id]) }
     end
   end
 
@@ -83,21 +87,21 @@ class ContractsController < ApplicationController
         @contract_fields << field_type[1] + "=>{" + field_type[0] + ": " + field[1] + "}"
       end    
     end
-    
-    debugger
-  
-    contract = {:contract_identification => params[:contract_identification], :contract_category_id => params[:contract_category].to_a[0][1], :contract_type_id => params[:contract_type_hidden], :contract => @contract_fields, :user_id => session[:user_id], :file => params[:file].original_filename, :contract_end_date => params[:contract_end_date]}
+
+    date_to_format = params[:contract_end_date].split("/")
+    contract_end_date = date_to_format[1] << "/" << date_to_format[0] << "/" <<date_to_format[2]
+
+    contract = {:contract_identification => params[:contract_identification], :contract_category_id => params[:contract_category].to_a[0][1], :contract_type_id => params[:contract_type_hidden], :contract => @contract_fields, :user_id => session[:user_id], :file => params[:file].original_filename, :contract_end_date => contract_end_date}
     @contract = Contract.new(contract)
 
     respond_to do |format|
       if @contract.save
         @contract.saveFile(params[:file])
         @contract.saveFiles(@files)
-        params[:file] = ''
 
         notice = 'Contrato inserido com sucesso.'
-        format.ext_json { render(:update) {|page| page.alert notice 
-          page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + contracts_path + "');" } }
+        format.html { render(:update) {|page| page.alert notice 
+           page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + contracts_path + "');" } }
       else
         format.ext_json { render :json => @contract.to_ext_json(:success => false) }
       end
@@ -127,10 +131,13 @@ class ContractsController < ApplicationController
       end  
     end
     
+    date_to_format = params[:contract_end_date].split("/")
+    contract_end_date = date_to_format[1] << "/" << date_to_format[0] << "/" <<date_to_format[2]
+    
     if(params[:file] == '')
-      contract = {:contract_identification => params[:contract_identification], :contract_category_id => params[:contract_category].to_a[0][1], :contract_type_id => params[:contract_type_hidden], :contract => @contract_fields, :user_id => session[:user_id], :contract_end_date => params[:contract_end_date]}
+      contract = {:contract_identification => params[:contract_identification], :contract_category_id => params[:contract_category].to_a[0][1], :contract_type_id => params[:contract_type_hidden], :contract => @contract_fields, :user_id => session[:user_id], :contract_end_date => contract_end_date}
     else
-      contract = {:contract_identification => params[:contract_identification], :contract_category_id => params[:contract_category].to_a[0][1], :contract_type_id => params[:contract_type_hidden], :contract => @contract_fields, :user_id => session[:user_id], :file => params[:file].original_filename, :contract_end_date => params[:contract_end_date]}
+      contract = {:contract_identification => params[:contract_identification], :contract_category_id => params[:contract_category].to_a[0][1], :contract_type_id => params[:contract_type_hidden], :contract => @contract_fields, :user_id => session[:user_id], :file => params[:file].original_filename, :contract_end_date => contract_end_date}
     end
     
     respond_to do |format|

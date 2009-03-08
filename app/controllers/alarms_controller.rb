@@ -78,7 +78,6 @@ class AlarmsController < ApplicationController
     
     def find_alarms
       pagination_state = update_pagination_state_with_params!(Alarm)
-      debugger
       @alarms = Alarm.find(:all, options_from_pagination_state(pagination_state).merge(options_from_search(Alarm)))
     end
 end
