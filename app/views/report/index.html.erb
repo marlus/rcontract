@@ -1,0 +1,250 @@
+<%= select :contract_category, :contract_category_id,
+       ContractCategory.find(:all).collect {|c| [ c.name, c.id ] },
+       { :include_blank => true } %>
+
+<div id="indexReport" style="height:100%"></div>
+<script type="text/javascript">
+//<![CDATA[
+
+	var typeStore = new Ext.data.JsonStore({
+		url: '/contract_types/list_types/',  
+		fields: [
+			{name: 'id'},
+			{name: 'document'}
+		]
+	});
+
+	var report_form_items = [
+		{ 
+			id:			   'contractCategoryReport',
+			fieldLabel:    'Categoria',
+			xtype:         'combo',
+			triggerAction: 'all',
+			typeAhead:      true,
+			forceSelection: true,
+			grow: true,
+			editable: 		false,
+			transform:     'contract_category_contract_category_id',
+			lazyRender:     true,
+			listeners: {
+				select: {
+					fn:function()
+					{						
+						var contractCategoryReport = this;
+						var contractType  = Ext.getCmp('contractTypeReport');
+						
+						//Carrega a segunda combo.
+						contractType.setValue('');
+						contractType.reset();
+						contractType.setDisabled(false);
+						contractType.store.load({params: ("id=" + contractCategoryReport.value)});
+
+					}
+				}
+			}
+		},
+		{ 
+			id: 		   'contractTypeReport',
+			fieldLabel:    'Tipo',
+			xtype:         'combo',
+			triggerAction: 'all',
+			typeAhead:      true,
+			forceSelection: true,
+			width: 			350,
+			grow: 			true,
+			editable: 		false,
+			mode: 			'local',
+			valueField:		'id',
+			displayField:	'document',
+			store:			typeStore,
+			listeners: {
+				select: {
+					fn:function()
+					{
+						//Valor do contractType
+						var contractType = this;
+						
+						//Remove o panel com os campos
+						unLoadFields();
+						
+						//Carrega o panel com os campos
+						fieldsStore.load({
+							params: ("id=" + this.value),
+							callback: function(records,o,s){
+								//Obtem os registros do campo
+								var fields = records[0].get('fields');
+								if (fields.length > 0)
+								{
+									//loadFields(fields, contract_type_hidden);
+								}
+							}
+						});
+					}
+				}
+			}
+		},
+	    { 
+		  fieldLabel:    'Criação',
+		  id: 			 'contract_start_date',
+		  name:          'contract_start_date',
+	      xtype:         'datefield',
+		  allowBlank:    'false'
+	    },
+	    { 
+		  fieldLabel:    'Vencimento',
+		  id:            'contract_end_date',
+		  name:          'contract_end_date',
+	      xtype:         'datefield',
+		  allowBlank:    'false'
+	    }
+	];
+
+    // shorthand alias
+    var fm = Ext.form;
+
+    // the column model has information about grid columns
+    // dataIndex maps the column to the specific data field in
+    // the data store (created below)
+    var cm = new Ext.grid.ColumnModel([{
+           id:'nome_campo',
+           header: "Identificação",
+           dataIndex: 'contract_identification',
+           width: 100,
+           editor: new fm.TextField({
+               allowBlank: false
+           })
+        },{
+           header: "Categoria",
+           dataIndex: 'contract_category_name',
+           width: 150,
+           editor: new Ext.form.ComboBox({
+               typeAhead: true,
+               triggerAction: 'all',
+               lazyRender:true,
+               listClass: 'x-combo-list-small'
+            })
+        },{
+	       header: "Tipo",
+	       dataIndex: 'contract_type_name',
+	       width: 150,
+	    },{
+	       header: "Criação",
+	       dataIndex: 'created_at',
+	       width: 100,
+	    },{
+	       header: "Vencimento",
+	       dataIndex: 'contract_end_date',
+	       width: 100,
+	    }
+    ]);
+
+    // this could be inline, but we want to define the ContractType record
+    // type so we can add records dynamically
+    var ContractType = Ext.data.Record.create([
+           // the "name" below matches the tag name to read, except "availDate"
+           // which is mapped to the tag "availability"
+           {name: 'contract_identification', type: 'string'},
+           {name: 'contract_category_name', type: 'string'},
+           {name: 'contract_type_name', type: 'string'},
+           {name: 'created_at', type: 'string'},
+           {name: 'contract_end_date', type: 'string'}
+      ]);
+
+	//create dados
+	var myData = "";
+
+	//Store for grid
+	var store = new Ext.data.Store({
+		proxy: new Ext.data.HttpProxy({url: "/report/list_contracts/0?"}),
+     	reader: new Ext.data.JsonReader({root: "contracts"}, ContractType)
+     	});
+
+	//Grid for report
+	var idGrid = 0;
+
+    // create the editor grid
+    var grid = new Ext.grid.GridPanel({
+        store: store,
+        cm: cm,
+        height:350,
+        frame:true,
+		datachanged : this,
+        tbar: [{
+            text: 'Exportar PDF',
+			iconCls:'add',
+            handler : function(){
+                alert('exporta para PDF...');
+            }					
+        },
+        {
+            text: 'Exportar XLS',
+			iconCls:'edit',
+            handler : function(){
+	        	alert('exporta para XLS...');
+            }					
+        }]
+    });
+
+	var lblSeparator = new Ext.form.Label({
+		html: '&nbsp;'
+	});
+
+	var lblSeparator2 = new Ext.form.Label({
+		html: '&nbsp;'
+	});
+
+    var btnSearch = new Ext.Button({
+        text: '&nbsp;&nbsp;&nbsp;Consultar&nbsp;&nbsp;&nbsp;',
+        handler: function(){
+			contractCategoryReport = Ext.getCmp('contractCategoryReport');
+			contractTypeReport = Ext.getCmp('contractTypeReport');
+			contract_start_date = Ext.getCmp('contract_start_date');
+			contract_end_date = Ext.getCmp('contract_end_date');
+			store.load({
+					params: ("categoria=" + contractCategoryReport.value + "&tipo=" + contractTypeReport.value + "&data_criacao=" + contract_start_date.value + "&data_vencimento=" + contract_end_date.value),
+					callback: function(){
+						//Obtem os registros do campo
+						//alert('categoria: ' + contractCategoryReport.value + " e tipo: " + contractTypeReport.value);
+					}
+				});
+        }
+    });
+
+	report_form_items[4] = lblSeparator;
+	report_form_items[5] = btnSearch;
+	report_form_items[6] = lblSeparator2;	
+	report_form_items[7] = grid;
+
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+          Ext.onReady(function(){
+
+              Ext.QuickTips.init();
+
+              // turn on validation errors beside the field globally
+              Ext.form.Field.prototype.msgTarget = 'side';
+
+              //var panel = new Ext.FormPanel({
+              panel = new Ext.FormPanel({
+                  labelWidth:   75, // label settings here cascade unless overridden
+                  url:          '/users',
+                  frame:         true,
+                  waitMsgTarget: true,
+                  title:         'Relatorio de Contratos',
+                  bodyStyle:     'padding:5px 5px 0',
+                  defaultType:   'textfield',
+                  renderTo:      'indexReport',
+                  items: report_form_items
+              });
+
+              // populate form values
+              panel.getForm().setValues([{"value": null, "id": "user[name]"}, {"value": null, "id": "user[updated_at]"}, {"value": null, "id": "user[username]"}, {"value": null, "id": "user[group_id]"}, {"value": null, "id": "user[password]"}, {"value": null, "id": "user[email]"}, {"value": null, "id": "user[created_at]"}]);
+
+              
+              
+          });
+
+//]]>
+</script>
