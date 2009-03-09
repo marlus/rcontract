@@ -4,7 +4,7 @@
 		//<![CDATA[
 		var alarm_datastore = new Ext.data.Store({
 			proxy: new Ext.data.HttpProxy({
-         		url: '/alarms?format=ext_json',
+         		url: '/alarms?inicial_alarm=true&format=ext_json',
          		method: 'GET'
      		}),
 			reader: new Ext.data.JsonReader({
