@@ -84,7 +84,7 @@
 			}
 		},
 	    { 
-		  fieldLabel:    'Criação',
+		  fieldLabel:    'Inicio',
 		  id: 			 'contract_start_date',
 		  name:          'contract_start_date',
 	      xtype:         'datefield',
@@ -128,12 +128,12 @@
 	       dataIndex: 'contract_type_name',
 	       width: 150,
 	    },{
-	       header: "Criação",
-	       dataIndex: 'created_at',
+	       header: "Inicio",
+	       dataIndex: 'begin_date',
 	       width: 100,
 	    },{
 	       header: "Vencimento",
-	       dataIndex: 'contract_end_date',
+	       dataIndex: 'end_date',
 	       width: 100,
 	    }
     ]);
@@ -146,8 +146,8 @@
            {name: 'contract_identification', type: 'string'},
            {name: 'contract_category_name', type: 'string'},
            {name: 'contract_type_name', type: 'string'},
-           {name: 'created_at', type: 'string'},
-           {name: 'contract_end_date', type: 'string'}
+           {name: 'begin_date', type: 'string'},
+           {name: 'end_date', type: 'string'}
       ]);
 
 	//create dados

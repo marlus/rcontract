@@ -14,7 +14,7 @@ class ReportController < ApplicationController
       data_criacao = params[:data_criacao]
       data_vencimento = params[:data_vencimento]
 
-      sql = "SELECT a.contract_identification, b.name AS contract_category_name, c.document AS contract_type_name, a.created_at, a.contract_end_date FROM contracts a, contract_categories b, contract_types c WHERE a.contract_category_id=b.id AND a.contract_type_id=c.id "
+      sql = %(SELECT a.contract_identification, b.name AS contract_category_name, c.document AS contract_type_name, strftime('%%d/%%m/%%Y', a.created_at) AS begin_date, strftime('%%d/%%m/%%Y', a.contract_end_date) AS end_date FROM contracts a, contract_categories b, contract_types c WHERE a.contract_category_id=b.id AND a.contract_type_id=c.id )
 
       if (categoria != nil && categoria != "")
         sql << " AND a.contract_category_id = '" + categoria + "'"
@@ -44,7 +44,7 @@ class ReportController < ApplicationController
           
       format.ext_json {render :json => { :contracts => contracts }}
       format.pdf { 
-        @data_report = contracts.collect{|contract| [contract.contract_identification, contract.contract_category_name, contract.contract_type_name, contract.created_at, contract.contract_end_date]} 
+        @data_report = contracts.collect{|contract| [contract.contract_identification, contract.contract_category_name, contract.contract_type_name, contract.begin_date, contract.end_date]} 
         render :layout => false
       }
     end
