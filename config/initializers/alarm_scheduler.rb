@@ -20,8 +20,6 @@ scheduler.cron("0 0 * * *") do
     # Obtem a ordem do contrato a ser comparado (Anterior/Apos vencimento)
     alarm_order = alarm.alarm_order.id
     
-    debugger
-    
     # Verifica se a data final do contrato esta entre o perido de envio e o tipo de alarme
     if(((contract_end_date.between?(Date.today, Date.today+period_warning) && alarm_order == 1) ||
       (contract_end_date.between?(Date.today-period_warning, Date.today) && alarm_order == 1)) ||
