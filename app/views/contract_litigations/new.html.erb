@@ -1,0 +1,9 @@
+<div id="contract_litigation-form"></div>
+<%= render :partial => 'form_items', :object => :contract_litigation_form_items %>
+<%= ext_form_for 'ContractLitigation',
+                 :element => 'contract_litigation-form',
+                 :form_items => :contract_litigation_form_items,
+                 :mode => :new,
+				 :title => 'Inserir Processo',
+				 :tabId => params[:tabId], 
+				 :tabTitle => params[:tabTitle] %>

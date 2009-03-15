@@ -93,8 +93,7 @@ class AlarmsController < ApplicationController
           # Obtem periodo de ativo do alarme
           period_warning = alarm.alarm_period_warning.name.sub(/ [a-z]+$/, '').to_i
           # Obtem a ordem do contrato a ser comparado (Anterior/Apos vencimento)
-          alarm_order = alarm.alarm_order.id          
-          debugger      
+          alarm_order = alarm.alarm_order.id              
           if(((contract_end_date.between?(Date.today, Date.today+period_warning) && alarm_order == 1) ||
             (contract_end_date.between?(Date.today-period_warning, Date.today) && alarm_order == 1)) ||
             ((contract_end_date.between?(Date.today, Date.today+period_warning) && alarm_order == 2) ||
