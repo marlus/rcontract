@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20090104011955) do
 
   create_table "alarm_period_warnings", :force => true do |t|
     t.string   "name"
+    t.integer  "date_value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -40,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20090104011955) do
     t.integer  "alarm_period_warning_id"
     t.integer  "alarm_order_id"
     t.integer  "contract_id"
+    t.integer  "group_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

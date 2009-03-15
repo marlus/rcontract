@@ -99,7 +99,7 @@ class AlarmsController < ApplicationController
             (contract_end_date.between?(Date.today-period_warning, Date.today) && alarm_order == 1)) ||
             ((contract_end_date.between?(Date.today, Date.today+period_warning) && alarm_order == 2) ||
             (contract_end_date.between?(Date.today-period_warning, Date.today) && alarm_order == 2)) &&
-            alarm.alarm_type_warnings.include?(alarm_type_email) == true)
+            alarm.alarm_type_warnings.include?(alarm_type_email) == true && alarm.group_id == session[:group_id])
 
             @alarms.push(alarm)
           end

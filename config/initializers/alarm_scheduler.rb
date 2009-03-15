@@ -16,7 +16,7 @@ scheduler.cron("0 0 * * *") do
     # Obtem data final do contrato
     contract_end_date = alarm.contract.contract_end_date
     # Obtem periodo de ativo do alarme
-    period_warning = alarm.alarm_period_warning.name.sub(/ [a-z]+$/, '').to_i
+    period_warning = alarm.alarm_period_warning.date_value
     # Obtem a ordem do contrato a ser comparado (Anterior/Apos vencimento)
     alarm_order = alarm.alarm_order.id
     
@@ -27,7 +27,9 @@ scheduler.cron("0 0 * * *") do
       (contract_end_date.between?(Date.today-period_warning, Date.today) && alarm_order == 2)) &&
       alarm.alarm_type_warnings.include?(alarm_type_email) == true)
       users.each do |user|
-        MailerAlarm.deliver_mail(user, alarm)
+        if(user.group_id == alarm.group_id)
+          MailerAlarm.deliver_mail(user, alarm)
+        end
       end
     end
   end

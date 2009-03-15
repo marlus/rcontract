@@ -4,6 +4,7 @@ class CreateAlarms < ActiveRecord::Migration
       t.integer :alarm_period_warning_id
       t.integer :alarm_order_id
       t.integer :contract_id
+      t.integer :group_id
       t.timestamps
     end
   end

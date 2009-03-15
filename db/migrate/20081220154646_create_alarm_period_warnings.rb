@@ -2,7 +2,7 @@ class CreateAlarmPeriodWarnings < ActiveRecord::Migration
   def self.up
     create_table :alarm_period_warnings do |t|
       t.string :name
-
+      t.integer :date_value
       t.timestamps
     end
   end

@@ -10,6 +10,10 @@
        AlarmPeriodWarning.find(:all).collect {|c| [ c.name, c.id ] },
        { :include_blank => true } %>
 
+<%= select :group, :group_id,
+       Group.find(:all).collect {|c| [ c.name, c.id ] },
+       { :include_blank => true } %>
+
 <script language="javascript">
 
 var contractTypes = new Ext.data.JsonStore({
@@ -124,6 +128,14 @@ var contracts = new Ext.data.JsonStore({
       typeAhead:      true,
       forceSelection: true,
       transform:     'alarm_alarm_order_id',
+      lazyRender:     true
+    },
+    { fieldLabel:    'Grupos',
+      xtype:         'combo',
+      triggerAction: 'all',
+      typeAhead:      true,
+      forceSelection: true,
+      transform:     'group_group_id',
       lazyRender:     true
     },
 	{ xtype: 'checkboxgroup',
