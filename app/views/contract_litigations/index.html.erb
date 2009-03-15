@@ -1,0 +1,11 @@
+<div id="contract_litigation-grid" style="height:100%"></div>
+<%= ext_datastore_for 'ContractLitigation' %>
+<% javascript_tag do -%>
+  var contract_litigation_column_model = new Ext.grid.ColumnModel([
+    {id: 'id', header: "#", width: 20, dataIndex: 'id'},
+    {header: 'Contrato', dataIndex: 'contract_litigation[contract_id]'},
+    {header: 'Número', dataIndex: 'contract_litigation[number]'},
+    {header: 'Descrição', dataIndex: 'contract_litigation[description]'}
+  ]);
+<% end -%>
+<%= ext_grid_for 'ContractLitigation', :title => 'Listar Processos', :element => 'contract_litigation-grid', :tabId => params[:tabId], :tabTitle => params[:tabTitle] %>

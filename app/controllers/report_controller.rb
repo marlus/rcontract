@@ -13,14 +13,16 @@ class ReportController < ApplicationController
       tipo = params[:tipo]
       data_criacao = params[:data_criacao]
       data_vencimento = params[:data_vencimento]
+      keyword = params[:keyword]
 
+      #sql = %(SELECT a.contract_identification, b.name AS contract_category_name, c.document AS contract_type_name, DATE_FORMAT('%%d/%%m/%%Y', a.created_at) AS begin_date, DATE_FORMAT('%%d/%%m/%%Y', a.contract_end_date) AS end_date FROM contracts a, contract_categories b, contract_types c WHERE a.contract_category_id=b.id AND a.contract_type_id=c.id )
       sql = %(SELECT a.contract_identification, b.name AS contract_category_name, c.document AS contract_type_name, strftime('%%d/%%m/%%Y', a.created_at) AS begin_date, strftime('%%d/%%m/%%Y', a.contract_end_date) AS end_date FROM contracts a, contract_categories b, contract_types c WHERE a.contract_category_id=b.id AND a.contract_type_id=c.id )
 
       if (categoria != nil && categoria != "")
         sql << " AND a.contract_category_id = '" + categoria + "'"
       end
       
-      if (tipo != nil && tipo != "")
+      if (tipo != nil && tipo != "undefined")
         sql << " AND a.contract_type_id = '" + tipo + "'"
       end
 
@@ -38,6 +40,10 @@ class ReportController < ApplicationController
         data_vencimento_mes = data_vencimento_arr[1]
         data_vencimento_ano = data_vencimento_arr[2]
         sql << " AND a.contract_end_date < '" + data_vencimento_ano + '-' + data_vencimento_mes + '-' + data_vencimento_dia + " 00:00:00'"
+      end
+      
+      if (keyword != nil && keyword != "")
+        sql << " AND a.contract LIKE ('%%" + keyword + "%%') "
       end
       
       contracts = Contract.find_by_sql [sql]

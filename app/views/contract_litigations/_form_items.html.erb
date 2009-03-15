@@ -1,0 +1,258 @@
+<%= select :contract_category, :contract_category_id,
+       ContractCategory.find(:all).collect {|c| [ c.name, c.id ] },
+       { :include_blank => true } %>
+
+<script language="javascript">
+
+var contractTypes = new Ext.data.JsonStore({
+	url: '/contract_types/list_types/',  
+	fields: [
+		{name: 'id'},
+		{name: 'document'}
+	]
+});
+
+var contracts = new Ext.data.JsonStore({
+	url: '/contracts/list/',  
+	fields: [
+		{name: 'id'},
+		{name: 'contract_identification'}
+	]
+});
+  var id = '<%=params["id"]%>';
+  var <%= "#{form_items}" %> = [
+    { 
+		id:			   'contractCategoryLitigation',
+		fieldLabel:    'Categoria Contrato',
+		xtype:         'combo',
+		triggerAction: 'all',
+		typeAhead:      true,
+		forceSelection: true,
+		grow: true,
+		editable: 		false,
+		transform:     'contract_category_contract_category_id',
+		lazyRender:     true,
+		listeners: {
+			select: {
+				fn:function()
+				{
+					var contractCategoryLitigation = this;
+					var contractType  = Ext.getCmp('litigation_contract_type_id');
+
+					//Remove o panel com os campos
+					unLoadFields();
+					
+					//Carrega a segunda combo.
+					contractType.setValue('');
+					contractType.reset();
+					contractType.setDisabled(false);
+					contractType.store.load({params: ("id=" + contractCategoryLitigation.value)});
+
+				}
+			}
+		}
+	},
+	{ 
+		id: 		   'litigation_contract_type_id',
+		fieldLabel:    'Tipo Contrato',
+		xtype:         'combo',
+		triggerAction: 'all',
+		typeAhead:      true,
+		forceSelection: true,
+		width: 			350,
+		grow: 			true,
+		editable: 		false,
+		mode: 			'local',
+		valueField:		'id',
+		displayField:	'document',
+		store:			contractTypes,
+		listeners: {
+			select: {
+				fn:function()
+				{
+					var contractTypeLitigation = this;
+					var contract  = Ext.getCmp('litigation_contract_id');
+
+					//Remove o panel com os campos
+					unLoadFields();
+					
+					//Carrega a terceira combo.
+					contract.setValue('');
+					contract.reset();
+					contract.setDisabled(false);
+					contract.store.load({params: ("id=" + contractTypeLitigation.value)});
+
+				}
+			}
+		}
+	},
+	{ 
+		id: 		   'litigation_contract_id',
+		fieldLabel:    'Contrato',
+		xtype:         'combo',
+		triggerAction: 'all',
+		typeAhead:      true,
+		forceSelection: true,
+		width: 			350,
+		grow: 			true,
+		editable: 		false,
+		mode: 			'local',
+		hiddenName:		'contract_litigation[contract_id]',
+		valueField:		'id',
+		displayField:	'contract_identification',
+		store:			contracts
+	},
+	{ fieldLabel:    'Número',
+      xtype: 		 'textfield',
+	  name:		     'contract_litigation[number]',
+	  allowBlank:	 'false'
+    },
+    { fieldLabel:    'Descrição',
+      xtype:         'textarea',
+	  width: 		 '250',
+  	  name:		     'contract_litigation[description]',
+	  allowBlank:	 'false'
+    }
+  ];
+	function unLoadFields()
+	{
+		panel.remove('panelFields');
+	}
+	
+	// populate form values	
+	Ext.onReady(function(){
+
+	              Ext.QuickTips.init();
+
+	              // turn on validation errors beside the field globally
+	              Ext.form.Field.prototype.msgTarget = 'side';
+
+	              panel = new Ext.FormPanel({
+	                  labelWidth:   125, // label settings here cascade unless overridden
+	                  url:          '/contract_litigations',
+	                  frame:         true,
+	                  waitMsgTarget: true,
+	                  title:         'Inserir Processo',
+	                  bodyStyle:     'padding:5px 5px 0',
+	                  defaultType:   'textfield',
+	                  renderTo:      'contract_litigation-form',
+
+	                  items: contract_litigation_form_items,
+
+					  buttons: [{  
+								 text: 'Salvar',  
+								 type: 'submit',  
+								 handler: function(){ 
+										if (id)
+										{
+											panel.getForm().submit({
+												url:'/contract_litigations/' + id + '?format=ext_json', 
+												params: 
+												{ 
+													tabId: '5', 
+													tabTitle: 'Listar Processos', 
+													_method: 'PUT' 
+										    	}, 
+								 				waitMsg:'Saving...'
+								   			});
+							 			}
+										else
+										{
+											panel.getForm().submit({
+												url:'/contract_litigations/?format=ext_json', 
+												params: 
+												{ 
+													tabId: '5', 
+													tabTitle: 'Listar Processos'
+										    	}, 
+								 				waitMsg:'Saving...'
+								   			});											
+										}
+								}},
+								{  
+									text: 'Cancelar',  
+									handler: function(){ 
+										panel.suspendEvents(); 
+										parent.updateTab('5', 'Listar Processos', '/contract_litigations'); 
+									}
+								}
+	                           ]});
+
+				  //Utility to edit the contract
+			      <% if params["id"] %>
+			
+					contract_category_id = "<%=@contract_litigation.contract.contract_category_id%>";
+					var contractType  = Ext.getCmp('litigation_contract_type_id');
+
+					//Remove o panel com os campos
+					unLoadFields();
+					
+					//Carrega a segunda combo.
+					contractType.setValue('');
+					contractType.reset();
+					contractType.setDisabled(false);
+					contractType.store.load({
+									params: ("id=" + contract_category_id),
+									callback: function()
+										{	
+											panel.getForm().setValues([
+													{
+														"value": "<%=@contract_litigation.contract.contract_type_id%>", 
+														"id": "litigation_contract_type_id"
+													}
+													]);
+										}										
+									});
+
+					//Carrega a terceira combo
+					var contract  = Ext.getCmp('litigation_contract_id');
+					var contractTypeLitigation = "<%=@contract_litigation.contract.contract_type_id%>";
+
+					//Remove o panel com os campos
+					unLoadFields();
+					
+					//Carrega a terceira combo.
+					contract.setValue('');
+					contract.reset();
+					contract.setDisabled(false);
+					contract.store.load({
+								params: ("id=" + contractTypeLitigation),
+								callback: function()
+									{	
+										panel.getForm().setValues([
+												{
+													"value": "<%=@contract_litigation.contract.id%>", 
+													"id": "contract_litigation[contract_id]"
+												}
+												]);
+									}								
+								});
+
+	              	// populate form values
+	              	panel.getForm().setValues([
+						{
+							"value": "<%=@contract_litigation.contract.contract_category_id%>", 
+							"id": "contract_category[contract_category_id]"
+						},
+						{
+							"value": "<%=@contract_litigation.updated_at%>", 
+							"id": "contract_litigation[updated_at]"
+						},
+						{
+							"value": "<%=@contract_litigation.created_at%>", 
+							"id": "contract_litigation[created_at]"
+						},
+						{
+							"value": "<%=@contract_litigation.number%>", 
+							"id": "contract_litigation[number]"
+						},
+						{
+							"value": "<%=@contract_litigation.description%>", 
+							"id": "contract_litigation[description]"
+						}												
+					]);
+				<% end %>
+
+	          });
+	
+</script>

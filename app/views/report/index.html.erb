@@ -96,7 +96,13 @@
 		  name:          'contract_end_date',
 	      xtype:         'datefield',
 		  allowBlank:    'false'
-	    }
+	    },
+	    { 
+		  fieldLabel:    'Palavra-chave',
+		  id:            'keyword',
+		  name:          'keyword',
+		  allowBlank:    'false'
+	    }	
 	];
 
     // shorthand alias
@@ -177,7 +183,8 @@
 				contractTypeReport = Ext.getCmp('contractTypeReport');
 				contract_start_date = Ext.getCmp('contract_start_date');
 				contract_end_date = Ext.getCmp('contract_end_date');
-                document.location.replace("/report/list_contracts/0.pdf?categoria=" + contractCategoryReport.value + "&tipo=" + contractTypeReport.value + "&data_criacao=" + contract_start_date.value + "&data_vencimento=" + contract_end_date.value);
+				keyword = Ext.getCmp('keyword');
+                document.location.replace("/report/list_contracts/0.pdf?categoria=" + contractCategoryReport.value + "&tipo=" + contractTypeReport.value + "&data_criacao=" + contract_start_date.value + "&data_vencimento=" + contract_end_date.value + "&keyword=" + keyword.getValue());
             }					
         }/*,
         {
@@ -204,8 +211,10 @@
 			contractTypeReport = Ext.getCmp('contractTypeReport');
 			contract_start_date = Ext.getCmp('contract_start_date');
 			contract_end_date = Ext.getCmp('contract_end_date');
+			keyword = Ext.getCmp('keyword');
+			
 			store.load({
-					params: ("categoria=" + contractCategoryReport.value + "&tipo=" + contractTypeReport.value + "&data_criacao=" + contract_start_date.value + "&data_vencimento=" + contract_end_date.value),
+					params: ("categoria=" + contractCategoryReport.value + "&tipo=" + contractTypeReport.value + "&data_criacao=" + contract_start_date.value + "&data_vencimento=" + contract_end_date.value + "&keyword=" + keyword.getValue()),
 					callback: function(){
 						//Obtem os registros do campo
 						//alert('categoria: ' + contractCategoryReport.value + " e tipo: " + contractTypeReport.value);
@@ -214,10 +223,10 @@
         }
     });
 
-	report_form_items[4] = lblSeparator;
-	report_form_items[5] = btnSearch;
-	report_form_items[6] = lblSeparator2;	
-	report_form_items[7] = grid;
+	report_form_items[5] = lblSeparator;
+	report_form_items[6] = btnSearch;
+	report_form_items[7] = lblSeparator2;	
+	report_form_items[8] = grid;
 
 //]]>
 </script>
@@ -232,8 +241,8 @@
 
               //var panel = new Ext.FormPanel({
               panel = new Ext.FormPanel({
-                  labelWidth:   75, // label settings here cascade unless overridden
-                  url:          '/users',
+                  labelWidth:   100, // label settings here cascade unless overridden
+                  url:          '/report',
                   frame:         true,
                   waitMsgTarget: true,
                   title:         'Relatorio de Contratos',
