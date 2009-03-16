@@ -33,7 +33,7 @@ class PersonTypesController < ApplicationController
 
     respond_to do |format|
       if @person_type.save
-        notice = 'PersonType was successfully created.'
+        notice = 'Tipo Pessoa inserido com sucesso.'
         format.ext_json { render(:update) {|page| page.alert notice
            page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + person_types_path + "');" } }
       else
@@ -46,7 +46,7 @@ class PersonTypesController < ApplicationController
   def update
     respond_to do |format|
       if @person_type.update_attributes(params[:person_type])
-        notice = 'PersonType was successfully updated.'
+        notice = 'Tipo Pessoa alterado com sucesso.'
         format.ext_json { render(:update) {|page| page.alert notice
            page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + person_types_path + "');" } }
       else

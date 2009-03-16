@@ -33,7 +33,7 @@ class GroupsController < ApplicationController
 
     respond_to do |format|
       if @group.save
-        notice = 'Group was successfully created.'
+        notice = 'Grupo inserido com sucesso.'
         format.ext_json { render(:update) {|page| page.alert notice
            page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + groups_path + "');" } }
       else
@@ -46,7 +46,7 @@ class GroupsController < ApplicationController
   def update
     respond_to do |format|
       if @group.update_attributes(params[:group])
-        notice = 'Group was successfully updated.'
+        notice = 'Grupo alterado com sucesso.'
         format.ext_json { render(:update) {|page| page.alert notice
            page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + groups_path + "');" } }
       else

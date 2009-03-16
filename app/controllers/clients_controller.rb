@@ -33,7 +33,7 @@ class ClientsController < ApplicationController
 
     respond_to do |format|
       if @client.save
-        notice = 'Client was successfully created.'
+        notice = 'Cliente/Fornecedor inserido com sucesso.'
         format.ext_json { render(:update) {|page| page.alert notice
            page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + clients_path + "');" } }
       else
@@ -46,7 +46,7 @@ class ClientsController < ApplicationController
   def update
     respond_to do |format|
       if @client.update_attributes(params[:client])
-        notice = 'Client was successfully updated.'
+        notice = 'Cliente/Fornecedor alterado com sucesso.'
         format.ext_json { render(:update) {|page| page.alert notice
            page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + clients_path + "');" } }
       else

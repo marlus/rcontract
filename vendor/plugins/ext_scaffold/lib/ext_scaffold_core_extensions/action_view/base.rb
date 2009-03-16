@@ -69,7 +69,7 @@ module ExtScaffoldCoreExtensions
                       handler: function(){
                                  var selected = grid.getSelectionModel().getSelected();
                                  if(selected) {
-                                   if(confirm('Really delete?')) {
+                                   if(confirm('Deseja remover?')) {
                                       var conn = new Ext.data.Connection();
                                       conn.request({
                                           url: '#{collection_path}/' + selected.data.id,

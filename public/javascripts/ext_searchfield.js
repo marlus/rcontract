@@ -18,7 +18,7 @@ Ext.ux.grid.Search = function(config) {
     Ext.apply(this, config, {
         // defaults
          position:'bottom'
-        ,searchText:'Search'
+        ,searchText:'Procurar'
         ,searchTipText:'Type a text to search and press Enter'
         ,iconCls:'ux-icon-search'
         ,checkIndexes:'all'
