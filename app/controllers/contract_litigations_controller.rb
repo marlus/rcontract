@@ -7,7 +7,7 @@ class ContractLitigationsController < ApplicationController
   def index
     respond_to do |format|
       format.html     # index.html.erb (no data required)
-      format.ext_json { render :json => find_contract_litigations.to_ext_json(:class => ContractLitigation, :count => ContractLitigation.count(options_from_search(ContractLitigation))) }
+      format.ext_json { render :json => find_contract_litigations.to_ext_json(:class => ContractLitigation, :count => ContractLitigation.count(options_from_search(ContractLitigation)), :include => [:contract]) }
     end
   end
 
@@ -34,7 +34,7 @@ class ContractLitigationsController < ApplicationController
 
     respond_to do |format|
       if @contract_litigation.save
-        flash[:notice] = 'Processo inserido com sucesso.'
+        notice = 'Processo inserido com sucesso.'
         format.ext_json { render(:update) {|page| page.alert notice
           page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + contract_litigations_path + "');" } }
         
@@ -48,8 +48,7 @@ class ContractLitigationsController < ApplicationController
   def update
     respond_to do |format|
       if @contract_litigation.update_attributes(params[:contract_litigation])
-        flash[:notice] = 'Processo alterado com sucesso.'
-                
+        notice = 'Processo alterado com sucesso.'
         format.ext_json { render(:update) {|page| page.alert notice
            page << "parent.updateTab('" + params[:tabId] + "', '" + params[:tabTitle] + "', '" + contract_litigations_path + "');" } }
       else

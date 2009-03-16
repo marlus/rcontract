@@ -1,5 +1,26 @@
 <div id="contract_litigation-grid" style="height:100%"></div>
-<%= ext_datastore_for 'ContractLitigation' %>
+<%#= ext_datastore_for 'ContractLitigation' %>
+
+<script type="text/javascript">
+		//<![CDATA[
+		var contract_litigation_datastore = new Ext.data.Store({
+			proxy: new Ext.data.HttpProxy({
+			url: '/contract_litigations?format=ext_json',
+			method: 'GET'
+		}),
+		reader: new Ext.data.JsonReader({
+			root: 'contract_litigations',
+			id: 'id',
+			totalProperty: 'results'
+		},
+		[ {name: 'id', mapping: 'id'}, {name: 'contract_litigation[contract_id]', mapping: 'contract.contract_identification'},{name: 'contract_litigation[description]', mapping: 'description'},{name: 'contract_litigation[number]', mapping: 'number'},{name: 'contract_litigation[created_at]', mapping: 'created_at'},{name: 'contract_litigation[updated_at]', mapping: 'updated_at'}]),
+		// turn on remote sorting
+		remoteSort: true,
+		sortInfo: {field: 'id', direction: 'ASC'}
+		});
+		//]]>
+</script>
+contract.contract_identification
 <% javascript_tag do -%>
   var contract_litigation_column_model = new Ext.grid.ColumnModel([
     {id: 'id', header: "#", width: 20, dataIndex: 'id'},
