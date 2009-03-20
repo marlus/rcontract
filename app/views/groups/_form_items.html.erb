@@ -1,5 +1,41 @@
+
+<%= stylesheet_link_tag "../ext/examples/multiselect/multiselect.css"  %>
+<%= javascript_include_tag "../ext/examples/multiselect/DDView.js" %>
+<%= javascript_include_tag "../ext/examples/multiselect/MultiSelect.js" %>
+<%= javascript_include_tag "../ext/examples/multiselect/ItemSelector.js" %>
 <% javascript_tag do -%>
-  var <%= "#{form_items}" %> = [
-    <%= ext_field(:field_label => 'Name', :name => 'group[name]', :xtype => :text_field) %>
+
+	var usersData = Ext.data.Record.create([
+	       // the "name" below matches the tag name to read, except "availDate"
+	       // which is mapped to the tag "availability"
+	       {name: 'id', type: 'string'},
+	       {name: 'username', type: 'string'}
+	  ]);
+
+	var store = new Ext.data.Store({
+	 	proxy: new Ext.data.HttpProxy({url: '/users/list_users/0'}),
+     	reader: new Ext.data.JsonReader({root: "rows"},usersData)
+     	});
+	
+	
+	store.load();
+	
+    var <%= "#{form_items}" %> = [
+    <%= ext_field(:field_label => 'Nome', :name => 'group[name]', :xtype => :text_field) %>,
+	{
+        xtype:"itemselector",
+        name:"group[user_ids]",
+        fieldLabel:"Usuários",
+        dataFields:["id", "username"],
+        toData:[],
+        msWidth:250,
+        msHeight:200,
+        valueField:"id",
+        displayField:"username",
+        imagePath:"../ext/examples/multiselect/images/",
+        toLegend:"Selecionados",
+        fromLegend:"Disponíveis",
+		fromStore: store
+    }
   ];
 <% end -%>

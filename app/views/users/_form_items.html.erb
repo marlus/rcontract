@@ -1,21 +1,8 @@
 <%= select :user, :group_id,
        Group.find(:all).collect {|c| [ c.name, c.id ] },
        { :include_blank => true } %>
-
-	<%= stylesheet_link_tag "../ext/examples/multiselect/multiselect.css"  %>
-	<%= javascript_include_tag "../ext/examples/multiselect/DDView.js" %>
-	<%= javascript_include_tag "../ext/examples/multiselect/MultiSelect.js" %>
-	<%= javascript_include_tag "../ext/examples/multiselect/ItemSelector.js" %>
 	
 <% javascript_tag do -%>
-
-	/*var groupsStore = new Ext.data.JsonStore({
-		url: '/contract_types/list_types/1',  
-		fields: [
-			{name: 'id'},
-			{name: 'document'}
-		]
-	});*/
 
   var user_form_items = [
     <%= ext_field(:field_label => 'Usuário', :name => 'user[username]', :xtype => :text_field) %>,
@@ -36,23 +23,6 @@
 		forceSelection: true,
 		transform:     'user_group_id',
 		lazyRender:     true
-    }/*,
-	{
-        xtype:"itemselector",
-         name:"itemselector",
-         fieldLabel:"ItemSelector",
-         dataFields:["code", "desc"],
-         toData:[["10", "Ten"]],
-         msWidth:250,
-         msHeight:200,
-         valueField:"code",
-         displayField:"desc",
-         imagePath:"../ext/examples/multiselect/images/",
-         toLegend:"Selected",
-         fromLegend:"Available",
-         fromData:[[123,"One Hundred Twenty Three"],
-             ["1", "One"], ["2", "Two"], ["3", "Three"], ["4", "Four"], ["5", "Five"],
-             ["6", "Six"], ["7", "Seven"], ["8", "Eight"], ["9", "Nine"]],
-    }*/
+    }
   ];
 <% end -%>
