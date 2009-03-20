@@ -15,8 +15,8 @@ class ReportController < ApplicationController
       data_vencimento = params[:data_vencimento]
       keyword = params[:keyword]
 
-      #sql = %(SELECT a.contract_identification, b.name AS contract_category_name, c.document AS contract_type_name, DATE_FORMAT('%%d/%%m/%%Y', a.created_at) AS begin_date, DATE_FORMAT('%%d/%%m/%%Y', a.contract_end_date) AS end_date FROM contracts a, contract_categories b, contract_types c WHERE a.contract_category_id=b.id AND a.contract_type_id=c.id )
-      sql = %(SELECT a.contract_identification, b.name AS contract_category_name, c.document AS contract_type_name, strftime('%%d/%%m/%%Y', a.created_at) AS begin_date, strftime('%%d/%%m/%%Y', a.contract_end_date) AS end_date FROM contracts a, contract_categories b, contract_types c WHERE a.contract_category_id=b.id AND a.contract_type_id=c.id )
+      sql = %(SELECT a.contract_identification, b.name AS contract_category_name, c.document AS contract_type_name, DATE_FORMAT('%%d/%%m/%%Y', a.created_at) AS begin_date, DATE_FORMAT('%%d/%%m/%%Y', a.contract_end_date) AS end_date FROM contracts a, contract_categories b, contract_types c WHERE a.contract_category_id=b.id AND a.contract_type_id=c.id )
+      #sql = %(SELECT a.contract_identification, b.name AS contract_category_name, c.document AS contract_type_name, strftime('%%d/%%m/%%Y', a.created_at) AS begin_date, strftime('%%d/%%m/%%Y', a.contract_end_date) AS end_date FROM contracts a, contract_categories b, contract_types c WHERE a.contract_category_id=b.id AND a.contract_type_id=c.id )
 
       if (categoria != nil && categoria != "")
         sql << " AND a.contract_category_id = '" + categoria + "'"
