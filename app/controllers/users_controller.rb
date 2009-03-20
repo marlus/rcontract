@@ -11,6 +11,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def list_users
+    respond_to do |format|
+      data = "{'rows': [" 
+      User.find(:all, :select => 'id,username').each do |field|
+        data << "{'id': '#{field.id}', 'username': '#{field.username}'},"
+      end
+      data << "]}"
+      format.json { render :json => data }
+    end
+  end
+
   # GET /users/1
   def show
     # show.html.erb
