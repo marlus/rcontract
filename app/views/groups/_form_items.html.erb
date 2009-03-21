@@ -5,6 +5,8 @@
 <%= javascript_include_tag "../ext/examples/multiselect/ItemSelector.js" %>
 <% javascript_tag do -%>
 
+	var id = '<%=params["id"]%>';
+
 	var usersData = Ext.data.Record.create([
 	       // the "name" below matches the tag name to read, except "availDate"
 	       // which is mapped to the tag "availability"
@@ -12,13 +14,34 @@
 	       {name: 'username', type: 'string'}
 	  ]);
 
-	var store = new Ext.data.Store({
-	 	proxy: new Ext.data.HttpProxy({url: '/users/list_users/0'}),
-     	reader: new Ext.data.JsonReader({root: "rows"},usersData)
-     	});
+	if (id)
+	{
+		var storeFrom = new Ext.data.Store({
+		 	proxy: new Ext.data.HttpProxy({url: '/users/list_users_from/' + id}),
+	     	reader: new Ext.data.JsonReader({root: "rows"},usersData)
+	     	});
 	
+		var storeTo = new Ext.data.Store({
+		 	proxy: new Ext.data.HttpProxy({url: '/users/list_users_to/' + id}),
+	     	reader: new Ext.data.JsonReader({root: "rows"},usersData)
+	    	});
+	}
+	else
+	{
+		var storeFrom = new Ext.data.Store({
+		 	proxy: new Ext.data.HttpProxy({url: '/users/list_users/0'}),
+	     	reader: new Ext.data.JsonReader({root: "rows"},usersData)
+	     	});
 	
-	store.load();
+		var blankData = '';
+		var storeTo = new Ext.data.Store({
+		 	proxy: new Ext.data.MemoryProxy(blankData),
+	     	reader: new Ext.data.JsonReader({root: "rows"},usersData)
+	    	});		
+	}
+	
+	storeFrom.load();
+	storeTo.load();
 	
     var <%= "#{form_items}" %> = [
     <%= ext_field(:field_label => 'Nome', :name => 'group[name]', :xtype => :text_field) %>,
@@ -35,7 +58,8 @@
         imagePath:"../ext/examples/multiselect/images/",
         toLegend:"Selecionados",
         fromLegend:"Disponíveis",
-		fromStore: store
+		fromStore: storeFrom,
+		toStore: storeTo
     }
   ];
 <% end -%>

@@ -22,6 +22,35 @@ class UsersController < ApplicationController
     end
   end
 
+  def list_users_from
+    id = params[:id]
+    respond_to do |format|
+      data = "{'rows': [" 
+      users_array = Array.new
+      users = User.find(:all, :select => 'users.id, users.username', :joins => :group, :conditions => ['groups_users.group_id=?', id]).each do |field|
+        users_array.push(field.id)
+      end
+      User.find(:all, :select => 'id,username', :conditions => ['id not in (?)', users_array]).each do |field|
+        data << "{'id': '#{field.id}', 'username': '#{field.username}'},"
+      end
+      data << "]}"
+      format.json { render :json => data }
+    end
+  end
+  
+  def list_users_to
+    id = params[:id]
+    respond_to do |format|
+      data = "{'rows': [" 
+      User.find(:all, :select => 'users.id, users.username', :joins => :group, :conditions => ['groups_users.group_id=?', id]).each do |field|
+        data << "{'id': '#{field.id}', 'username': '#{field.username}'},"
+      end
+      data << "]}"
+      format.json { render :json => data }
+    end
+  end
+  
+
   # GET /users/1
   def show
     # show.html.erb

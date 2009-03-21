@@ -48,6 +48,10 @@ class GroupsController < ApplicationController
 
   # PUT /groups/1
   def update
+    
+    users = params[:group][:user_ids].split(',')
+    params[:group][:user_ids] = users
+    
     respond_to do |format|
       if @group.update_attributes(params[:group])
         notice = 'Grupo alterado com sucesso.'
