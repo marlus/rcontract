@@ -2,30 +2,76 @@
 <%#= ext_datastore_for 'Alarm' %>
 <script type="text/javascript">
 		//<![CDATA[
-		var alarm_datastore = new Ext.data.Store({
-			proxy: new Ext.data.HttpProxy({
-         		url: '/alarms?inicial_alarm=true&format=ext_json',
-         		method: 'GET'
-     		}),
-			reader: new Ext.data.JsonReader({
-          		root: 'alarms',
-          		id: 'id',
-          		totalProperty: 'results'
-      		},
-      		[ {name: 'id', mapping: 'id'}, {name: 'alarm[alarm_period_warning_id]', mapping: 'alarm_period_warning.name'},{name: 'alarm[alarm_order_id]', mapping: 'alarm_order.name'},{name: 'alarm[contract_id]', mapping:'contract.contract_identification'},{name: 'alarm[created_at]', mapping: 'created_at'},{name: 'alarm[updated_at]', mapping: 'updated_at'}]),
-      		// turn on remote sorting
-      		remoteSort: true,
-      		sortInfo: {field: 'id', direction: 'ASC'}
-		});
-		//]]>
-</script>
-<% javascript_tag do -%>
-  var alarm_column_model = new Ext.grid.ColumnModel([
-    {id: 'id', header: "#", width: 20, dataIndex: 'id'},
-	{header: 'Contrato', dataIndex: 'alarm[contract_id]'},
-    {header: 'Data de aviso', dataIndex: 'alarm[alarm_period_warning_id]'},
-    {header: 'Ordem', dataIndex: 'alarm[alarm_order_id]'}
-  ]);
-<% end -%>
+	var alarm_datastore = new Ext.data.Store({
+		proxy: new Ext.data.HttpProxy({
+        		url: '/alarms?inicial_alarm=true&format=ext_json',
+        		method: 'GET'
+    		}),
+		reader: new Ext.data.JsonReader({
+         		root: 'alarms',
+         		id: 'id',
+         		totalProperty: 'results'
+     		},
+     		[ {name: 'id', mapping: 'id'}, {name: 'alarm[alarm_period_warning_id]', mapping: 'alarm_period_warning.name'},{name: 'alarm[alarm_order_id]', mapping: 'alarm_order.name'},{name: 'alarm[contract_id]', mapping:'contract.contract_identification'},{name: 'alarm[created_at]', mapping: 'created_at'},{name: 'alarm[updated_at]', mapping: 'updated_at'}]),
+     		// turn on remote sorting
+     		remoteSort: true,
+     		sortInfo: {field: 'id', direction: 'ASC'}
+	});
 
-<%= ext_grid_for 'Alarm', :title => 'Aviso de Alarmes', :element => 'alarm-grid-home', :tabId => params[:tabId], :tabTitle => params[:tabTitle] %>
+	var alarm_column_model = new Ext.grid.ColumnModel([
+		{id: 'id', header: "#", width: 20, dataIndex: 'id'},
+		{header: 'Contrato', dataIndex: 'alarm[contract_id]'},
+		{header: 'Data de aviso', dataIndex: 'alarm[alarm_period_warning_id]'},
+		{header: 'Ordem', dataIndex: 'alarm[alarm_order_id]'}
+	]);
+
+
+	/*
+	 * Display the grid of alarms
+	 */
+	Ext.onReady(function(){
+
+       Ext.state.Manager.setProvider(new Ext.state.CookieProvider());
+       Ext.QuickTips.init();
+
+	   var gridHeight = Ext.get('ext-gen41').getHeight();
+       var ds = alarm_datastore;
+
+       var cm = alarm_column_model;
+       cm.defaultSortable = true;
+
+       // create the grid
+       var grid = new Ext.grid.GridPanel({
+           		ds: ds,
+           		cm: cm,
+           		sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
+           		renderTo:   'alarm-grid-home',
+           		title:      'Aviso de Alarmes',
+				height: (gridHeight > 0) ? gridHeight : 500,
+           		stripeRows: true,
+           		viewConfig: {
+               		forceFit:true
+           		},
+
+           		// inline toolbars
+           		tbar:['->'],
+           		bbar: new Ext.PagingToolbar({
+                     pageSize: 25,
+                     store: ds,
+                     displayInfo: true,
+                     displayMsg: 'Registro {0} - {1} de {2}',
+                     emptyMsg: "Nenhum registro encontrado"
+           		}),
+           		plugins:[new Ext.ux.grid.Search({
+                       position:'top'
+                })]
+       });
+
+       ds.load({params: {start: 0, limit:25}});
+
+	   
+		
+	});
+
+//]]>
+</script>

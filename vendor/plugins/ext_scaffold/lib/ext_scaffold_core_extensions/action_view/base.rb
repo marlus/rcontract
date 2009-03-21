@@ -100,10 +100,10 @@ module ExtScaffoldCoreExtensions
               });
 
               // show record on double-click
-              grid.on("rowdblclick", function(grid, row, e) {
-                grid.suspendEvents();
-                window.location.href = '#{collection_path}/' + grid.getStore().getAt(row).data.id;
-              });
+              //grid.on("rowdblclick", function(grid, row, e) {
+              //  grid.suspendEvents();
+              //  window.location.href = '#{collection_path}/' + grid.getStore().getAt(row).data.id;
+              //});
 
               ds.load({params: {start: #{offset}, limit:#{page_size}}});
           });
