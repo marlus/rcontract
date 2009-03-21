@@ -34,8 +34,13 @@ class AddItensCategories < ActiveRecord::Migration
     
     #Client
     root.add_child(client = Category.create(:text => 'Clientes/Fornecedores'))
-    client.add_child(Category.create(:text => 'Inserir Cliente/Fornecedore', :link => '/clients/new'))
+    client.add_child(Category.create(:text => 'Inserir Cliente/Fornecedor', :link => '/clients/new'))
     client.add_child(Category.create(:text => 'Listar Clientes/Fornecedores', :link => '/clients'))
+    
+    #Admin
+    root.add_child(admin = Category.create(:text => 'Administração'))
+    admin.add_child(Category.create(:text => 'Inserir Acesso', :link => '/group_permissions/new'))
+    admin.add_child(Category.create(:text => 'Listar Acessos', :link => '/group_permissions'))
     
   end
 

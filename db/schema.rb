@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090320175924) do
+ActiveRecord::Schema.define(:version => 20090320214528) do
 
   create_table "alarm_orders", :force => true do |t|
     t.string   "name"
@@ -52,6 +52,13 @@ ActiveRecord::Schema.define(:version => 20090320175924) do
     t.integer  "rgt"
     t.string   "text"
     t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories_group_permissions", :id => false, :force => true do |t|
+    t.integer  "category_id"
+    t.integer  "group_permission_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -99,15 +106,14 @@ ActiveRecord::Schema.define(:version => 20090320175924) do
     t.datetime "updated_at"
   end
 
-  create_table "groups", :force => true do |t|
-    t.string   "name"
+  create_table "group_permissions", :force => true do |t|
+    t.integer  "group_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "groups_users", :id => false, :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "group_id"
+  create_table "groups", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,6 @@
+<div id="group_permission-form"></div>
+<%= render :partial => 'form_items', :object => :group_permission_form_items %>
+<%= ext_form_for 'GroupPermission',
+                 :element => 'group_permission-form',
+                 :form_items => :group_permission_form_items,
+                 :mode => :show %>

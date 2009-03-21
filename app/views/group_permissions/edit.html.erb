@@ -1,0 +1,9 @@
+<div id="group_permission-form"></div>
+<%= render :partial => 'form_items', :object => :group_permission_form_items %>
+<%= ext_form_for 'GroupPermission',
+				 :title => 'Editar Cliente/Fornecedor',
+                 :element => 'group_permission-form',
+                 :form_items => :group_permission_form_items,
+                 :mode => :edit, 
+				 :tabId => params[:tabId], 
+				 :tabTitle => params[:tabTitle] %>

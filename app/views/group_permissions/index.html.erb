@@ -1,0 +1,29 @@
+<div id="group_permission-grid" style="height:100%"></div>
+<%#= ext_datastore_for 'GroupPermission' %>
+<script type="text/javascript">
+	//<![CDATA[
+	var group_permission_datastore = new Ext.data.Store({
+			proxy: new Ext.data.HttpProxy({
+			url: '/group_permissions?format=ext_json',
+			method: 'GET'
+		}),
+	reader: new Ext.data.JsonReader({
+		root: 'group_permissions',
+		id: 'id',
+		totalProperty: 'results'
+	},
+	[ {name: 'id', mapping: 'id'}, {name: 'group_permission[group_id]', mapping: 'group.name'},{name: 'group_permission[created_at]', mapping: 'created_at'},{name: 'group_permission[updated_at]', mapping: 'updated_at'}]),
+	// turn on remote sorting
+	remoteSort: true,
+	sortInfo: {field: 'id', direction: 'ASC'}
+	});
+	//]]>
+</script>
+
+<% javascript_tag do -%>
+  var group_permission_column_model = new Ext.grid.ColumnModel([
+    {id: 'id', header: "#", width: 20, dataIndex: 'id'},
+    {header: 'Groupo', dataIndex: 'group_permission[group_id]'}
+  ]);
+<% end -%>
+<%= ext_grid_for 'GroupPermission',:title => 'Listar Acessos', :element => 'group_permission-grid',:tabId => params[:tabId], :tabTitle => params[:tabTitle] %>

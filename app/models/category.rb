@@ -1,4 +1,7 @@
 class Category < ActiveRecord::Base
+  
+  has_and_belongs_to_many :group_permissions
+  
   # For Rails 2.1: override default of include_root_in_json
   # (the Ext.tree.TreeLoader cannot use the additional nesting)
   Category.include_root_in_json = false if Category.respond_to?(:include_root_in_json)
