@@ -29,10 +29,6 @@ class GroupsController < ApplicationController
 
   # POST /groups
   def create
-
-    users = params[:group][:user_ids].split(',')
-    params[:group][:user_ids] = users
-  
     @group = Group.new(params[:group])
 
     respond_to do |format|

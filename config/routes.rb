@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :group_permissions
+
   map.resources :contract_litigations
 
   map.resources :contract_types

@@ -22,6 +22,21 @@ class LoginController < ApplicationController
             session[:user_id] = @user.id
             session[:group_id] = @user.group_id
             session[:name] = @user.name
+            session[:permissions] = Array.new
+            session[:permissions].push(1)
+            
+
+            group_permission = GroupPermission.find(:first, :conditions => ['group_id = ?', @user.group_id])
+            if (group_permission != nil)            
+              group_permission.categories.each do |categories_group|
+                session[:permissions].push(categories_group.id)
+              
+                Category.find_children(categories_group.id).each do |category|
+                  session[:permissions].push(category.id)
+                end
+              end              
+            end
+            
             render :text => '{ success: true}'
             #redirect_to :controller => "users", :action => "index"
             #puts "sucess"

@@ -1,0 +1,76 @@
+<%= select :group_permission, :group_id,
+       Group.find(:all).collect {|c| [ c.name, c.id ] },
+       { :include_blank => true } %>
+
+<%= stylesheet_link_tag "../ext/examples/multiselect/multiselect.css"  %>
+<%= javascript_include_tag "../ext/examples/multiselect/DDView.js" %>
+<%= javascript_include_tag "../ext/examples/multiselect/MultiSelect.js" %>
+<%= javascript_include_tag "../ext/examples/multiselect/ItemSelector.js" %>
+
+<% javascript_tag do -%>
+
+	var id = '<%=params["id"]%>';
+
+	var categoriesData = Ext.data.Record.create([
+       {name: 'id', type: 'string'},
+       {name: 'text', type: 'string'}
+    ]);
+
+    if (id)
+    {
+        var storeFrom = new Ext.data.Store({
+             proxy: new Ext.data.HttpProxy({url: '/categories/list_from/' + id}),
+             reader: new Ext.data.JsonReader({root: "rows"}, categoriesData)
+             });
+    
+        var storeTo = new Ext.data.Store({
+             proxy: new Ext.data.HttpProxy({url: '/categories/list_to/' + id}),
+             reader: new Ext.data.JsonReader({root: "rows"}, categoriesData)
+            });
+    }
+    else
+    {
+        var storeFrom = new Ext.data.Store({
+             proxy: new Ext.data.HttpProxy({url: '/categories/list/0'}),
+             reader: new Ext.data.JsonReader({root: "rows"}, categoriesData)
+             });
+    
+        var blankData = '';
+        var storeTo = new Ext.data.Store({
+             proxy: new Ext.data.MemoryProxy(blankData),
+             reader: new Ext.data.JsonReader({root: "rows"}, categoriesData)
+            });        
+    }
+
+	storeFrom.load();
+    storeTo.load();
+
+
+  var <%= "#{form_items}" %> = [
+	{
+        xtype:"itemselector",
+		name:"group_permission[category_ids]",
+		fieldLabel:"Permissões",
+		dataFields:["id", "text"],
+		toData:[],
+		msWidth:250,
+		msHeight:200,
+		valueField:"id",
+		displayField:"text",
+		imagePath:"../ext/examples/multiselect/images/",
+		toLegend:"Selecionados",
+		fromLegend:"Disponíveis",
+		fromStore: storeFrom,
+		toStore: storeTo
+    },
+	{ 
+		fieldLabel:    'Grupo',
+		xtype:         'combo',
+		triggerAction: 'all',
+		typeAhead:      true,
+		forceSelection: true,
+		transform:     'group_permission_group_id',
+		lazyRender:     true
+    }
+  ];
+<% end -%>

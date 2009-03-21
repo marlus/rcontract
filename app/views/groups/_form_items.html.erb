@@ -1,65 +1,6 @@
-
-<%= stylesheet_link_tag "../ext/examples/multiselect/multiselect.css"  %>
-<%= javascript_include_tag "../ext/examples/multiselect/DDView.js" %>
-<%= javascript_include_tag "../ext/examples/multiselect/MultiSelect.js" %>
-<%= javascript_include_tag "../ext/examples/multiselect/ItemSelector.js" %>
 <% javascript_tag do -%>
 
-	var id = '<%=params["id"]%>';
-
-	var usersData = Ext.data.Record.create([
-	       // the "name" below matches the tag name to read, except "availDate"
-	       // which is mapped to the tag "availability"
-	       {name: 'id', type: 'string'},
-	       {name: 'username', type: 'string'}
-	  ]);
-
-	if (id)
-	{
-		var storeFrom = new Ext.data.Store({
-		 	proxy: new Ext.data.HttpProxy({url: '/users/list_users_from/' + id}),
-	     	reader: new Ext.data.JsonReader({root: "rows"},usersData)
-	     	});
-	
-		var storeTo = new Ext.data.Store({
-		 	proxy: new Ext.data.HttpProxy({url: '/users/list_users_to/' + id}),
-	     	reader: new Ext.data.JsonReader({root: "rows"},usersData)
-	    	});
-	}
-	else
-	{
-		var storeFrom = new Ext.data.Store({
-		 	proxy: new Ext.data.HttpProxy({url: '/users/list_users/0'}),
-	     	reader: new Ext.data.JsonReader({root: "rows"},usersData)
-	     	});
-	
-		var blankData = '';
-		var storeTo = new Ext.data.Store({
-		 	proxy: new Ext.data.MemoryProxy(blankData),
-	     	reader: new Ext.data.JsonReader({root: "rows"},usersData)
-	    	});		
-	}
-	
-	storeFrom.load();
-	storeTo.load();
-	
-    var <%= "#{form_items}" %> = [
-    <%= ext_field(:field_label => 'Nome', :name => 'group[name]', :xtype => :text_field) %>,
-	{
-        xtype:"itemselector",
-        name:"group[user_ids]",
-        fieldLabel:"Usuários",
-        dataFields:["id", "username"],
-        toData:[],
-        msWidth:250,
-        msHeight:200,
-        valueField:"id",
-        displayField:"username",
-        imagePath:"../ext/examples/multiselect/images/",
-        toLegend:"Selecionados",
-        fromLegend:"Disponíveis",
-		fromStore: storeFrom,
-		toStore: storeTo
-    }
-  ];
+   var <%= "#{form_items}" %> = [
+       <%= ext_field(:field_label => 'Nome', :name => 'group[name]', :xtype => :text_field) %>
+     ];
 <% end -%>
