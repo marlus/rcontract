@@ -1,6 +1,7 @@
 <div id="user-form"></div>
 <%= render :partial => 'form_items', :object => :user_form_items %>
 <%= ext_form_for 'User',
+				 :title => 'Inserir Usuário',
                  :element => 'user-form',
                  :form_items => :user_form_items,
                  :mode => :new, 
