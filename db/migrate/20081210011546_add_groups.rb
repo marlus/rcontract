@@ -1,6 +1,7 @@
 class AddGroups < ActiveRecord::Migration
   def self.up
-    group = Group.create(:name => 'Administradores')
+    Group.create(:name => 'Administradores')
+    Group.create(:name => 'Usuários')
   end
 
   def self.down
