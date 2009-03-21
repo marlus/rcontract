@@ -3,9 +3,9 @@
 <% javascript_tag do -%>
   var user_column_model = new Ext.grid.ColumnModel([
     {id: 'id', header: "#", width: 20, dataIndex: 'id'},
-    {header: 'Name', dataIndex: 'user[name]'},
+    {header: 'Nome', dataIndex: 'user[name]'},
     {header: 'Email', dataIndex: 'user[email]'},
-    {header: 'Username', dataIndex: 'user[username]'}
+    {header: 'Usuário', dataIndex: 'user[username]'}
   ]);
 <% end -%>
 <%= ext_grid_for 'User', :title => 'Listar Usuários', :element => 'indexUsers', :tabId => params[:tabId], :tabTitle => params[:tabTitle] %>
